@@ -1,0 +1,601 @@
+[
+  {
+    "id": "massaoke",
+    "title": "Massaoke Time Machine",
+    "category": "singing",
+    "date": "2026-10-16",
+    "start": "20:15",
+    "end": "22:30",
+    "durationMinutes": 135,
+    "venue": "The Clapham Grand",
+    "area": "Clapham Junction / Battersea",
+    "priceGBP": 24.2,
+    "priceLabel": "£24,20/os. General Admission; sprawdź końcowe opłaty koszyka",
+    "priceStatus": "verified",
+    "description": "Żywy zespół, przeboje przez dekady i wielkie ekrany z tekstami. Śpiewa cała sala.",
+    "why": "Najlepsza odpowiedź na ochotę na wspólne śpiewanie — impreza, nie warsztat chóralny.",
+    "availability": "available",
+    "availabilityNote": "General Admission oferowane; Early Birds niedostępne. Liczby wolnych biletów dla 2–3 osób nie sprawdzono.",
+    "timeNote": "Drzwi 18:30. Start około 20:15 i koniec około 22:30, nie gwarantowane co do minuty.",
+    "sources": [
+      {
+        "label": "Clapham Grand",
+        "url": "https://claphamgrand.com/event/massaoke-time-machine/"
+      },
+      {
+        "label": "Eventim — data, cena i godziny",
+        "url": "https://www.eventim.co.uk/event/massaoke-time-machine-the-clapham-grand-21671803/"
+      }
+    ],
+    "youtube": "https://www.youtube.com/watch?v=CTc4v63GHBc",
+    "youtubeNote": "Nagranie „Hey Jude” z wcześniejszego researchu; odtwarzania nie odświeżono.",
+    "conflicts": [
+      "blue-lab-beats",
+      "matt-johnson"
+    ],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "hadestown",
+    "title": "Hadestown",
+    "category": "musical",
+    "date": "2026-10-17",
+    "start": "14:30",
+    "end": "17:00",
+    "durationMinutes": 150,
+    "venue": "Lyric Theatre",
+    "area": "Soho / Shaftesbury Avenue",
+    "priceGBP": 85,
+    "priceLabel": "Produkcja od £25; do planu £72–95/os. — konkretne miejsca do sprawdzenia",
+    "priceStatus": "estimate",
+    "budgetRange": [
+      72,
+      95
+    ],
+    "description": "Orfeusz i Eurydyka w świecie folku, jazzu, bluesa i nowoorleańskiej energii. Musical po angielsku.",
+    "why": "Pierwszy wybór muzyczny dla Mieszka. Popołudniowa sesja zostawia wieczór na Adję.",
+    "availability": "on-sale",
+    "availabilityNote": "Data i godzina potwierdzone w oficjalnym kalendarzu. Sąsiadujących miejsc oraz dzisiejszej ceny koszyka nie sprawdzono.",
+    "timeNote": "2 godz. 30 min z przerwą; około 17:00. Alternatywy: 17 X 19:30, 18 X 15:00, 16 X 19:30. 15 X 19:30 byłoby ryzykowne po locie.",
+    "sources": [
+      {
+        "label": "Oficjalny kalendarz",
+        "url": "https://uk.hadestown.com/"
+      },
+      {
+        "label": "FAQ: ceny i czas",
+        "url": "https://uk.hadestown.com/faq/"
+      },
+      {
+        "label": "Sobota 17 X, 14:30 — kasa",
+        "url": "https://ticketing.nimaxtheatres.com/shop/tickets/series/LYHDT01M/hadestown-1955178?promo=HDTWEB"
+      }
+    ],
+    "youtube": "https://www.youtube.com/watch?v=tdQRn4CewiQ",
+    "youtubeNote": "Wait for Me — nagranie z wcześniejszego researchu, nie obietnica październikowej obsady.",
+    "conflicts": [
+      "cabaret"
+    ],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03",
+    "sessions": [
+      {
+        "id": "15-1430",
+        "date": "2026-10-15",
+        "start": "14:30",
+        "end": "17:00",
+        "label": "15 X · 14:30"
+      },
+      {
+        "id": "15-1930",
+        "date": "2026-10-15",
+        "start": "19:30",
+        "end": "22:00",
+        "label": "15 X · 19:30"
+      },
+      {
+        "id": "16-1930",
+        "date": "2026-10-16",
+        "start": "19:30",
+        "end": "22:00",
+        "label": "16 X · 19:30"
+      },
+      {
+        "id": "17-1430",
+        "date": "2026-10-17",
+        "start": "14:30",
+        "end": "17:00",
+        "label": "17 X · 14:30"
+      },
+      {
+        "id": "17-1930",
+        "date": "2026-10-17",
+        "start": "19:30",
+        "end": "22:00",
+        "label": "17 X · 19:30"
+      },
+      {
+        "id": "18-1500",
+        "date": "2026-10-18",
+        "start": "15:00",
+        "end": "17:30",
+        "label": "18 X · 15:00"
+      }
+    ]
+  },
+  {
+    "id": "adja",
+    "title": "Adja",
+    "category": "concert",
+    "date": "2026-10-17",
+    "start": "21:00",
+    "end": "22:20",
+    "durationMinutes": 80,
+    "venue": "Upstairs at Ronnie’s",
+    "area": "Soho",
+    "priceGBP": 40,
+    "priceLabel": "£30–40/os.; do planu £40, wcześniej Stage View",
+    "priceStatus": "from",
+    "description": "Ciepły wokal, jazz, alternative R&B i neo-soul w kameralnym klubie.",
+    "why": "Adja była w poprzednio odczytanym Replay 2026 — najmniej przypadkowe odkrycie w zestawieniu.",
+    "availability": "on-sale",
+    "availabilityNote": "Aktualnie potwierdzone data i widełki cen. Times and Tickets aktywne; konkretnych miejsc nie sprawdzono.",
+    "timeNote": "21:00–22:20 i drzwi 20:15 pochodzą z researchu 1 IX; dzisiejszy odczyt potwierdza datę, ale godziny sesji trzeba odświeżyć w kasie.",
+    "sources": [
+      {
+        "label": "Ronnie Scott’s — Adja",
+        "url": "https://www.ronniescotts.co.uk/find-a-show/adja"
+      },
+      {
+        "label": "Oficjalny kalendarz października",
+        "url": "https://www.ronniescotts.co.uk/show-calendar?month=10&year=2026"
+      }
+    ],
+    "youtube": "https://www.youtube.com/watch?v=vEJd9XBQrAE",
+    "youtubeNote": "Odsłuch live z wcześniejszego researchu; odtwarzania nie odświeżono.",
+    "conflicts": [],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "blue-lab-beats",
+    "title": "Blue Lab Beats",
+    "category": "concert",
+    "date": "2026-10-16",
+    "start": null,
+    "end": null,
+    "durationMinutes": null,
+    "venue": "Upstairs at Ronnie’s",
+    "area": "Soho",
+    "priceGBP": 35,
+    "priceLabel": "£25–35/os.; do planu £35",
+    "priceStatus": "from",
+    "description": "Jazz, hip-hop, soul i elektronika z pełnym zespołem live.",
+    "why": "Współczesny londyński groove bliski osi Tom Misch / Yussef Dayes.",
+    "availability": "on-sale",
+    "availabilityNote": "16 X potwierdzone w kalendarzu klubu. Sesję i miejsca wybiera się w Times and Tickets.",
+    "timeNote": "Godzin konkretnej sesji nie potwierdzono; nie zakładamy, że uda się połączyć z Massaoke.",
+    "sources": [
+      {
+        "label": "Ronnie Scott’s — Blue Lab Beats",
+        "url": "https://www.ronniescotts.co.uk/find-a-show/blue-lab-beats"
+      },
+      {
+        "label": "Kalendarz października",
+        "url": "https://www.ronniescotts.co.uk/show-calendar?month=10&year=2026"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [
+      "massaoke",
+      "matt-johnson"
+    ],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "masego",
+    "title": "Masego — Fix Your Face Tour",
+    "category": "concert",
+    "date": "2026-10-18",
+    "start": null,
+    "end": null,
+    "durationMinutes": null,
+    "venue": "The O2 arena",
+    "area": "North Greenwich",
+    "priceGBP": 80,
+    "priceLabel": "Roboczy budżet £65–100/os.; oficjalnej ceny koszyka NIE potwierdzono",
+    "priceStatus": "estimate",
+    "budgetRange": [
+      65,
+      100
+    ],
+    "description": "Saksofon, miękki R&B, jazz i pulsujący groove. Duży koncert zamiast klubu.",
+    "why": "Najmocniejsze nowe znalezisko, możliwe dzięki powrotowi w poniedziałek. Posłuchaj „Tadow”.",
+    "availability": "on-sale",
+    "availabilityNote": "The O2 potwierdza On sale now. Brak potwierdzonej ceny AXS i miejsc dla 2–3 osób. Agregator Songkick pokazuje od £59,42, nie traktujemy tego jako gwarancji.",
+    "timeNote": "The O2: drzwi 18:00. Ticketmaster: wydarzenie 18:30. Godzina wejścia Masego i koniec koncertu niepodane; nie wpisujemy otwarcia drzwi jako startu artysty.",
+    "sources": [
+      {
+        "label": "The O2 — oficjalny koncert",
+        "url": "https://www.theo2.co.uk/events/detail/masego"
+      },
+      {
+        "label": "AXS — oficjalna kasa",
+        "url": "https://www.axs.com/uk/events/1479503/masego-tickets?skin=theo2"
+      },
+      {
+        "label": "Ticketmaster",
+        "url": "https://www.ticketmaster.co.uk/masego-fix-your-face-tour-london-18-10-2026/event/350064B2BC0E42BD"
+      }
+    ],
+    "youtube": "https://www.youtube.com/watch?v=szQdvAzGNwE",
+    "youtubeNote": "Masego & FKJ — Tadow, teledysk na oficjalnym kanale Masego; zweryfikowany 3 IX.",
+    "conflicts": [
+      "mike-lindup",
+      "soul-family"
+    ],
+    "origin": "new",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "mike-lindup",
+    "title": "Mike Lindup Trio",
+    "category": "concert",
+    "date": "2026-10-18",
+    "start": null,
+    "end": "23:00",
+    "durationMinutes": null,
+    "venue": "The Jazz Cafe",
+    "area": "Camden",
+    "priceGBP": 31.75,
+    "priceLabel": "£31,75/os. standing + £1,50 za zamówienie w Gigantic",
+    "priceStatus": "verified",
+    "description": "Klawiszowiec i współzałożyciel Level 42 z Yolandą Charles na basie oraz Johnem Samem na perkusji.",
+    "why": "Kameralny jazz-funk i wokal zamiast areny. Camden wygodne z północnego Londynu.",
+    "availability": "available",
+    "availabilityNote": "Bilety stojące oferowane; 18+. Bilet elektroniczny bez dodatkowej opłaty. Suma 2 biletów: £65; 3 biletów: £96,75, przy pojedynczej opłacie £1,50. Końcową sumę potwierdza koszyk.",
+    "timeNote": "Drzwi 19:00; godzina wejścia artysty niepodana. Kalendarz Gigantic podaje koniec 23:00.",
+    "sources": [
+      {
+        "label": "Gigantic — dokładne bilety",
+        "url": "https://www.gigantic.com/mike-lindup-trio-tickets/london-the-jazz-cafe/2026-10-18-19-00"
+      },
+      {
+        "label": "Kalendarz Jazz Cafe w Gigantic",
+        "url": "https://www.gigantic.com/venue/london/jazz-cafe-london"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [
+      "masego",
+      "soul-family"
+    ],
+    "origin": "new",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "matt-johnson",
+    "title": "Matt Johnson (Jamiroquai)",
+    "category": "concert",
+    "date": "2026-10-16",
+    "start": null,
+    "end": "22:00",
+    "durationMinutes": null,
+    "venue": "The Jazz Cafe",
+    "area": "Camden",
+    "priceGBP": 29,
+    "priceLabel": "£29/os. standing w See Tickets; końcowe opłaty zamówienia do sprawdzenia",
+    "priceStatus": "verified",
+    "description": "Klawiszowiec i współautor Jamiroquai ze swoim sześcioosobowym zespołem.",
+    "why": "Funkowy piątek, jeśli muzyka z instrumentalnym rozmachem wygra ze wspólnym śpiewaniem.",
+    "availability": "available",
+    "availabilityNote": "Bilety stojące oferowane; 18+. To koncert Matta Johnsona, NIE całego Jamiroquai. £29 zawiera wskazaną w ofercie opłatę obiektu £1,50.",
+    "timeNote": "Drzwi 18:30, koniec 22:00 według Gigantic; godzina występu niepotwierdzona.",
+    "sources": [
+      {
+        "label": "See Tickets — Matt Johnson",
+        "url": "https://visitgreenwich.seetickets.com/event/matt-johnson/jazz-cafe/3698374"
+      },
+      {
+        "label": "Kalendarz Jazz Cafe",
+        "url": "https://www.gigantic.com/venue/london/jazz-cafe-london"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [
+      "massaoke",
+      "blue-lab-beats"
+    ],
+    "origin": "new",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "marrocuba",
+    "title": "Marialy Pacheco & Rhani Krija: Marrocuba",
+    "category": "concert",
+    "date": "2026-10-15",
+    "start": null,
+    "end": null,
+    "durationMinutes": null,
+    "venue": "Upstairs at Ronnie’s",
+    "area": "Soho",
+    "priceGBP": 40,
+    "priceLabel": "£30–40/os.; do planu £40",
+    "priceStatus": "from",
+    "description": "Afro-kubański fortepian spotyka północnoafrykańską perkusję i jazzową improwizację.",
+    "why": "Muzyczna, rytmiczna propozycja na pierwszy wieczór — wyłącznie elastyczna rezerwa po podróży.",
+    "availability": "on-sale",
+    "availabilityNote": "Data i widełki cen potwierdzone. Sesje do wyboru w kasie. Przy przylocie 17:10 i wizycie u gospodarza nie planować obowiązkowo.",
+    "timeNote": "Niezweryfikowane godziny sesji. Bardziej realne przy środowym przylocie albo bezpośrednim przejeździe z lotniska do centrum.",
+    "sources": [
+      {
+        "label": "Ronnie Scott’s — Marrocuba",
+        "url": "https://www.ronniescotts.co.uk/find-a-show/marialy-pacheco-rhani-krija"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [
+      "perola-cuba"
+    ],
+    "origin": "new",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "perola-cuba",
+    "title": "Buena Vista Social Club Live Revue",
+    "category": "concert",
+    "date": "2026-10-15",
+    "start": "19:00",
+    "end": "22:00",
+    "durationMinutes": 180,
+    "venue": "Perola / art’otel Battersea",
+    "area": "Battersea Power Station",
+    "priceGBP": null,
+    "priceLabel": "Cena do sprawdzenia — nie zakładamy darmowego wejścia",
+    "priceStatus": "unknown",
+    "description": "Kubańskie son, bolero i cha-cha-cha w barze na 15. piętrze; sesja organizowana z Ronnie Scott’s.",
+    "why": "Luźniejsza atmosfera i efektowne miejsce, ale logistycznie nie po drodze do gospodarza.",
+    "availability": "on-sale",
+    "availabilityNote": "To revue/tribute brytyjskich muzyków kubańskich, NIE oryginalny skład Buena Vista Social Club. Cena w kasie nieczytelna w odczycie.",
+    "timeNote": "Oficjalnie 19:00–22:00. Po lądowaniu 17:10 ciasno; nie traktować jako obowiązkowego wydarzenia.",
+    "sources": [
+      {
+        "label": "JOIA — oficjalne daty",
+        "url": "https://www.joiabattersea.co.uk/event/ronnie-scotts-live-at-perola/"
+      },
+      {
+        "label": "DesignMyNight — kasa",
+        "url": "https://www.designmynight.com/london/whats-on/live-music/ronnie-scotts-live-music-sessions-at-perola?t=tickets"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [
+      "marrocuba"
+    ],
+    "origin": "new",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "cabaret",
+    "title": "Cabaret at the Kit Kat Club",
+    "category": "musical",
+    "date": "2026-10-17",
+    "start": "14:00",
+    "end": "16:45",
+    "durationMinutes": 165,
+    "venue": "Playhouse Theatre / Kit Kat Club",
+    "area": "Embankment",
+    "priceGBP": 95,
+    "priceLabel": "Produkcja od £35; roboczy budżet £85–110/os. na zwykłe miejsce",
+    "priceStatus": "estimate",
+    "budgetRange": [
+      85,
+      110
+    ],
+    "description": "Mroczny, immersyjny Berlin lat 30. i jeden z najbardziej teatralnych wieczorów West Endu.",
+    "why": "Drugi wybór po Hadestown. Zwykłe miejsca prostsze dla 2–3 osób niż stoliki z pakietami sprzedawanymi parami.",
+    "availability": "on-sale",
+    "availabilityNote": "17 X, 14:00 potwierdzone w Ticketmaster. Alternatywy: 17 X, 19:30 i 16 X, 19:30. Ceny konkretnej daty oraz sąsiednich miejsc niezweryfikowane.",
+    "timeNote": "Około 2 godz. 45 min z przerwą. Sobota 14:00 zastępuje Hadestown 14:30; wtedy Hadestown można przenieść na niedzielę 15:00. Piątek 19:30 koliduje z Massaoke.",
+    "sources": [
+      {
+        "label": "Oficjalna strona",
+        "url": "https://kitkat.club/"
+      },
+      {
+        "label": "FAQ — czas trwania",
+        "url": "https://kitkat.club/faqs/"
+      },
+      {
+        "label": "Ticketmaster — październikowe terminy",
+        "url": "https://www.ticketmaster.co.uk/cabaret-tickets/artist/844059?page=2&venueId=450983"
+      }
+    ],
+    "youtube": "https://www.youtube.com/watch?v=p_fvjuChtcg",
+    "youtubeNote": "Trailer z wcześniejszego researchu; obsada październikowa niegwarantowana.",
+    "conflicts": [
+      "hadestown"
+    ],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03",
+    "sessions": [
+      {
+        "id": "15-1930",
+        "date": "2026-10-15",
+        "start": "19:30",
+        "end": "22:15",
+        "label": "15 X · 19:30"
+      },
+      {
+        "id": "16-1930",
+        "date": "2026-10-16",
+        "start": "19:30",
+        "end": "22:15",
+        "label": "16 X · 19:30"
+      },
+      {
+        "id": "17-1400",
+        "date": "2026-10-17",
+        "start": "14:00",
+        "end": "16:45",
+        "label": "17 X · 14:00"
+      },
+      {
+        "id": "17-1930",
+        "date": "2026-10-17",
+        "start": "19:30",
+        "end": "22:15",
+        "label": "17 X · 19:30"
+      }
+    ]
+  },
+  {
+    "id": "hamilton",
+    "title": "Hamilton",
+    "category": "musical",
+    "date": null,
+    "start": null,
+    "end": null,
+    "durationMinutes": 165,
+    "venue": "Victoria Palace Theatre",
+    "area": "Victoria",
+    "priceGBP": 95,
+    "priceLabel": "Roboczy budżet £75–120/os.; ceny wybranej daty niezweryfikowane",
+    "priceStatus": "estimate",
+    "budgetRange": [
+      75,
+      120
+    ],
+    "description": "Historia Alexandra Hamiltona opowiedziana hip-hopem, R&B, jazzem i Broadwayem.",
+    "why": "Energia i rytm, ale gęsty angielski wymaga większej uwagi niż w klasycznym musicalu.",
+    "availability": "schedule-only",
+    "availabilityNote": "Aktualna oficjalna strona potwierdza regularny rozkład i sprzedaż do marca 2027. Nie sprawdzono kas 15–19 X ani miejsc. Leslie Odom Jr kończy sezon 5 IX — nie obiecujemy go w październiku.",
+    "timeNote": "Regularnie pon.–sob. 19:30, czw. i sob. 14:30. Na wyjazd sensowna sobota 17 X, 14:30/19:30 lub piątek 16 X, 19:30, ale konkretne terminy do potwierdzenia. Poniedziałek 19:30 jest po wylocie.",
+    "sources": [
+      {
+        "label": "Delfont Mackintosh — Hamilton",
+        "url": "https://www.delfontmackintosh.co.uk/whats-on/hamilton"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03",
+    "availableWeekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "les-miserables",
+    "title": "Les Misérables",
+    "category": "musical",
+    "date": null,
+    "start": null,
+    "end": null,
+    "durationMinutes": 170,
+    "venue": "Sondheim Theatre",
+    "area": "Soho / Shaftesbury Avenue",
+    "priceGBP": 85,
+    "priceLabel": "Roboczy budżet £65–110/os.; cena konkretnej daty do sprawdzenia",
+    "priceStatus": "estimate",
+    "budgetRange": [
+      65,
+      110
+    ],
+    "description": "Wielkie melodie, zbiorowe emocje i pełna skala klasycznego musicalu.",
+    "why": "Najbardziej klasyczny wybór dla wspólnego westendowego wieczoru.",
+    "availability": "schedule-only",
+    "availabilityNote": "Aktualny oficjalny rozkład i sprzedaż do marca 2027; nie sprawdzono konkretnych kas 15–19 X ani miejsc. Nie zakładać niedzielnego spektaklu.",
+    "timeNote": "Regularnie pon.–sob. 19:30, czw. i sob. 14:30; około 2 godz. 50 min. Sobota 17 X, 14:30 alternatywą dla Hadestown/Cabaretu. Poniedziałkowy wieczór po wylocie.",
+    "sources": [
+      {
+        "label": "Delfont Mackintosh — Les Misérables",
+        "url": "https://www.delfontmackintosh.co.uk/whats-on/les-miserables"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03",
+    "availableWeekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "sing-out-louise",
+    "title": "Sing Out, Louise!",
+    "category": "singing",
+    "date": "2026-10-15",
+    "start": "21:30",
+    "end": null,
+    "durationMinutes": null,
+    "venue": "Phoenix Arts Club",
+    "area": "Soho / 1 Phoenix Street",
+    "priceGBP": null,
+    "priceLabel": "Cena do sprawdzenia w kasie; nie zakładamy darmowego wstępu",
+    "priceStatus": "unknown",
+    "description": "Musicalowe przeboje przy pianinie — można śpiewać, zamawiać piosenki albo tylko słuchać.",
+    "why": "Kameralna alternatywa dla Massaoke. Opcjonalny późny czwartek, jeśli po podróży zostanie energia.",
+    "availability": "on-sale",
+    "availabilityNote": "Oficjalny kalendarz aktualnie podaje 14, 15, 16, 17 i 18 X o 21:30. Kasa 15 X nie dała się odczytać; cena i miejsca niepotwierdzone.",
+    "timeNote": "UWAGA: aktualny kalendarz 21:30 zastępuje 21:15 ze wcześniejszego researchu. Czas zakończenia niepodany. W sobotę koliduje z Adją, w niedzielę z Masego.",
+    "sources": [
+      {
+        "label": "Phoenix Arts Club — aktualny kalendarz",
+        "url": "https://phoenixartsclub.com/sing-out-louise"
+      },
+      {
+        "label": "Czwartek15X — kasa",
+        "url": "https://booking.phoenixartsclub.com/event/75586/performance/1129294"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [],
+    "origin": "previous",
+    "verifiedAt": "2026-09-03"
+  },
+  {
+    "id": "soul-family",
+    "title": "Natalie Williams’ Soul Family",
+    "category": "concert",
+    "date": "2026-10-18",
+    "start": null,
+    "end": null,
+    "durationMinutes": null,
+    "venue": "Ronnie Scott’s — Main Show",
+    "area": "Soho",
+    "priceGBP": 50,
+    "priceLabel": "£40–60/os. — obecnie wyprzedane",
+    "priceStatus": "from",
+    "description": "Dziesięcioosobowy zespół, soul i wokale w jednym z najbardziej znanych jazzowych klubów miasta.",
+    "why": "Bardzo dobre stylistyczne dopasowanie, ale wyłącznie rezerwa na ewentualne zwroty.",
+    "availability": "soldout",
+    "availabilityNote": "Oficjalna strona mówi Sold out. Nie dodawać jako gwarantowanej, kupowalnej opcji.",
+    "timeNote": "Drzwi 18:30; start i koniec występu niepodane. To nie godzina gwarantowanego wejścia artystów.",
+    "sources": [
+      {
+        "label": "Ronnie Scott’s — SOLD OUT",
+        "url": "https://www.ronniescotts.co.uk/find-a-show/natalie-williams-soul-family-3"
+      }
+    ],
+    "youtube": null,
+    "conflicts": [
+      "masego",
+      "mike-lindup"
+    ],
+    "origin": "new",
+    "verifiedAt": "2026-09-03"
+  }
+]

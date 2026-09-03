@@ -1,0 +1,140 @@
+{
+  "verifiedAt": "2026-09-03",
+  "currency": "PLN",
+  "travellers": 2,
+  "note": "Ceny nowych biletów RT dla dorosłych. Nie są wyceną wymiany istniejącego biletu. Nic nie zostało kupione.",
+  "variants": [
+    {
+      "id": "15-19",
+      "label": "Czwartek–poniedziałek",
+      "departure": "2026-10-15",
+      "return": "2026-10-19",
+      "out": "15:20",
+      "arrival": "17:10",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO279",
+      "returnFlight": "LO280",
+      "nights": 4,
+      "newTicket": 727.9,
+      "twoNewTickets": 1457.8,
+      "standardTicket": 960.9,
+      "verified": "LOT, publiczna ścieżka wyboru obu lotów, 1 i 2 dorosłych",
+      "recommended": true
+    },
+    {
+      "id": "14-19",
+      "label": "Środa–poniedziałek",
+      "departure": "2026-10-14",
+      "return": "2026-10-19",
+      "out": "15:20",
+      "arrival": "17:10",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO279",
+      "returnFlight": "LO280",
+      "nights": 5,
+      "newTicket": 745,
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+    },
+    {
+      "id": "16-19",
+      "label": "Piątek–poniedziałek",
+      "departure": "2026-10-16",
+      "return": "2026-10-19",
+      "out": "15:20",
+      "arrival": "17:10",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO279",
+      "returnFlight": "LO280",
+      "nights": 3,
+      "newTicket": 742,
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+    },
+    {
+      "id": "15-18",
+      "label": "Czwartek–niedziela",
+      "departure": "2026-10-15",
+      "return": "2026-10-18",
+      "out": "15:20",
+      "arrival": "17:10",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO279",
+      "returnFlight": "LO280",
+      "nights": 3,
+      "newTicket": 846,
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+    },
+    {
+      "id": "16-18",
+      "label": "Piątek–niedziela",
+      "departure": "2026-10-16",
+      "return": "2026-10-18",
+      "out": "15:20",
+      "arrival": "17:10",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO279",
+      "returnFlight": "LO280",
+      "nights": 2,
+      "newTicket": 874,
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+    },
+    {
+      "id": "15late-19",
+      "label": "Czwartek późnym wieczorem",
+      "departure": "2026-10-15",
+      "return": "2026-10-19",
+      "out": "20:20",
+      "arrival": "22:00",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO285",
+      "returnFlight": "LO280",
+      "nights": 4,
+      "newTicket": 601,
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły",
+      "warning": "Dotarcie do gospodarza bardzo późno. Oszczędność około 127 zł na nowym bilecie kosztem pierwszego wieczoru."
+    }
+  ],
+  "sources": [
+    {
+      "label": "LOT: wyszukaj i sprawdź obecną cenę",
+      "url": "https://www.lot.com/pl/pl"
+    },
+    {
+      "label": "Warunki zmiany biletu",
+      "url": "https://www.lot.com/pl/pl/centrum-pomocy/zmiana-lub-anulacja-rezerwacji"
+    },
+    {
+      "label": "Limit bagażu podręcznego",
+      "url": "https://www.lot.com/pl/pl/centrum-pomocy/centrum-pomocy-bagaz/limit-bagazu-podrecznego"
+    }
+  ],
+  "luggage": {
+    "cabin": "1 × 8 kg, 55 × 40 × 23 cm",
+    "personal": "1 przedmiot osobisty do 2 kg, np. torba na laptopa",
+    "checked": "Najwyżej jedna wspólna walizka 23 kg w obie strony",
+    "status": "Do potwierdzenia na infolinii: bagaż po zmianie trasy nie jest automatycznie gwarantowany.",
+    "fallback": 233,
+    "fallbackNote": "Potwierdzona 3 IX dopłata do taryfy Standard Kostka na 15–19 X: 960,90 zamiast 727,90 zł. To cena pakietu, nie samego dodatku bagażowego."
+  },
+  "reissue": {
+    "feeEUR": 70,
+    "note": "70 € to warunek podany przez podróżnego, nie ogólna gwarancja taryfowa LOT. Dopłatę i oba odcinki z 23 kg potwierdza infolinia. Wpisz rzeczywistą dopłatę po rozmowie; nie odejmujemy mechanicznie publicznej ceny od wartości poprzedniego biletu."
+  },
+  "route": {
+    "title": "Heathrow → Brent Cross",
+    "steps": [
+      "Elizabeth line do Tottenham Court Road",
+      "Northern line, kierunek Edgware, do Brent Cross",
+      "Dojście do gospodarza ustalcie prywatnie"
+    ],
+    "duration": "Około 70–90 minut od stacji na Heathrow, plus wyjście z samolotu i kontrola graniczna.",
+    "fareGBP": 15.5,
+    "note": "Mapy Google 3 IX: 15 X, odjazd około 18:00, około 71 min i £15,50/os. To migawka planera, nie gwarancja październikowego rozkładu. Dokładny adres gospodarza nie jest publikowany.",
+    "source": "https://tfl.gov.uk/plan-a-journey/"
+  }
+}

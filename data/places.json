@@ -1,0 +1,471 @@
+{
+  "places": [
+    {
+      "id": "hampstead-kenwood",
+      "title": "Hampstead Heath + Kenwood",
+      "category": "walk",
+      "area": "Hampstead / północny Londyn",
+      "station": "Hampstead / Golders Green / Gospel Oak",
+      "durationMinutes": 210,
+      "priceGBP": 0,
+      "priceLabel": "Wstęp bezpłatny",
+      "priceStatus": "official-free",
+      "description": "Spokojny spacer przez Heath, panorama z Parliament Hill i wnętrza Kenwood z kolekcją malarstwa, w tym Rembrandtem.",
+      "why": "Blisko bazy, dużo przestrzeni na rozmowy i dobry pomysł na londyńską niedzielę z gospodarzem.",
+      "opening": "Kenwood pokazuje obecnie codziennie 10:00–17:00, ostatnie wejście 16:30. Godziny domu sprawdzić ponownie przed wyjazdem; spacer najlepiej za dnia.",
+      "booking": "Heath bez rezerwacji. Bezpłatny bilet do Kenwood zalecany dla gwarancji wejścia, nie obowiązkowy.",
+      "rainFriendly": false,
+      "sources": [
+        {
+          "label": "Kenwood — oficjalna wizyta",
+          "url": "https://www.english-heritage.org.uk/visit/places/kenwood/"
+        },
+        {
+          "label": "Parliament Hill — City of London",
+          "url": "https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/where-to-go-at-hampstead-heath/parliament-hill-viewpoint"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "kenwood-choir",
+      "title": "Jacobean Choral Singing w Kenwood",
+      "category": "music",
+      "area": "Kenwood / Hampstead",
+      "station": "Golders Green + lokalny dojazd / spacer przez Heath",
+      "durationMinutes": 30,
+      "priceGBP": 0,
+      "priceLabel": "Bezpłatnie · dobrowolne datki",
+      "priceStatus": "official-free",
+      "description": "Thames Chamber Choir wykonuje utwory Byrda, Tallisa i muzykę epoki Jakuba I. Dwa identyczne półgodzinne koncerty.",
+      "why": "Kameralny, datowany bonus do dnia na północy. To słuchanie chóru — nie warsztat wspólnego śpiewania.",
+      "opening": "Niedziela 18 października 2026: 14:00–14:30 lub 15:15–15:45. Wybrać jeden koncert.",
+      "booking": "Organizator potwierdza darmowy wstęp bez wcześniejszej rezerwacji. Datki mile widziane.",
+      "rainFriendly": true,
+      "date": "2026-10-18",
+      "start": "2026-10-18T14:00:00+01:00",
+      "end": "2026-10-18T14:30:00+01:00",
+      "sources": [
+        {
+          "label": "Dokładna karta wydarzenia 18 X 2026",
+          "url": "https://www.english-heritage.org.uk/visit/whats-on/kenwood-jacobean-choral-singing/"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "frieze",
+      "title": "Frieze Sculpture · opcjonalnie targi Frieze",
+      "category": "art",
+      "area": "Regent’s Park",
+      "station": "Regent’s Park / Baker Street / Great Portland Street",
+      "durationMinutes": 75,
+      "priceGBP": 0,
+      "priceLabel": "Sculpture £0 · targi osobno od £38 + opłaty",
+      "priceStatus": "official-free-with-paid-alternative",
+      "description": "Bezpłatna wystawa rzeźb pod gołym niebem. W tym samym terminie odbywają się targi Frieze, ale do wystawy parkowej nie jest potrzebny ich bilet.",
+      "why": "Sezonowe wydarzenie dokładnie podczas Waszego wyjazdu; dobry dodatek do Abbey Road, bez obowiązku dużego wydatku.",
+      "opening": "Frieze Sculpture: 16 września–1 listopada 2026, za dnia. Targi: 14–18 X; 14 X tylko zaproszenia. 16–17 X 11:00–19:00, 18 X 11:00–18:00; typ biletu ogranicza wejście.",
+      "booking": "Sculpture bez rezerwacji. Targi tylko online, na termin i godzinę: weekendowy cennik £38 early bird / £48 regular + opłaty. Dostępność early bird niepotwierdzona. Płatne targi nie są uwzględnione w cenie £0 tej karty.",
+      "rainFriendly": false,
+      "start": "2026-09-16",
+      "end": "2026-11-01",
+      "sources": [
+        {
+          "label": "Frieze Sculpture 2026",
+          "url": "https://www.frieze.com/fairs/frieze-sculpture"
+        },
+        {
+          "label": "Cennik targów 2026",
+          "url": "https://www.frieze.com/fairs/frieze-london-frieze-masters/tickets"
+        },
+        {
+          "label": "Godziny i warunki Frieze London",
+          "url": "https://www.frieze.com/fairs/frieze-london/visitor-information/faqs?language=en"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "borough",
+      "title": "Borough Market",
+      "category": "food",
+      "area": "London Bridge / Bankside",
+      "station": "London Bridge",
+      "durationMinutes": 75,
+      "priceGBP": 0,
+      "priceLabel": "Wejście £0 · lunch orientacyjnie £15–25",
+      "priceStatus": "official-free-food-estimate",
+      "description": "Rynek jako przystanek na lunch i próbowanie jedzenia, nie kolejna atrakcja do odhaczenia.",
+      "why": "Łączy się pieszo z Tate i spacerem nad Tamizą. Piątek jest sensowniejszy niż najbardziej tłoczna część weekendu.",
+      "opening": "Czw. i pt. 10:00–17:00; sob. 9:00–17:00; niedz. 10:00–16:00. W poniedziałek 19 X rynek jest zamknięty według regularnych godzin.",
+      "booking": "Bez rezerwacji. £15–25 na lunch to estymacja planistyczna, nie oficjalny cennik; jedzenie nie jest zawarte w £0 za wejście.",
+      "rainFriendly": true,
+      "sources": [
+        {
+          "label": "Borough Market — godziny i dojazd",
+          "url": "https://boroughmarket.org.uk/visit-us/"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03",
+      "availableWeekdays": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "tate",
+      "title": "Tate Modern",
+      "category": "art",
+      "area": "Bankside",
+      "station": "Southwark / Blackfriars",
+      "durationMinutes": 105,
+      "priceGBP": 0,
+      "priceLabel": "Kolekcja bezpłatna · wystawy specjalne osobno",
+      "priceStatus": "official-tourism-free",
+      "description": "Sztuka współczesna i architektura dawnej elektrowni. Można zajrzeć do Turbine Hall i wybrać fragment kolekcji, bez planu na całe muzeum.",
+      "why": "Dobry półtoragodzinny przystanek podczas dnia nad Tamizą i mocna alternatywa na deszcz.",
+      "opening": "Planować w godzinach 10:00–18:00. Późne godziny piątku i soboty wymagają ponownego sprawdzenia: źródła pokazują rozbieżność 21:00/22:00.",
+      "booking": "Kolekcja bezpłatna; konkretne wystawy czasowe mogą wymagać oddzielnego płatnego biletu. Nie potwierdzono wybranej wystawy ani miejsc.",
+      "rainFriendly": true,
+      "sources": [
+        {
+          "label": "Tate Modern — strona muzeum",
+          "url": "https://www.tate.org.uk/visit/tate-modern"
+        },
+        {
+          "label": "Visit London — treść dostarczona przez Tate",
+          "url": "https://www.visitlondon.com/things-to-do/place/344410-tate-modern"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "southbank",
+      "title": "Queen’s Walk / South Bank",
+      "category": "walk",
+      "area": "Westminster → South Bank → Bankside",
+      "station": "Westminster / Waterloo / Blackfriars",
+      "durationMinutes": 90,
+      "priceGBP": 0,
+      "priceLabel": "Spacer bezpłatny",
+      "priceStatus": "free-public-walk",
+      "description": "Tamiza, widok na Big Ben z zewnątrz, mosty, Southbank Centre i spacer po szerokim nadrzecznym deptaku.",
+      "why": "Daje poczucie miasta bez rezerwacji i budowania dnia z samych płatnych atrakcji. Trasę można skrócić w dowolnym momencie.",
+      "opening": "Elastycznie; najlepiej za dnia albo wczesnym wieczorem. To spacer, nie biletowane wejście do obiektów po drodze.",
+      "booking": "Bez rezerwacji. Przy deszczu skrócić odcinek i wejść do Tate albo wybrać seans BFI.",
+      "rainFriendly": false,
+      "sources": [
+        {
+          "label": "Queen’s Walk — oficjalna organizacja South Bank",
+          "url": "https://southbank.london/see-and-do/queens-walk"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "skyline",
+      "title": "Horizon 22 lub Sky Garden",
+      "category": "view",
+      "area": "City of London",
+      "station": "Liverpool Street / Bank / Monument",
+      "durationMinutes": 60,
+      "priceGBP": 0,
+      "priceLabel": "Darmowy punkt widokowy · slot do rezerwacji",
+      "priceStatus": "official-free",
+      "description": "Wybrać jeden bezpłatny punkt widokowy. Horizon 22 to panorama z 58. piętra; Sky Garden łączy widok z ogrodem pod dachem.",
+      "why": "Najpierw spróbowałbym darmowej panoramy, zanim automatycznie dokładamy koszt Shardu czy London Eye.",
+      "opening": "Horizon: pn.–pt. 10:00–18:00, sob. 10:00–17:00, niedz. 10:00–16:00. Sky Garden: bezpłatny dostęp pn.–pt. 10:00–18:00, weekend 11:00–21:00.",
+      "booking": "Horizon: rezerwacja darmowego slotu. Sky Garden: bilety do 3 tygodni naprzód, pobyt 1 h. Dla 16 X okno zaczyna się około 25 IX — nie jest to gwarantowana godzina wypuszczenia puli. Walk-in wyłącznie gdy jest miejsce. Nie potwierdzono slotów na Wasz termin.",
+      "rainFriendly": true,
+      "sources": [
+        {
+          "label": "Horizon 22 — wizyta i godziny",
+          "url": "https://horizon22.co.uk/visit"
+        },
+        {
+          "label": "Sky Garden — darmowe bilety i zasady",
+          "url": "https://skygarden.london/booking/"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "abbey-road",
+      "title": "Abbey Road",
+      "category": "music",
+      "area": "St John’s Wood",
+      "station": "St John’s Wood",
+      "durationMinutes": 40,
+      "priceGBP": 0,
+      "priceLabel": "Przejście i okolica £0 · zakupy osobno",
+      "priceStatus": "free-exterior",
+      "description": "Słynne przejście dla pieszych, studio z zewnątrz i oficjalny sklep. To krótki muzyczny przystanek, a nie standardowe zwiedzanie wnętrza studia.",
+      "why": "Pasuje do muzycznego charakteru wyjazdu i można połączyć go z Regent’s Park.",
+      "opening": "Sklep pn.–sob. 9:30–17:30, niedz. 10:00–17:00. Przejście jest normalną ulicą — nie blokować ruchu.",
+      "booking": "Bez rezerwacji. Abbey Road jest działającym studiem i nie oferuje zwykłego publicznego wejścia do wnętrza.",
+      "rainFriendly": false,
+      "sources": [
+        {
+          "label": "Abbey Road — przejście i sklep",
+          "url": "https://www.abbeyroad.com/crossing"
+        },
+        {
+          "label": "Studio nie jest otwarte do publicznych wizyt",
+          "url": "https://www.abbeyroad.com/contact-us/"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "rough-trade",
+      "title": "Rough Trade East + Brick Lane",
+      "category": "music",
+      "area": "Shoreditch / Brick Lane",
+      "station": "Shoreditch High Street / Liverpool Street",
+      "durationMinutes": 120,
+      "priceGBP": 0,
+      "priceLabel": "Wejście do sklepu £0 · zakupy i kawa osobno",
+      "priceStatus": "free-shop-entry",
+      "description": "Winyle, odkrywanie muzyki, fotobudka i bar w dużym sklepie przy Brick Lane. Zostawić trochę czasu na samą okolicę.",
+      "why": "Luźniejszy, muzyczny dzień we dwójkę lub z Marcinem, zamiast kolejnej długiej listy zabytków.",
+      "opening": "Pn.–sob. 10:00–19:00, niedz. 11:00–17:00.",
+      "booking": "Do sklepu bez rezerwacji. Nie potwierdzono konkretnego koncertu instore na 15–19 X; takie wydarzenia mogą mieć osobne bilety.",
+      "rainFriendly": true,
+      "sources": [
+        {
+          "label": "Rough Trade East — oficjalna karta sklepu",
+          "url": "https://www.roughtrade.com/en-gb/stores/east-london"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "national-gallery",
+      "title": "National Gallery",
+      "category": "art",
+      "area": "Trafalgar Square / West End",
+      "station": "Charing Cross / Leicester Square",
+      "durationMinutes": 90,
+      "priceGBP": 0,
+      "priceLabel": "Kolekcja bezpłatna",
+      "priceStatus": "official-free",
+      "description": "Krótka selekcja malarstwa zamiast ambicji zobaczenia całej galerii. Najlepiej wybrać kilka sal i wyjść z energią na resztę dnia.",
+      "why": "Praktyczny plan na deszcz przed Soho lub musicalem, a także sąsiad Water Body po drugiej stronie placu.",
+      "opening": "Codziennie 10:00–18:00; w piątki do 21:00.",
+      "booking": "Bezpłatny bilet zalecany dla szybszego wejścia; walk-up również możliwy. Wystawy specjalne mogą być płatne osobno.",
+      "rainFriendly": true,
+      "sources": [
+        {
+          "label": "National Gallery — zaplanuj wizytę",
+          "url": "https://www.nationalgallery.org.uk/visiting/plan-your-visit"
+        },
+        {
+          "label": "Zasady wejścia zaktualizowane w 2026",
+          "url": "https://www.nationalgallery.org.uk/about-us/organisation/policies/visitor-admissions-policy"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "water-body",
+      "title": "Water Body · Marshmallow Laser Feast",
+      "category": "art",
+      "area": "St Martin-in-the-Fields / Trafalgar Square",
+      "station": "Charing Cross / Leicester Square",
+      "durationMinutes": 60,
+      "priceGBP": 12,
+      "priceLabel": "£9 pn.–pt. przed 17:00 / £12 wieczory i weekend + £1 online",
+      "priceStatus": "official-tariff-not-live-availability",
+      "description": "Immersyjna instalacja audiowizualna o obiegu wody i niewidocznych połączeniach między krajobrazami, ekosystemami i człowiekiem.",
+      "why": "Mocny nowy typ dla zainteresowań dźwiękiem, obrazem i naturą. Nie jest koncertem, lecz doświadczeniem audiowizualnym w ramach BFI Expanded.",
+      "opening": "3–18 października 2026, 12:30–21:00, The Hall w St Martin-in-the-Fields. Nie działa w poniedziałek 19 X. 60 min to bufor planistyczny — runtime instalacji nie został potwierdzony.",
+      "booking": "Sprzedaż ogólna BFI od 17 IX o 10:00 czasu Londynu; wybór slotu. Online/telefon +£1 za osobę, maks. £3 za transakcję. Nie potwierdzono miejsc na wybrany slot.",
+      "rainFriendly": true,
+      "start": "2026-10-03",
+      "end": "2026-10-18",
+      "sources": [
+        {
+          "label": "Water Body — dokładna karta 2026",
+          "url": "https://whatson.bfi.org.uk/lff/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=water-body-lff26"
+        },
+        {
+          "label": "BFI — cennik i sprzedaż",
+          "url": "https://whatson.bfi.org.uk/lff/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=tickets-booking-information"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "bfi",
+      "title": "BFI London Film Festival",
+      "category": "art",
+      "area": "South Bank i kina West End",
+      "station": "Waterloo / Leicester Square — zależnie od seansu",
+      "durationMinutes": 150,
+      "priceGBP": 18,
+      "priceLabel": "Kina £13 matinee / £18 wieczory · gale i spotkania osobno",
+      "priceStatus": "official-tariff-not-live-availability",
+      "description": "Trafiacie na finał festiwalu. Wybrać jeden film lub spotkanie, bez dokładania drugiego pełnego wieczoru do dnia z musicalem.",
+      "why": "Ciekawa opcja na deszcz i prawdziwie datowe wydarzenie podczas Waszej wizyty.",
+      "opening": "7–18 października 2026. Konkretny seans do wyboru; czas 150 min jest estymacją. Festiwal kończy się przed poniedziałkiem 19 X.",
+      "booking": "Sprzedaż ogólna 17 IX 10:00; dodatkowe bilety 1 X 10:00. Zwykłe kina: £13 pn.–pt. przed 17:00, £18 wieczory i weekendowe poranki. Screen Talks £21, gale £21–30, gala zamknięcia £40. Online +£1/os, maks. £3/transakcja. Brak potwierdzonej dostępności miejsc.",
+      "rainFriendly": true,
+      "start": "2026-10-07",
+      "end": "2026-10-18",
+      "sources": [
+        {
+          "label": "Program 70. BFI London Film Festival",
+          "url": "https://www.bfi.org.uk/london-film-festival/news/full-programme-announced-70th-bfi-london-film-festival"
+        },
+        {
+          "label": "BFI — oficjalny cennik i terminy sprzedaży",
+          "url": "https://whatson.bfi.org.uk/lff/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=tickets-booking-information"
+        }
+      ],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "meet-friends",
+      "title": "Spotkanie z Karoliną, Adamem i ekipą",
+      "category": "friends",
+      "area": "Miejsce ustalimy wspólnie",
+      "station": null,
+      "durationMinutes": null,
+      "priceGBP": 0,
+      "priceLabel": "Samo spotkanie £0 · jedzenie i musical osobno",
+      "priceStatus": "personal-plan",
+      "description": "Karolina będzie w Londynie. Adam dołączy, jeśli akurat będzie na miejscu. Chcemy zarezerwować czas na spotkanie, być może połączone z musicalem.",
+      "why": "To ważny punkt wyjazdu, nie coś do upchnięcia między atrakcjami. Możemy spotkać się w mniejszym albo większym gronie.",
+      "opening": "Dzień i godzina do ustalenia z Karoliną. Jej obecność w Londynie jest potwierdzona przez Mieszka, termin spotkania jeszcze nie.",
+      "booking": "Ustalcie skład i wieczór przed zakupem wspólnej puli biletów. Adam na razie warunkowo.",
+      "rainFriendly": true,
+      "sources": [],
+      "origin": "new",
+      "verifiedAt": "2026-09-03"
+    }
+  ],
+  "practical": [
+    {
+      "id": "privacy",
+      "title": "Baza u Marcina",
+      "body": "Publiczna strona pokazuje wyłącznie okolice Brent Cross. Dokładny adres, dane rezerwacji lotniczej i dane dokumentów pozostają poza publikacją.",
+      "sources": [],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "northern-line",
+      "title": "Brent Cross i Northern line",
+      "body": "Brent Cross Underground to inna stacja niż Brent Cross West. Do West End szukaj wariantu Northern przez Charing Cross; do London Bridge przez Bank, czasem z przesiadką w Camden Town. Wracając sprawdzaj kierunek Edgware, nie High Barnet. To schemat sieci, nie potwierdzony rozkład na październik.",
+      "sources": [
+        {
+          "label": "TfL — Brent Cross",
+          "url": "https://tfl.gov.uk/tube/stop/940GZZLUBTX/brent-cross-underground-station"
+        },
+        {
+          "label": "Planer TfL",
+          "url": "https://tfl.gov.uk/plan-a-journey/"
+        }
+      ],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "contactless",
+      "title": "Każdy własna karta lub telefon",
+      "body": "Każdy podróżny korzysta z osobnego nośnika płatności i konsekwentnie tego samego w całej podróży. Karta plastikowa i Apple Pay tej samej karty są traktowane jako różne nośniki. W metrze i kolei dotknij czytnika przy wejściu oraz wyjściu; w autobusie tylko przy wejściu.",
+      "sources": [
+        {
+          "label": "TfL — pay as you go",
+          "url": "https://tfl.gov.uk/fares/ways-to-pay/pay-as-you-go"
+        }
+      ],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "daily-cap",
+      "title": "Limit dzienny komunikacji",
+      "body": "Oficjalna tabela 2026 podaje £10.50/os/dzień dla stref 1–3. To maksymalny limit dla objętych nim podróży, nie stała opłata. Trzy pełne dni można ostrożnie oszacować na maks. £31.50/os; dni lotniskowe policzyć osobno. Tygodniowy cap działa poniedziałek–niedziela, więc Wasz wyjazd przekracza granicę tygodnia.",
+      "priceGBP": 10.5,
+      "priceStatus": "official-2026-cap",
+      "sources": [
+        {
+          "label": "Oficjalna tabela cen 2026 — PDF, s. 22",
+          "url": "https://www.london.gov.uk/media/111830/download"
+        },
+        {
+          "label": "TfL — zasady i capy",
+          "url": "https://tfl.gov.uk/fares/find-fares/caps-and-travelcard-prices"
+        },
+        {
+          "label": "TfL — tygodniowe rozliczenie",
+          "url": "https://tfl.gov.uk/fares/ways-to-pay/pay-as-you-go"
+        }
+      ],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "eta",
+      "title": "Paszport i ETA",
+      "body": "Dla zwykłej wizyty turystycznej z polskim paszportem potrzebna jest ETA, chyba że podróżny ma zwolnienie lub odpowiedni status UK. Sprawdź najpierw, czy masz już ważną ETA. Nowa kosztuje £20/os — dla dwóch podróżnych £40, jeśli obaj jej potrzebują; Marcinowi jej nie doliczamy. Paszport musi być ważny przez cały pobyt. Decyzja zwykle w 1 dzień, może zająć do 3 dni roboczych; poczekaj na potwierdzenie przed podróżą. ETA jest związana z paszportem, ważna 2 lata lub do jego wygaśnięcia.",
+      "priceGBP": 20,
+      "priceStatus": "official-fee",
+      "sources": [
+        {
+          "label": "GOV.UK — oficjalna aplikacja ETA",
+          "url": "https://www.gov.uk/eta/apply"
+        },
+        {
+          "label": "GOV.UK — dokumenty i wyjątki",
+          "url": "https://www.gov.uk/uk-border-control/before-you-leave-for-the-uk"
+        }
+      ],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "dates-not-inventory",
+      "title": "Potwierdzony termin ≠ zarezerwowane miejsce",
+      "body": "Daty Kenwood Choir, Frieze, Water Body i BFI są potwierdzone na 2026. Nie sprawdzono dostępności konkretnych slotów ani miejsc. Darmowy wstęp do punktu widokowego nie oznacza, że można wejść bez planowania.",
+      "sources": [
+        {
+          "label": "Sky Garden — rezerwacja",
+          "url": "https://skygarden.london/booking/"
+        },
+        {
+          "label": "BFI — sprzedaż i ceny",
+          "url": "https://whatson.bfi.org.uk/lff/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=tickets-booking-information"
+        }
+      ],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "no-overbooking",
+      "title": "Jeden duży punkt dzienny wystarczy",
+      "body": "Czwartek: przylot i kolacja. Piątek: Borough + Tate albo spacer, potem opcjonalny musical. Sobota: wybierz Abbey Road/Frieze, City/Brick Lane albo deszczowy duet National Gallery/Water Body. Niedziela: Londyn Marcina, Hampstead/Kenwood, opcjonalnie chór. Poniedziałek: spokojny poranek i lotnisko; bez Borough, Frieze Fair, Water Body ani BFI, które tego dnia nie działają.",
+      "sources": [],
+      "verifiedAt": "2026-09-03"
+    },
+    {
+      "id": "budget-scope",
+      "title": "Budżet dla dwóch podróżnych, atrakcje dla chętnych",
+      "body": "Loty, transfery lotniskowe, jedzenie i ewentualna ETA dotyczą dwóch osób lecących z Warszawy. Atrakcje liczymy dla 1–5 chętnych, zależnie od udziału Marcina, Karoliny i Adama. To łączny koszt zaznaczonej grupy, nie rachunek do zapłacenia przez Mieszka. Kwoty wejścia £0 nie obejmują jedzenia, zakupów ani płatnych alternatyw.",
+      "sources": [],
+      "verifiedAt": "2026-09-03"
+    }
+  ]
+}

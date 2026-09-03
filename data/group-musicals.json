@@ -1,0 +1,190 @@
+{
+  "intro": "Musical dla 2–5 osób: Mieszko i Kostek, z możliwością dołączenia Marcina, Karoliny i Adama. Mieszko chce na pewno spotkać się z Karoliną; termin spotkania nie jest jeszcze ustalony; jej udział w teatrze, udział Marcina oraz obecność Adama w Londynie wymagają potwierdzenia. Poniższy ranking to nasza ocena dopasowania, nie ocena artystycznej jakości spektakli.",
+  "groupAdvice": [
+    "Najpierw ustalmy liczbę chętnych i limit za osobę. Dla mieszanej grupy proponuję sobotę 17 X po południu i kolację po spektaklu. Piątek 16 X wieczorem to alternatywa, ale konkuruje z Massaoke i koncertami.",
+    "Te trzy produkcje mają oficjalny okres sprzedaży obejmujący wyjazd. Pojedynczych przedstawień 16–17 X oraz mapy 2–5 sąsiadujących miejsc nie sprawdzono. Godziny poniżej opisują regularny rozkład; data 17 X jest propozycją do wyszukania w kasie.",
+    "Budżet roboczy £70–100/os. oznacza £140–200 za 2 osoby, £210–300 za 3, £280–400 za 4 lub £350–500 za 5. To estymacja, nie oferta: po wyborze miejsc trzeba sprawdzić pełną kwotę z opłatami. W kalkulatorze przyjęto środek £85/os.",
+    "Wspólne miejsca kupujmy w jednym koszyku. Jeśli nie ma pięciu obok siebie, uzgodnijmy wcześniej układ 2+3 w pobliżu — nie kupujmy osobno z nadzieją, że system nas połączy.",
+    "Dla maksymalnie pięciu osób nie zakładamy zniżki grupowej: publikowane progi tych teatrów zaczynają się od 6 lub 10 osób. Rush, loterie i bilety w dniu spektaklu nie gwarantują pięciu miejsc obok siebie ani najniższej ceny na nasz termin.",
+    "Najłatwiejsze wejście dla grupy o różnych gustach: Moulin Rouge. Najbliżej muzycznego kierunku Mieszka pozostaje Hadestown. Les Misérables to klasyka z dużymi emocjami; Cabaret jest mroczniejszy i bardziej dorosły; Hamilton wymaga największej swobody w śledzeniu szybkiego angielskiego.",
+    "Oceny trudności angielskiego są orientacyjne, nie oficjalną klasyfikacją CEFR. Przy Mincemeat i Mormon humor mocno zależy od słów; przed zakupem warto zapytać wszystkich, czy to ich rodzaj wieczoru.",
+    "W regularnym rozkładzie tych trzech nowych propozycji nie ma niedzieli. Poniedziałkowy wieczór 19 X kolidowałby z preferowanym powrotem, a czwartek po locie nie jest dobrym terminem na drogi bilet z małym marginesem.",
+    "Żadnych miejsc nie zarezerwowano i niczego nie kupiono. Wystarczy wybrać jeden główny musical — reszta wyjazdu powinna zostawić przestrzeń na spotkania."
+  ],
+  "recommendations": [
+    {
+      "id": "moulin-rouge",
+      "title": "Moulin Rouge! The Musical",
+      "category": "musical",
+      "date": null,
+      "start": null,
+      "end": null,
+      "durationMinutes": 165,
+      "venue": "Piccadilly Theatre",
+      "area": "Soho / Piccadilly Circus",
+      "priceGBP": 85,
+      "priceLabel": "Plan £70–100/os. (estymacja); teatr reklamuje ceny od £25, niepotwierdzone dla 17 X i 2–5 wspólnych miejsc",
+      "priceStatus": "estimate",
+      "description": "Widowiskowa historia miłosna w paryskim klubie, opowiedziana przez znane przeboje pop. Duża scenografia, choreografia i energia wspólnego wieczoru na West Endzie.",
+      "why": "Najmniej ryzykowna nowa propozycja dla grupy o nieznanych lub różnych gustach: rozpoznawalna muzyka pomaga nawet wtedy, gdy nie złapiecie każdego zdania. To opinia o dopasowaniu, nie gwarancja gustu wszystkich.",
+      "availability": "schedule-only",
+      "availabilityNote": "ATG podaje sprzedaż do 27 II 2027. Nie sprawdzono koszyka na 17 X ani 2–5 sąsiadujących miejsc. Od £25 jest ceną reklamowaną przez teatr, a nie wyceną grupy. Oferty £30 rush i £45 day seats są ograniczone i nie stanowią podstawy tego planu.",
+      "timeNote": "17 X to proponowana sobota. Regularnie: pon.–sob. 19:30, czw. i sob. 14:30. Dokładnego przedstawienia 17 X w kasie nie potwierdzono. Oficjalne źródła podają różny czas: strona produkcji 2 h 35 min, teatr/ATG około 2 h 45 min; do logistyki przyjęto 165 min.",
+      "sources": [
+        {
+          "label": "Oficjalna produkcja — godziny, FAQ, oferty ograniczone",
+          "url": "https://moulinrougemusical.co.uk/london-tickets/"
+        },
+        {
+          "label": "Piccadilly Theatre — cena od £25 i informacje",
+          "url": "https://www.thepiccadillytheatre.com/shows/moulin-rouge"
+        },
+        {
+          "label": "ATG — okres sprzedaży i czas trwania",
+          "url": "https://www.atgtickets.com/shows/moulin-rouge-the-musical/piccadilly-theatre/"
+        }
+      ],
+      "youtube": null,
+      "conflicts": [],
+      "origin": "new",
+      "verifiedAt": "2026-09-03",
+      "groupFit": "Bardzo dobry kandydat dla 2–5 osób o różnych gustach. Najbardziej „duży wspólny wieczór” z nowych propozycji. Znane hity nie oznaczają, że publiczność ma śpiewać podczas przedstawienia.",
+      "englishLevel": "Orientacyjnie B1/B2 daje większy komfort; znajomość hitów i wizualna forma ułatwiają odbiór. Mniej językowo wymagający wybór niż Hamilton lub Operation Mincemeat.",
+      "contentNote": "Romans i dorosły klimat nocnego klubu; rekomendacja producenta 12+. Błyski/stroboskopy, mgła, głośne dźwięki i pojawiająca się broń.",
+      "suggestedDate": "2026-10-17",
+      "availableWeekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "operation-mincemeat",
+      "title": "Operation Mincemeat",
+      "category": "musical",
+      "date": null,
+      "start": null,
+      "end": null,
+      "durationMinutes": 155,
+      "venue": "Fortune Theatre",
+      "area": "Covent Garden",
+      "priceGBP": 85,
+      "priceLabel": "Plan £70–100/os. (estymacja); dokładna cena 17 X i blok 2–5 miejsc do sprawdzenia",
+      "priceStatus": "estimate",
+      "description": "Brytyjska komedia musicalowa o autentycznej operacji dezinformacyjnej z 1943 roku. Kameralny teatr, błyskawiczne zmiany postaci i sprytnie opowiedziana absurdalna historia szpiegowska.",
+      "why": "Najciekawsza propozycja dla grupy, która chce odkryć coś bardzo brytyjskiego i lubi inteligentną farsę. Może dać dużo tematów do rozmowy po spektaklu, ale nie jest neutralnym wyborem przy nierównym poziomie angielskiego.",
+      "availability": "schedule-only",
+      "availabilityNote": "Oficjalne ATG prowadzi sprzedaż do 20 II 2027. Nie potwierdzono indywidualnego przedstawienia 17 X ani wspólnych miejsc. Publikowane £59,50 dotyczą m.in. ograniczonych ofert Upper Circle/day tickets; loteria par biletów po £30 nie gwarantuje planu dla 2–5 osób. Zniżka grupowa od 10 osób nie dotyczy tej ekipy.",
+      "timeNote": "17 X to proponowana sobota. Regularnie: pon.–sob. 19:30, wt. i sob. 15:00. Dokładne przedstawienie październikowe wymaga potwierdzenia w kasie. Czas producenta: 2 h 35 min z 20-minutową przerwą.",
+      "sources": [
+        {
+          "label": "ATG / Fortune Theatre — okres sprzedaży i rozkład",
+          "url": "https://www.atgtickets.com/shows/operation-mincemeat-a-new-musical/fortune-theatre/"
+        },
+        {
+          "label": "Oficjalne FAQ — historia i czas",
+          "url": "https://operationmincemeat.com/faqs/"
+        },
+        {
+          "label": "Oficjalne bilety — zasady ograniczonych ofert",
+          "url": "https://operationmincemeat.com/tickets/"
+        }
+      ],
+      "youtube": null,
+      "conflicts": [],
+      "origin": "new",
+      "verifiedAt": "2026-09-03",
+      "groupFit": "Świetny kandydat, jeśli wszyscy lubią brytyjski humor i sprawnie śledzą dialog. Dla ekipy mieszanej językowo przesunąłbym go za Moulin Rouge, Hadestown i Les Misérables.",
+      "englishLevel": "Orientacyjnie mocne B2/C1: szybkie dialogi, gry słów, brytyjskie odniesienia i zmiany postaci. Bardziej językowy wieczór niż Moulin Rouge.",
+      "contentNote": "Wojna, śmierć i wykorzystanie zwłok są podstawą fabuły, przedstawionej jako czarna komedia. Oficjalne ostrzeżenia obejmują głośne dźwięki, migające światła i dym.",
+      "suggestedDate": "2026-10-17",
+      "availableWeekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "book-of-mormon",
+      "title": "The Book of Mormon",
+      "category": "musical",
+      "date": null,
+      "start": null,
+      "end": null,
+      "durationMinutes": 150,
+      "venue": "Prince of Wales Theatre",
+      "area": "Leicester Square / Piccadilly Circus",
+      "priceGBP": 85,
+      "priceLabel": "Plan £70–100/os. + £2,50 opłaty za bilet (estymacja); blok miejsc i końcowa kwota do sprawdzenia",
+      "priceStatus": "estimate",
+      "description": "Brawurowa, celowo obrazoburcza komedia autorów South Parku o misjonarzach. Klasyczna musicalowa forma z bardzo niegrzeczną, satyryczną treścią.",
+      "why": "Może być najzabawniejszym wieczorem wyjazdu, jeśli cała grupa świadomie wybierze ten rodzaj humoru. Nie kupowałbym go jako niespodzianki dla Karoliny czy Adama bez rozmowy o treści.",
+      "availability": "schedule-only",
+      "availabilityNote": "Delfont Mackintosh podaje sprzedaż do 23 I 2027. Nie potwierdzono przedstawienia 17 X ani 2–5 miejsc obok siebie. Oficjalne £25 rush jest ofertą ograniczoną, nie wyceną grupy. Teatr podaje £2,50 opłaty za pełnopłatny bilet; końcową kwotę należy sprawdzić w koszyku. Grupy od 10 osób.",
+      "timeNote": "17 X to proponowana sobota. Regularnie: pon.–sob. 19:30, pt. i sob. 14:30. Dokładne przedstawienie 16 lub 17 X wymaga potwierdzenia. Producent podaje 2 h 30 min, operator teatru około 2 h 20 min — w planie bezpiecznie 150 min, z przerwą.",
+      "sources": [
+        {
+          "label": "Oficjalna produkcja — godziny, treść i dostępność napisów",
+          "url": "https://thebookofmormonmusical.com/"
+        },
+        {
+          "label": "Delfont Mackintosh — okres sprzedaży, opłaty i teatr",
+          "url": "https://www.delfontmackintosh.co.uk/whats-on/the-book-of-mormon"
+        }
+      ],
+      "youtube": null,
+      "conflicts": [],
+      "origin": "new",
+      "verifiedAt": "2026-09-03",
+      "groupFit": "Wysokie dopasowanie tylko przy wspólnej zgodzie na humor w stylu South Parku. Przy nieznanych preferencjach gości to najbardziej ryzykowny wybór z tej trójki, nie domyślna propozycja.",
+      "englishLevel": "Orientacyjnie B2+ dla większości żartów. Producent oferuje napisy przez GalaPro na własnym urządzeniu; nie potwierdzono języka polskiego, więc nie zakładamy tłumaczenia.",
+      "contentNote": "Oficjalna rekomendacja 14+: mocny język i dorosłe tematy. Obrazoburcza satyra religijna, seksualne żarty i celowo obraźliwe stereotypy mogą nie odpowiadać każdemu. Stroboskopy i głośne strzały.",
+      "suggestedDate": "2026-10-17",
+      "availableWeekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "feePerPersonGBP": 2.5
+    }
+  ],
+  "ranking": [
+    {
+      "id": "moulin-rouge",
+      "reason": "Pierwszy wybór dla mieszanej grupy: znane przeboje, widowisko i mniejsza zależność od śledzenia każdego żartu."
+    },
+    {
+      "id": "hadestown",
+      "reason": "Pierwszy wybór pod muzyczny gust Mieszka; folk, jazz i blues, a sobotni matinee jest już potwierdzony w dotychczasowym researchu."
+    },
+    {
+      "id": "les-miserables",
+      "reason": "Klasyczny, emocjonalny West End dla osób, które chcą dużej historii i znanych musicalowych melodii. Długi, poważniejszy wieczór."
+    },
+    {
+      "id": "operation-mincemeat",
+      "reason": "Podnieść do top 2, jeśli wszyscy mają dobry angielski i ochotę na błyskotliwą brytyjską komedię."
+    },
+    {
+      "id": "cabaret",
+      "reason": "Bardzo mocna opcja dla grupy, która świadomie wybierze mroczniejszy, dorosły klimat; mniej neutralna niż Moulin Rouge."
+    },
+    {
+      "id": "hamilton",
+      "reason": "Świetny kandydat przy wspólnej ochocie na hip-hop i dużej swobodzie językowej; szybki tekst może najmocniej podzielić komfort odbioru."
+    },
+    {
+      "id": "book-of-mormon",
+      "reason": "Opcja warunkowa: może wygrać, jeśli wszyscy lubią South Park i bezpośrednio zgodzą się na prowokacyjny humor."
+    }
+  ]
+}

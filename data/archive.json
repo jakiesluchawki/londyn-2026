@@ -1,0 +1,740 @@
+{
+  "meta": {
+    "title": "Zanim wybraliśmy Londyn",
+    "subtitle": "Cały wcześniejszy research — inspiracje na następne wyjazdy.",
+    "observedAt": "2026-09-01",
+    "status": "Archiwum, nie aktualna oferta",
+    "assumptions": [
+      "Jedna osoba, piątek–niedziela, dwie noce.",
+      "Hotel z prywatną łazienką i śniadaniem.",
+      "Bezpośredni LOT z Warszawy, podręczny i torba osobista.",
+      "Widełki oznaczały dodatkowy wydatek według ówczesnego modelu przebukowania; obejmowały hotel, wydarzenia, jedzenie, transport i umiarkowane zwiedzanie.",
+      "Nie są budżetem obecnego wyjazdu Mieszka i Kostka. W Londynie śpią u Marcina — dawny koszt hotelu nie ma zastosowania.",
+      "Nic w tych wariantach nie zostało zarezerwowane."
+    ],
+    "exclusions": "Bez dojazdu na WAW, ubezpieczenia, zakupów i licznych taksówek. Osobny bufor 200–300 zł nie był ukryty w sumach.",
+    "exchangeRates": "Wyłącznie robocze założenia historyczne: 1 EUR = 4,33 PLN; 1 GBP = 5 PLN.",
+    "warning": "Ceny i dostępność wymagają ponownego sprawdzenia. Publiczna cena nowego biletu nie jest wyceną wymiany posiadanego biletu przez LOT."
+  },
+  "taste": {
+    "person": "Mieszko — nie profil muzyczny całej trójki",
+    "basis": "Odczyt Replay 2025/2026, Ulubionych i Granych na okrągło wykonany przy pierwotnym researchu.",
+    "observedArtists": [
+      "Sławek Jaskułke",
+      "Poluzjanci",
+      "Bugge Wesseltoft",
+      "Lady Blackbird",
+      "Tom Misch",
+      "Yussef Dayes",
+      "Sampha",
+      "Little Simz",
+      "Bonobo",
+      "Moderat",
+      "Durand Jones",
+      "Glass Beams",
+      "Agnes Obel",
+      "Adja"
+    ],
+    "interpretation": "Ciepły wokal i soul, jazz z pulsem, melodyjna elektronika, atmosfera i emocje.",
+    "confirmedPreferences": [
+      "Adja pojawiała się w Replay 2026.",
+      "Mieszko chce również wspólnie śpiewać i lubi pomysł musicalu po angielsku.",
+      "Jungle nie przekonało Mieszka — nie traktujemy tego zespołu jako pewnego dopasowania."
+    ],
+    "boundary": "Omar, Lizz Wright, Alfa Mist, Mansur Brown i pozostałe propozycje poniżej są odkryciami do sprawdzenia, a nie dowodem wcześniejszych ulubionych artystów.",
+    "privacy": "Bez publicznych odnośników do prywatnych playlist."
+  },
+  "cities": [
+    {
+      "id": "paris-choir",
+      "city": "Paryż",
+      "title": "A Dawning — wspólne śpiewanie",
+      "dates": "2026-10-02/2026-10-04",
+      "budget": "3300–3600 zł + nieznana cena chóru",
+      "reason": "Najbliższy pomysłowi aktywnego uczestnictwa: trzy godziny nauki i wspólnego śpiewania.",
+      "events": [
+        {
+          "title": "Gaia One-Day Choir: Ólafur Arnalds & Talos — A Dawning",
+          "date": "2026-10-02",
+          "time": "18:30–21:30",
+          "venue": "American Church in Paris",
+          "price": "Nieopublikowana w momencie sprawdzenia",
+          "url": "https://www.eventbrite.com/e/paris-one-day-choir-olafur-arnalds-talos-a-dawning-tickets-1999043356492",
+          "notes": "Prowadzenie: Asher Blank. Bez przesłuchania; nauka partii chóralnych. To nie koncert Ólafura z miejsca na widowni. Zapowiedziany start sprzedaży: 4 IX o 00:00 CEST; materiały co najmniej tydzień przed wydarzeniem. Ewentualne późniejsze wystąpienie z artystą nie było gwarantowaną częścią biletu."
+        }
+      ],
+      "flight": {
+        "outbound": "LO331 · piątek · WAW 07:20 → CDG 09:50",
+        "inbound": "LO336 · niedziela · CDG 19:45 → WAW 22:05",
+        "historicalNewTicketRT": "1881,46 zł"
+      },
+      "hotel": {
+        "name": "Eiffel Kennedy 3★",
+        "historicalTotal": "401 EUR / 2 noce",
+        "conditions": "Single, łazienka, śniadania; ocena 8,1. Historycznie bezpłatne odwołanie przed 1 X.",
+        "url": "https://www.booking.com/hotel/fr/eiffelkennedy.pl.html",
+        "alternative": "Campanile Prime Paris 19 La Villette — 351 EUR ze śniadaniem, dalej od chóru."
+      },
+      "localBudget": "140–210 EUR na jedzenie, transport i zwiedzanie.",
+      "relaxedPlan": [
+        "Piątek: lunch nad Sekwaną, odpoczynek, kościół około 18:00.",
+        "Sobota: Musée d’Orsay lub Saint-Germain, Île de la Cité, księgarnie i kolacja.",
+        "Niedziela: Montmartre albo spokojny spacer; wyjazd na CDG około 16:15–16:30."
+      ],
+      "decisionNote": "Paryż można było wybrać niezależnie od zdobycia wejścia na chór, świadomie akceptując koszt kolejnej zmiany lotu. Hotel z bezpłatną anulacją ograniczał ryzyko. Warunki dalszej zmiany wymagały potwierdzenia na infolinii.",
+      "sources": [
+        {
+          "label": "Musée d’Orsay",
+          "url": "https://www.musee-orsay.fr/fr/visite"
+        },
+        {
+          "label": "Transport Île-de-France 2026",
+          "url": "https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026"
+        }
+      ]
+    },
+    {
+      "id": "lisbon-omar",
+      "city": "Lizbona",
+      "title": "Omar + pierwsze spotkanie z Lizboną",
+      "dates": "2026-10-30/2026-11-01",
+      "budget": "1900–2250 zł",
+      "reason": "Historycznie najlepsza relacja programu do kosztu: soul, nowe miasto i cieplejszy klimat.",
+      "events": [
+        {
+          "title": "Omar",
+          "date": "2026-10-30",
+          "time": "Drzwi 20:00 · koncert 21:00",
+          "venue": "Badassery",
+          "price": "49,50 EUR, w tym wskazana opłata 4,50 EUR",
+          "url": "https://purchase.seetickets.com/event/omar-lisboa/badassery/3696400",
+          "notes": "Bilet PLATEIA. Nie przechodzono końcowej płatności."
+        }
+      ],
+      "flight": {
+        "outbound": "LO425 · piątek · WAW 10:25 → LIS 13:55",
+        "inbound": "LO426 · niedziela · LIS 14:55 → WAW 20:00",
+        "historicalNewTicketRT": "1082,82 zł"
+      },
+      "hotel": {
+        "name": "Alif Campo Pequeno 3★",
+        "historicalTotal": "211 EUR / 2 noce",
+        "conditions": "Twin dla jednej osoby, łazienka i śniadania; ocena 8,7. Metro około 200 m. Historycznie anulacja przed 28 X, płatność 26 X.",
+        "url": "https://www.booking.com/hotel/pt/hotelalif.pl.html"
+      },
+      "localBudget": "110–185 EUR poza hotelem i Omarem.",
+      "relaxedPlan": [
+        "Piątek: Príncipe Real/Rato, kolacja, Badassery około 20:15.",
+        "Sobota: Alfama, Graça, punkty widokowe, Baixa/Chiado; Belém jako zamiennik części planu.",
+        "Niedziela: śniadanie i krótki spacer; lotnisko około 12:45."
+      ],
+      "decisionNote": "Bez Sintry podczas tak krótkiego pierwszego pobytu. W ówczesnych cenach weekend z Omarem wychodził taniej niż tydzień wcześniejszy pobyt bez koncertu.",
+      "sources": [
+        {
+          "label": "Badassery",
+          "url": "https://badassery.club/"
+        },
+        {
+          "label": "Metro Lisboa — taryfy",
+          "url": "https://www.metrolisboa.pt/2025/12/19/novas-tarifas-2026/"
+        },
+        {
+          "label": "IPMA — normy klimatyczne Lizbony",
+          "url": "https://www.ipma.pt/bin/file.data/climate-normal/cn_91-20_LISBOA_GAGO_COUTINHO.pdf"
+        }
+      ],
+      "climate": "Październikowa norma około 22,6°C dzień / 14,9°C noc; klimat, nie prognoza. Koniec miesiąca może być chłodniejszy i deszczowy."
+    },
+    {
+      "id": "london-original",
+      "city": "Londyn",
+      "title": "Pierwotny plan: Massaoke + Hadestown + Adja",
+      "dates": "2026-10-16/2026-10-18",
+      "budget": "3000–3350 zł; wariant z Cabaret 3300–3750 zł",
+      "reason": "Najlepszy gotowy program muzyczny — trzy odmienne formaty bez kolizji godzin.",
+      "superseded": "ZASTĄPIONY: obecny plan to dwie osoby, dłuższy pobyt i nocleg u Marcina. Poniższe loty, hotel i budżet są wyłącznie archiwum.",
+      "events": [
+        {
+          "title": "Massaoke Time Machine",
+          "date": "2026-10-16",
+          "time": "Około 20:15; drzwi 18:30; koniec 22:30",
+          "venue": "Clapham Grand",
+          "price": "Budżet 26 GBP; kasy wskazywały 24,20 / 25,97 GBP",
+          "url": "https://claphamgrand.com/event/massaoke-time-machine/",
+          "notes": "Przeboje, zespół na żywo i teksty na ekranie. Taneczny singalong, nie warsztat harmonii chóralnej."
+        },
+        {
+          "title": "Hadestown",
+          "date": "2026-10-17",
+          "time": "14:30–około 17:00",
+          "venue": "Lyric Theatre",
+          "price": "Plan 72–95 GBP; historyczna mapa 25–175 GBP",
+          "url": "https://ticketing.nimaxtheatres.com/shop/tickets/series/LYHDT01M/hadestown-1955178?promo=HDTWEB",
+          "notes": "Folk, jazz, Orfeusz i Eurydyka. Nagrania nie gwarantują październikowej obsady."
+        },
+        {
+          "title": "Adja",
+          "date": "2026-10-17",
+          "time": "21:00–22:20; drzwi 20:15",
+          "venue": "Upstairs at Ronnie’s",
+          "price": "40 GBP Stage View",
+          "url": "https://www.ronniescotts.co.uk/find-a-show/adja",
+          "notes": "Tańsze Side/Bar miały ograniczenia widoku."
+        },
+        {
+          "title": "Frieze Sculpture",
+          "date": "2026-09-16/2026-11-01",
+          "time": "Proponowany spacer niedziela 10:00–12:00",
+          "venue": "Regent’s Park",
+          "price": "Bezpłatnie",
+          "url": "https://press.frieze.com/frieze-sculpture-returns-to-the-regents-park-with-11-international-artists/",
+          "notes": "Plenerowa wystawa, nie bilet na płatne targi."
+        }
+      ],
+      "flight": {
+        "outbound": "LO281 · piątek · WAW 07:25 → LHR 09:20",
+        "inbound": "LO280 · niedziela · LHR 18:10 → WAW 21:45",
+        "historicalNewTicketRT": "829,92 zł"
+      },
+      "hotel": {
+        "name": "Mowbray Court 3★",
+        "historicalTotal": "264 GBP / 2 noce",
+        "conditions": "Single, łazienka i śniadania w sprawdzonej ofercie; ocena 7,6. Earl’s Court. Historycznie odwołanie przed 15 X, płatność 13 X.",
+        "url": "https://www.booking.com/hotel/gb/the-mowbray-court.pl.html"
+      },
+      "localBudget": "Wydarzenia 138–161 GBP, jedzenie 80–115 GBP, transport 35–45 GBP. Historyczny budżet uwzględniał nową ETA; aktualne wymagania i cenę należy pokazać w bieżącej części strony.",
+      "relaxedPlan": [
+        "Piątek: odpoczynek po wczesnym wylocie, potem Massaoke.",
+        "Sobota: Soho/Covent Garden, Hadestown, kolacja i Adja — oba występy w Soho.",
+        "Niedziela: Frieze Sculpture, odbiór torby i Heathrow."
+      ],
+      "decisionNote": "Cabaret zamiast Massaoke dawało drugi musical i podnosiło dawny budżet o około 320–370 zł. Tych dwóch piątkowych imprez nie należało łączyć.",
+      "sources": [
+        {
+          "label": "TfL — prace i utrudnienia",
+          "url": "https://tfl.gov.uk/status-updates/major-works-and-events"
+        },
+        {
+          "label": "Hotel — usługi",
+          "url": "https://www.mowbraycourt.com/"
+        }
+      ]
+    },
+    {
+      "id": "madrid-jazz",
+      "city": "Madryt",
+      "title": "Lizz Wright + Alfa Mist",
+      "dates": "2026-10-30/2026-11-01",
+      "budget": "2600–3050 zł, z niepotwierdzoną rezerwą na bilety",
+      "reason": "Najbardziej niedoceniony wariant: wokal i współczesny jazz; tańszy nocleg niż Barcelona.",
+      "events": [
+        {
+          "title": "Lizz Wright",
+          "date": "2026-10-30",
+          "time": "20:30",
+          "venue": "Teatro Albéniz",
+          "price": "Nieodczytana cena wybranego miejsca",
+          "url": "https://www.notikumi.com/2026/10/30/lizz-wright"
+        },
+        {
+          "title": "Alfa Mist",
+          "date": "2026-10-31",
+          "time": "20:30; drzwi 19:45",
+          "venue": "Teatro Albéniz",
+          "price": "Nieodczytana cena wybranego miejsca",
+          "url": "https://www.notikumi.com/2026/10/31/alfa-mist-1"
+        }
+      ],
+      "eventBudgetCaveat": "60–100 EUR za oba koncerty było wyłącznie rezerwą planistyczną. Na mapach były miejsca, ale bez wyboru miejsca kasa nie ujawniała ceny. Venue to Teatro Albéniz, nie Sala Villanos.",
+      "flight": {
+        "outbound": "LO433 · piątek · WAW 10:45 → MAD 14:35",
+        "inbound": "LO434 · niedziela · MAD 15:30 → WAW 19:05",
+        "historicalNewTicketRT": "1290,45 zł"
+      },
+      "hotel": {
+        "name": "Hotel Praga 4★",
+        "historicalTotal": "332 EUR / 2 noce",
+        "conditions": "Single 15 m², łazienka, śniadania; ocena 8,4. Madrid Río, poza ścisłym centrum. Historycznie anulacja przed 29 X, płatność w obiekcie.",
+        "url": "https://www.booking.com/hotel/es/pragamadrid.pl.html"
+      },
+      "localBudget": "125–190 EUR poza hotelem i koncertami.",
+      "relaxedPlan": [
+        "Piątek: hotel i odpoczynek; kolacja koło Sol, Lizz.",
+        "Sobota: Prado, Retiro, lunch i odpoczynek; Alfa Mist.",
+        "Niedziela: Madrid Río albo kawa w centrum; MAD około 13:15–13:30."
+      ],
+      "decisionNote": "Mocny trop przy zamiłowaniu do Lady Blackbird, Toma Mischa i Yussefa Dayesa. Chłodniejszych wieczorów nie traktować jako gwarancji ciepłego wypoczynku.",
+      "sources": [
+        {
+          "label": "Organizator — Lizz",
+          "url": "https://apmusicales.com/evento/lizz-wright-madrid-2026-teatro-albeniz/"
+        },
+        {
+          "label": "Organizator — Alfa",
+          "url": "https://apmusicales.com/evento/alfa-mist-madrid-2026-teatro-albeniz/"
+        },
+        {
+          "label": "Prado",
+          "url": "https://www.museodelprado.es/visita/horarios-y-tarifas"
+        },
+        {
+          "label": "AEMET — Madryt",
+          "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?k=mad&l=3195"
+        }
+      ]
+    },
+    {
+      "id": "lisbon-quiet",
+      "city": "Lizbona",
+      "title": "Bez zobowiązania koncertowego",
+      "dates": "2026-10-23/2026-10-25",
+      "budget": "2000–2350 zł; opcjonalne fado około 100 zł więcej",
+      "reason": "Miasto, jedzenie, punkty widokowe i swobodny wieczór.",
+      "events": [
+        {
+          "title": "Fado in Chiado — opcja",
+          "date": "2026-10-24",
+          "time": "Regularnie 19:00, około 50 minut",
+          "venue": "Fado in Chiado",
+          "price": "Reklamowane 23 EUR",
+          "url": "https://fadoinchiado.com/",
+          "notes": "Dostępność konkretnego 24 X nie została potwierdzona."
+        }
+      ],
+      "flight": {
+        "outbound": "LO425 · piątek · WAW 10:10 → LIS 13:30",
+        "inbound": "LO426 · niedziela · LIS 14:55 → WAW 20:00",
+        "historicalNewTicketRT": "1470,49 zł"
+      },
+      "hotel": {
+        "name": "A.S. Lisboa 3★",
+        "historicalTotal": "228 EUR / 2 noce",
+        "conditions": "Łazienka i śniadania; ocena 8,3. Metro Alameda. Historycznie anulacja przed 21 X, płatność 19 X.",
+        "url": "https://www.booking.com/hotel/pt/as-lisboa.pl.html"
+      },
+      "relaxedPlan": [
+        "Alfama, Graça, Baixa i Chiado; Belém zamiast części centrum, nie obok wszystkich innych punktów.",
+        "Bez Sintry i bez gonienia za pełną listą zabytków."
+      ],
+      "decisionNote": "Dawna spokojniejsza alternatywa. Przed kolejną decyzją sprawdzić od nowa lot i hotel."
+    },
+    {
+      "id": "barcelona-groove",
+      "city": "Barcelona",
+      "title": "Cimafunk + Mansur Brown",
+      "dates": "2026-10-09/2026-10-11",
+      "budget": "3500–3850 zł",
+      "reason": "Afrokubański funk, gitara, współczesny jazz i elektronika.",
+      "events": [
+        {
+          "title": "Cimafunk",
+          "date": "2026-10-09",
+          "time": "20:30",
+          "venue": "Paral·lel 62",
+          "price": "Reklamowane 32 EUR; końcowe opłaty niepotwierdzone",
+          "url": "https://tickets.oneboxtds.com/cruilla.concerts/select/2911410"
+        },
+        {
+          "title": "Mansur Brown",
+          "date": "2026-10-10",
+          "time": "Sesje 19:30 lub 22:00, około 75 minut",
+          "venue": "Niespójne oznaczenie: Stones / Secret Location Barcelona",
+          "price": "Od 22 EUR",
+          "url": "https://tickets.oneboxtds.com/80voltes/events/56754",
+          "notes": "Data i sesje były potwierdzone, dokładny adres nie. Zalecana wcześniejsza sesja dla spokojnej kolacji."
+        }
+      ],
+      "flight": {
+        "outbound": "LO437 · piątek · WAW 08:30 → BCN 11:40",
+        "inbound": "LO436 · niedziela · BCN 18:00 → WAW 21:00",
+        "historicalNewTicketRT": "1578,95 zł"
+      },
+      "hotel": {
+        "name": "Casa Lit Barcelona by Ona 3★",
+        "historicalTotal": "459 EUR / 2 noce",
+        "conditions": "Single, łazienka i śniadania; ocena 8,1, śniadania 8,8. Blisko Paral·lel 62. Historycznie odwołanie przed 6 X; pierwsza noc pobierana w ciągu 3 dni przed przyjazdem.",
+        "url": "https://www.booking.com/hotel/es/casa-lit-barcelona-by-ona.pl.html"
+      },
+      "localBudget": "140–205 EUR poza hotelem i koncertami; na koncerty rezerwa 60–75 EUR wobec reklamowanej sumy od 54 EUR.",
+      "relaxedPlan": [
+        "Piątek: stare miasto i Cimafunk.",
+        "Sobota: jeden obiekt Gaudiego albo Gràcia; Mansur o 19:30 i kolacja.",
+        "Niedziela: nabrzeże, kawa i lunch; BCN około 16:00."
+      ],
+      "decisionNote": "Hotel wyraźnie podnosił rachunek. Warto przede wszystkim przy mocnym muzycznym przekonaniu do obu wykonawców.",
+      "climate": "Historycznie przywołana norma października: około 22,1°C dzień / 13,5°C noc. Nie prognoza, możliwy deszcz.",
+      "sources": [
+        {
+          "label": "Cruïlla Concerts",
+          "url": "https://www.cruillaconcerts.cat/tickets/"
+        },
+        {
+          "label": "Jazztrònica",
+          "url": "https://jazztronicafest.com/"
+        },
+        {
+          "label": "AEMET — Barcelona",
+          "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=0076"
+        }
+      ]
+    },
+    {
+      "id": "paris-live",
+      "city": "Paryż",
+      "title": "Ólafur Arnalds + Fat Freddy’s Drop",
+      "dates": "2026-10-09/2026-10-11",
+      "budget": "3350–3700 zł",
+      "reason": "Fortepian i atmosfera w piątek; soul, dub i groove w sobotę.",
+      "events": [
+        {
+          "title": "Ólafur Arnalds",
+          "date": "2026-10-09",
+          "time": "20:00",
+          "venue": "Salle Pleyel",
+          "price": "Kategoria 1: 59,90 EUR; Carré Or: 69,90 EUR",
+          "url": "https://tickets.sallepleyel.com/fr/product/1222/salle_pleyel/olafur_arnalds_",
+          "notes": "Tańsze kategorie i sobotni koncert 10 X były wyprzedane w chwili sprawdzenia."
+        },
+        {
+          "title": "Fat Freddy’s Drop",
+          "date": "2026-10-10",
+          "time": "20:00; drzwi 18:30",
+          "venue": "Zénith Paris",
+          "price": "51–62 EUR",
+          "url": "https://le-zenith.com/shows/Fat%20Freddy%27s%20Drop-21065"
+        }
+      ],
+      "flight": {
+        "outbound": "LO331 · piątek · WAW 07:20 → CDG 09:50",
+        "inbound": "LO336 · niedziela · CDG 19:45 → WAW 22:05",
+        "historicalNewTicketRT": "1657,01 zł"
+      },
+      "hotel": {
+        "name": "ibis Styles Paris Buttes Chaumont 3★",
+        "historicalTotal": "352 EUR / 2 noce",
+        "conditions": "Single, łazienka i śniadania; ocena 8,2. Blisko Laumière; schody przed windą. Historycznie odwołanie do 9 X o 00:00, czyli noc 8/9 X. Alternatywny Double 363 EUR.",
+        "url": "https://www.booking.com/hotel/fr/le-laumia-re.pl.html"
+      },
+      "localBudget": "140–210 EUR poza hotelem i koncertami; koncerty od 110,90 EUR, w budżecie 110,90–120 EUR.",
+      "relaxedPlan": [
+        "Piątek: spokojny dzień i wcześniejsza kolacja przy Pleyel.",
+        "Sobota: Buttes-Chaumont i kanał Saint-Martin, odpoczynek, Zénith.",
+        "Niedziela: Montmartre albo centrum, jeden kierunek."
+      ],
+      "decisionNote": "Koncertowy wariant Paryża, nie chór. Nie łączy się w jeden dwunoclegowy pobyt z wydarzeniem 2 X.",
+      "climate": "Październikowa norma około 16,5°C dzień / 9,9°C noc; nie prognoza.",
+      "sources": [
+        {
+          "label": "Météo-France — Paryż",
+          "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_75114001.pdf"
+        }
+      ]
+    }
+  ],
+  "music": [
+    {
+      "artist": "Omar",
+      "track": "There’s Nothing Like This",
+      "youtube": "https://www.youtube.com/watch?v=7pqoQP7WlV4",
+      "fit": "Ciepły, elegancki soul.",
+      "tasteStatus": "Odkrycie",
+      "event": "Lizbona · 30 X · 21:00 · Badassery",
+      "price": "49,50 EUR",
+      "url": "https://purchase.seetickets.com/event/omar-lisboa/badassery/3696400"
+    },
+    {
+      "artist": "Adja",
+      "track": "Sucking on my Emphatitties — live",
+      "youtube": "https://www.youtube.com/watch?v=vEJd9XBQrAE",
+      "fit": "Jazz/soul/R&B; artystka odnotowana w Replay 2026 Mieszka.",
+      "tasteStatus": "Obecna w odczytanym Replay",
+      "event": "Londyn · 17 X · 21:00 · Upstairs at Ronnie’s",
+      "price": "40 GBP Stage View",
+      "url": "https://www.ronniescotts.co.uk/find-a-show/adja"
+    },
+    {
+      "artist": "Hadestown",
+      "track": "Wait for Me — London live",
+      "youtube": "https://www.youtube.com/watch?v=tdQRn4CewiQ",
+      "fit": "Folk, jazz i silny chóralny moment.",
+      "tasteStatus": "Rekomendacja musicalowa",
+      "event": "Londyn · 17 X · 14:30 · Lyric Theatre",
+      "price": "Plan 72–95 GBP",
+      "url": "https://uk.hadestown.com/"
+    },
+    {
+      "artist": "Lizz Wright",
+      "track": "Lean In",
+      "youtube": "https://www.youtube.com/watch?v=sBBsyT6qYyM",
+      "fit": "Głęboki wokal; trop od Lady Blackbird.",
+      "tasteStatus": "Odkrycie",
+      "event": "Madryt · 30 X · 20:30 · Teatro Albéniz",
+      "price": "Cena nieodczytana",
+      "url": "https://www.notikumi.com/2026/10/30/lizz-wright"
+    },
+    {
+      "artist": "Alfa Mist",
+      "track": "Keep On",
+      "youtube": "https://www.youtube.com/watch?v=XrY2m5rdlQQ",
+      "fit": "Jazz z hiphopowym pulsem; trop Tom Misch/Yussef Dayes.",
+      "tasteStatus": "Odkrycie",
+      "event": "Madryt · 31 X · 20:30 · Teatro Albéniz",
+      "price": "Cena nieodczytana",
+      "url": "https://www.notikumi.com/2026/10/31/alfa-mist-1"
+    },
+    {
+      "artist": "Cimafunk",
+      "track": "Me Voy",
+      "youtube": "https://www.youtube.com/watch?v=o1YBngPfU-o",
+      "fit": "Afrokubański funk, energia i groove.",
+      "tasteStatus": "Odkrycie",
+      "event": "Barcelona · 9 X · 20:30 · Paral·lel 62",
+      "price": "32 EUR; opłaty niepotwierdzone",
+      "url": "https://tickets.oneboxtds.com/cruilla.concerts/select/2911410"
+    },
+    {
+      "artist": "Mansur Brown",
+      "track": "Shiroi",
+      "youtube": "https://www.youtube.com/watch?v=pOB6Wk22zG8",
+      "fit": "Gitara, współczesny jazz i elektronika.",
+      "tasteStatus": "Odkrycie",
+      "event": "Barcelona · 10 X · 19:30 / 22:00",
+      "price": "Od 22 EUR",
+      "url": "https://tickets.oneboxtds.com/80voltes/events/56754",
+      "caveat": "Adres venue nie był potwierdzony."
+    },
+    {
+      "artist": "Ólafur Arnalds",
+      "track": "Near Light",
+      "youtube": "https://www.youtube.com/watch?v=0kYc55bXJFI",
+      "fit": "Fortepian, przestrzeń, nastrój.",
+      "tasteStatus": "Rekomendacja zgodna z zainteresowaniem chórem",
+      "event": "Paryż · 9 X · 20:00 · Salle Pleyel",
+      "price": "Od dostępnej kategorii 59,90 EUR",
+      "url": "https://tickets.sallepleyel.com/fr/product/1222/salle_pleyel/olafur_arnalds_"
+    },
+    {
+      "artist": "Fat Freddy’s Drop",
+      "track": "Wandering Eye",
+      "youtube": "https://www.youtube.com/watch?v=JtyCtksvSOg",
+      "fit": "Soul, dub i długi koncertowy groove.",
+      "tasteStatus": "Odkrycie",
+      "event": "Paryż · 10 X · 20:00 · Zénith",
+      "price": "51–62 EUR",
+      "url": "https://le-zenith.com/shows/Fat%20Freddy%27s%20Drop-21065"
+    },
+    {
+      "artist": "TWO LANES",
+      "track": "Belong — live",
+      "youtube": "https://www.youtube.com/watch?v=A7sw-cieuvU",
+      "fit": "Fortepian i melodyjna elektronika.",
+      "tasteStatus": "Odkrycie",
+      "event": "Lizbona · 10 X · 21:00 · LAV Sala 2",
+      "price": "26,84 EUR z opłatą",
+      "url": "https://www.ticketline.pt/evento/two-lanes-a-part-of-us-105552",
+      "caveat": "Niepełny kosztorys; historyczny LOT około 2609 zł."
+    },
+    {
+      "artist": "FKJ",
+      "track": "Ylang Ylang",
+      "youtube": "https://www.youtube.com/watch?v=kBGBybrkttA",
+      "fit": "Mocny trop stylistyczny dla Mieszka.",
+      "tasteStatus": "Odkrycie",
+      "event": "Esch-sur-Alzette · 17 X · 20:00 · Rockhal",
+      "price": "49,50 EUR; możliwa dostawa osobno",
+      "url": "https://rockhal.lu/shows/fkj/",
+      "caveat": "Rockhal nie jest w centrum Luksemburga; brak pełnego kosztorysu."
+    },
+    {
+      "artist": "Apparat",
+      "track": "Goodbye",
+      "youtube": "https://www.youtube.com/watch?v=TJ4INx5lfe4",
+      "fit": "Trop od Moderat.",
+      "tasteStatus": "Odkrycie",
+      "event": "Lyon/Villeurbanne · 10 X · 20:00 · Transbordeur",
+      "price": "42 EUR",
+      "url": "https://www.transbordeur.fr/evenement/apparat-10102026/",
+      "caveat": "To Apparat, nie koncert Moderat."
+    },
+    {
+      "artist": "Os Garotin",
+      "track": "Zero a Cem — live",
+      "youtube": "https://www.youtube.com/watch?v=z8V1ffEBt8k",
+      "fit": "Brazylijski soul/MPB.",
+      "tasteStatus": "Odkrycie",
+      "event": "Lizbona · 25 IX · 22:00 · Lisboa ao Vivo",
+      "price": "30–50 EUR + opłaty",
+      "url": "https://www.bossafm.com/os-garotin-european-tour-september-2026-tickets/lisboa/lisboa-ao-vivo/2026/09/25",
+      "caveat": "Niepełny kosztorys; historyczny weekendowy LOT około 2747 zł."
+    },
+    {
+      "artist": "Kelela",
+      "track": "Contact",
+      "youtube": "https://www.youtube.com/watch?v=_GT9SmA1vlI",
+      "fit": "Elektroniczne R&B.",
+      "tasteStatus": "Odkrycie",
+      "event": "Barcelona · 23 X · 20:00 · La Paloma",
+      "price": "36 EUR regularny",
+      "url": "https://feverup.com/m/648895",
+      "caveat": "Kolidowała z JMSN. Promocyjna oferta Revolut była niedostępna, zwykłe bilety nie."
+    },
+    {
+      "artist": "JMSN",
+      "track": "Talk Is Cheap",
+      "youtube": "https://www.youtube.com/watch?v=0jRDKoF3Mp0",
+      "fit": "Neo-soul.",
+      "tasteStatus": "Odkrycie",
+      "event": "Barcelona · 23 X · La (2) Apolo",
+      "price": "26 EUR",
+      "url": "https://feverup.com/m/648902/en",
+      "caveat": "Kasa wskazywała 20:00, opis venue inną godzinę; konflikt z Kelelą."
+    },
+    {
+      "artist": "Digitalism",
+      "track": "Pogo",
+      "youtube": "https://www.youtube.com/watch?v=cZvt23iBVVo",
+      "fit": "Bardziej imprezowa elektronika.",
+      "tasteStatus": "Odkrycie",
+      "event": "Barcelona · 31 X · La (2) Apolo",
+      "price": "33,50 EUR",
+      "url": "https://www.sala-apolo.com/es/evento/digitalism-20261031-7225",
+      "caveat": "Niespójność godziny między kasą a venue; końcowa opłata niepotwierdzona."
+    },
+    {
+      "artist": "Jason Moran",
+      "track": "Body and Soul",
+      "youtube": "https://www.youtube.com/watch?v=atLTdAnXWME",
+      "fit": "Fortepian solo, bardziej wymagający jazz.",
+      "tasteStatus": "Odkrycie",
+      "event": "Seixal · 16 X · 22:00 · SeixalJazz",
+      "price": "12 EUR według programu",
+      "url": "https://www.cm-seixal.pt/evento/jason-moran",
+      "caveat": "Poza centrum Lizbony; nocny powrót niezweryfikowany."
+    },
+    {
+      "artist": "Camilla George",
+      "track": null,
+      "youtube": null,
+      "fit": "Dodatkowy tani trop jazzowy.",
+      "tasteStatus": "Odkrycie",
+      "event": "Seixal · 9 X · 22:00 · SeixalJazz",
+      "price": "12 EUR według miasta",
+      "url": "https://www.cm-seixal.pt/evento/camilla-george",
+      "caveat": "Brak zweryfikowanego utworu z oficjalnego kanału. Możliwe połączenie z TWO LANES 10 X, dopiero po rozwiązaniu nocnego transportu."
+    },
+    {
+      "artist": "Blue Lab Beats",
+      "track": null,
+      "youtube": null,
+      "fit": "Londyńska rezerwa muzyczna.",
+      "tasteStatus": "Odkrycie",
+      "event": "Londyn · 16 X · Ronnie Scott’s",
+      "price": "25–35 GBP",
+      "url": "https://www.ronniescotts.co.uk/find-a-show/blue-lab-beats",
+      "caveat": "Zamiast innego piątkowego wydarzenia; nie sprawdzono wszystkich sesji."
+    },
+    {
+      "artist": "Acantha Lang",
+      "track": null,
+      "youtube": null,
+      "fit": "Londyńska rezerwa na inny weekend.",
+      "tasteStatus": "Odkrycie",
+      "event": "Londyn · 3 X · Ronnie Scott’s",
+      "price": "35–45 GBP",
+      "url": "https://www.ronniescotts.co.uk/find-a-show/acantha-lang",
+      "caveat": "Poza wybranym terminem 15–19 X; nie sprawdzono wszystkich sesji."
+    },
+    {
+      "artist": "Massaoke",
+      "track": "Hey Jude — singalong",
+      "youtube": "https://www.youtube.com/watch?v=CTc4v63GHBc",
+      "fit": "Wspólne śpiewanie przebojów przy zespole na żywo.",
+      "tasteStatus": "Format zgodny z deklaracją Mieszka",
+      "event": "Londyn · 16 X · Clapham Grand",
+      "price": "Budżet 26 GBP",
+      "url": "https://claphamgrand.com/event/massaoke-time-machine/",
+      "caveat": "Nie warsztat chóralny; publiczność śpiewa z ekranem."
+    },
+    {
+      "artist": "Cabaret",
+      "track": "Trailer",
+      "youtube": "https://www.youtube.com/watch?v=p_fvjuChtcg",
+      "fit": "Ciemny, immersyjny, teatralny klimat.",
+      "tasteStatus": "Rekomendacja musicalowa",
+      "event": "Londyn · 16 X · 19:30 · Kit Kat Club; pre-show od 18:30",
+      "price": "Plan 90–100 GBP Dress Circle",
+      "url": "https://kitkat.club/",
+      "caveat": "Około 2 h 45; kolidował z Massaoke. Trailer nie gwarantuje obsady. Stoliki z kolacją mogły być sprzedawane parami."
+    }
+  ],
+  "londonExtras": [
+    {
+      "title": "Hamilton",
+      "url": "https://www.delfontmackintosh.co.uk/whats-on/hamilton",
+      "description": "Hiphop/R&B, duża energia, bardzo gęsty angielski.",
+      "historicalSchedule": "Piątek 19:30 lub sobota 14:30/19:30 według regularnego rozkładu.",
+      "status": "Ceny i miejsca na konkretne daty nie były sprawdzone."
+    },
+    {
+      "title": "Les Misérables",
+      "url": "https://www.delfontmackintosh.co.uk/whats-on/les-miserables",
+      "description": "Wielkie melodie i zbiorowe emocje; najbardziej klasyczny wybór.",
+      "historicalSchedule": "Piątek 19:30 lub sobota 14:30/19:30; około 2 h 50.",
+      "status": "Ceny i miejsca na konkretne daty nie były sprawdzone."
+    },
+    {
+      "title": "Sing Out, Louise!",
+      "url": "https://phoenixartsclub.com/sing-out-louise",
+      "description": "Musicalowe piosenki przy pianinie w Phoenix Arts Club; można śpiewać lub słuchać.",
+      "historicalSchedule": "W odczytanym kalendarzu: 16 i 17 X, 21:15.",
+      "status": "Cena niepotwierdzona. Alternatywa dla innego wieczornego wydarzenia, nie dodatek po Cabaret."
+    }
+  ],
+  "practicalSources": [
+    {
+      "label": "LOT — publiczna wyszukiwarka",
+      "url": "https://www.lot.com/pl/pl"
+    },
+    {
+      "label": "LOT — zmiana lub anulacja",
+      "url": "https://www.lot.com/pl/pl/centrum-pomocy/zmiana-lub-anulacja-rezerwacji"
+    },
+    {
+      "label": "LOT — bagaż podręczny",
+      "url": "https://www.lot.com/pl/pl/centrum-pomocy/centrum-pomocy-bagaz/limit-bagazu-podrecznego"
+    },
+    {
+      "label": "Hadestown — FAQ",
+      "url": "https://uk.hadestown.com/faq/"
+    },
+    {
+      "label": "Cabaret — FAQ",
+      "url": "https://kitkat.club/faqs/"
+    },
+    {
+      "label": "Cabaret — historyczna kasa 16 X",
+      "url": "https://www.atgtickets.com/shows/cabaret/kit-kat-club-at-the-playhouse/tickets/01723905-5D07-42CA-A40F-3707D517A629"
+    },
+    {
+      "label": "UK — ETA",
+      "url": "https://www.gov.uk/eta"
+    },
+    {
+      "label": "UK — wniosek ETA",
+      "url": "https://www.gov.uk/eta/apply"
+    },
+    {
+      "label": "UK — dokumenty wjazdowe",
+      "url": "https://www.gov.uk/uk-border-control/before-you-leave-for-the-uk"
+    }
+  ],
+  "footnotes": [
+    "Zwykły Hadestown lub Cabaret oglądamy i słuchamy — nie zagłuszamy aktorów śpiewaniem. Singalong to osobny format.",
+    "W pierwotnym researchu odrzucono m.in. wyprzedane Jalen Ngonda w Kopenhadze 16 X i sobotni koncert Ólafura w Paryżu.",
+    "Regularne, wielotygodniowe kursy chóralne nie były przedstawiane jako jednorazowe warsztaty.",
+    "Problem Eventbrite rozwiązano bezpośrednim publicznym adresem wydarzenia, omijając zepsuty link śledzący; nie zmieniano zabezpieczeń przeglądarki.",
+    "Archiwalne informacje o ETA, bagażu i rozkładach transportu nie powinny zastępować osobnej aktualnej sekcji praktycznej.",
+    "Publiczne filmy służą odsłuchowi stylistyki; nie potwierdzają setlisty ani przyszłej obsady.",
+    "Utwory na start nie są rankingiem największych hitów ani liczby odtworzeń."
+  ]
+}
