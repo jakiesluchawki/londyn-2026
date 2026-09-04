@@ -4,7 +4,13 @@ import {readFileSync} from "node:fs";
 import {defaultState,sanitizeState,budget,conflicts,activeItems,encodeState,decodeState} from "../planner.mjs";
 
 const load = name => JSON.parse(readFileSync(new URL("../data/"+name+".json",import.meta.url),"utf8"));
-const data = {flights:load("flights"),events:load("events"),places:load("places")};
+// Preserve the original unbooked research as the legacy fixture. Published
+// booking facts are tested separately; existing quote-mode tests stay useful.
+const publishedData = {flights:load("flights"),events:load("events"),places:load("places")};
+const data = {...publishedData,flights:{...publishedData.flights,booking:undefined,
+  reissue:{feeEUR:70},luggage:{...publishedData.flights.luggage,fallback:233},
+  route:{...publishedData.flights.route,fareGBP:15.5},
+  variants:publishedData.flights.variants.filter(x=>x.id!=="15morning-19").map(x=>({...x,recommended:x.id==="15-19"}))}};
 const state = patch => ({...defaultState(data),...patch});
 const clone = x => JSON.parse(JSON.stringify(x));
 
@@ -338,4 +344,124 @@ test("explicit per-person theatre fee charges all five attendees, independent of
   assert.equal(b.activities[0].feeGBP,12.5);
   item.feePerPersonGBP=-1;
   assert.equal(budget(s,d).activities[0].feeGBP,0);
+});
+
+
+function confirmedFixture() {
+  const d=sessionFixture();
+  d.flights.variants.push({id:"15morning-19",departure:"2026-10-15",return:"2026-10-19",
+    out:"07:25",arrival:"09:20",back:"18:10",home:"21:45",outFlight:"LO281",returnFlight:"LO280",nights:4});
+  d.flights.booking={confirmed:true,variantId:"15morning-19",exchangePaidPLN:600,kostekPaidPLN:600.03,checkedIncluded:true,verifiedAt:"2026-09-04"};
+  return d;
+}
+
+test("confirmed booking migrates legacy inputs without losing attraction choices or sessions",()=>{
+  const d=confirmedFixture();
+  const raw={version:1,variant:"15late-19",selected:["hadestown","adja","tate","rough-trade"],
+    attendees:{hadestown:5,adja:4,tate:3},prices:{hadestown:72.5},
+    dates:{tate:"2026-10-16","rough-trade":"2026-10-14"},sessions:{hadestown:"h-sun"},
+    etaCount:0,foodGBP:42,gbpPLN:5.2,eurPLN:4.5,reissueExtraPLN:999,bag:"extra"};
+  const before=JSON.stringify(raw),s=sanitizeState(raw,d);
+  assert.equal(s.version,1);
+  assert.equal(s.variant,"15morning-19");
+  assert.equal(s.bag,"included");
+  assert.equal(s.reissueExtraPLN,0);
+  assert.deepEqual(s.selected,raw.selected);
+  assert.deepEqual(s.prices,raw.prices);
+  assert.deepEqual(s.dates,raw.dates);
+  assert.equal(s.sessions.hadestown,"h-sun");
+  assert.equal(s.attendees.hadestown,5);
+  assert.equal(s.attendees.adja,4);
+  assert.equal(s.attendees.tate,3);
+  assert.equal(s.etaCount,0);
+  assert.equal(s.foodGBP,42);
+  assert.equal(s.gbpPLN,5.2);
+  assert.equal(JSON.stringify(raw),before);
+  assert.deepEqual(budget(s,d).excludedItems,["rough-trade"]);
+  assert.deepEqual(decodeState(encodeState(raw),d),s);
+  assert.deepEqual(sanitizeState({...raw,selected:[]},d).selected,[]);
+});
+
+test("confirmed defaults and malformed legacy links use the booked morning itinerary",()=>{
+  const d=confirmedFixture(),s=defaultState(d);
+  assert.equal(s.variant,"15morning-19");
+  assert.equal(s.bag,"included");
+  assert.equal(s.reissueExtraPLN,0);
+  assert.deepEqual(decodeState("broken!",d),s);
+  assert.equal(budget(s,d).variant.outFlight,"LO281");
+  assert.equal(budget(s,d).variant.arrival,"09:20");
+});
+
+test("paid flights ignore legacy fare inputs, public prices, currency rates and baggage fallback",()=>{
+  const d=confirmedFixture();
+  d.flights.reissue={feeEUR:999,alreadyPaid:987654};
+  d.flights.luggage.fallback=999;
+  d.flights.variants.find(x=>x.id==="15morning-19").newTicket=9999;
+  const b=budget({version:1,variant:"14-19",selected:[],eurPLN:100,gbpPLN:7,
+    reissueExtraPLN:999,bag:"extra",booking:{exchangePaidPLN:9999}},d);
+  assert.equal(b.bookingConfirmed,true);
+  assert.equal(b.flightPLN,1200.03);
+  assert.equal(b.paidFlightPLN,1200.03);
+  assert.equal(b.baggagePLN,0);
+  assert.equal(b.lines.find(x=>x.id==="flights").estimated,false);
+  assert.equal(b.lines.find(x=>x.id==="baggage").estimated,false);
+  assert.ok(!b.warnings.some(x=>x.code.startsWith("baggage")));
+  assert.equal(b.alreadyPaidPLN,null);
+  assert.equal(b.priorTicketExcluded,true);
+  assert.ok(!JSON.stringify(b).includes("987654"));
+});
+
+test("remaining budget excludes exactly the already paid flight cost",()=>{
+  const d=confirmedFixture(),b=budget(defaultState(d),d);
+  assert.equal(b.knownTotalPLN,5267.03);
+  assert.equal(b.totalPLN,5267.03);
+  assert.equal(b.remainingKnownPLN,4067);
+  assert.equal(b.remainingPLN,4067);
+  assert.equal(b.paidFlightPLN+b.remainingKnownPLN,b.knownTotalPLN);
+  const legacy=budget(defaultState(data),data);
+  assert.equal(legacy.bookingConfirmed,false);
+  assert.equal(legacy.paidFlightPLN,0);
+  assert.equal(legacy.remainingPLN,legacy.totalPLN);
+});
+
+test("unknown attraction prices keep the remaining total partial after flights are paid",()=>{
+  const d=confirmedFixture();
+  const s={...defaultState(d),selected:["perola-cuba"]};
+  const b=budget(s,d);
+  assert.equal(b.paidFlightPLN,1200.03);
+  assert.equal(b.totalPLN,null);
+  assert.equal(b.remainingPLN,null);
+  assert.equal(b.remainingKnownPLN,2575);
+  assert.equal(b.knownTotalPLN,3775.03);
+  assert.deepEqual(b.unknownItems,["perola-cuba"]);
+  const priced=budget({...s,prices:{"perola-cuba":20}},d);
+  assert.equal(priced.remainingPLN,2775);
+  assert.equal(priced.totalPLN,3975.03);
+});
+
+test("confirmed payment data does not depend on a public fare and missing paid costs fail closed",()=>{
+  const d=confirmedFixture();
+  assert.equal(d.flights.variants.find(x=>x.id==="15morning-19").newTicket,undefined);
+  assert.equal(budget(defaultState(d),d).flightPLN,1200.03);
+  delete d.flights.booking.kostekPaidPLN;
+  const b=budget(defaultState(d),d);
+  assert.equal(b.bookingConfirmed,true);
+  assert.equal(b.flightPLN,null);
+  assert.equal(b.paidFlightPLN,null);
+  assert.equal(b.totalPLN,null);
+  assert.equal(b.remainingPLN,null);
+  assert.ok(b.warnings.some(x=>x.code==="flight-price-unknown"));
+});
+
+test("confirmed morning arrival replaces stale late-flight logistics without fabricating early access",()=>{
+  const d=confirmedFixture();
+  const lateState={...state(),variant:"15late-19",selected:["perola-cuba","sing-out-louise"]};
+  assert.ok(!conflicts(lateState,d).some(x=>x.code.startsWith("arrival")));
+  d.events.push(
+    {id:"before-landing",title:"Before landing",category:"concert",date:"2026-10-15",start:"08:30",end:"09:30",priceGBP:0},
+    {id:"too-soon",title:"Too soon",category:"concert",date:"2026-10-15",start:"10:30",end:"11:30",priceGBP:0}
+  );
+  const issues=conflicts({...lateState,selected:["before-landing","too-soon"]},d);
+  assert.ok(issues.some(x=>x.code==="arrival-conflict"&&x.itemIds.includes("before-landing")));
+  assert.ok(issues.some(x=>x.code==="arrival-buffer"&&x.itemIds.includes("too-soon")));
 });

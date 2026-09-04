@@ -1,7 +1,7 @@
 /**
  * Pure London trip planning helpers. No DOM, storage, network, or dependencies.
  *
- * Data: {flights:{variants,luggage,reissue,route}, events:Item[],
+ * Data: {flights:{variants,luggage,reissue,route,booking?}, events:Item[],
  *        places:Item[]|{places:Item[],practical:Item[]}}.
  * Item dates may be date:"YYYY-MM-DD", ISO start/end datetimes, inclusive
  * start/end date ranges, or absent (an unscheduled option, not an appointment).
@@ -35,6 +35,8 @@ function itemList(data = {}) {
   });
 }
 function variants(data) { return Array.isArray(data?.flights?.variants) ? data.flights.variants : []; }
+// Confirmed booking facts are trusted published data, never local/hash overrides.
+function confirmedBooking(data) { return data?.flights?.booking?.confirmed === true ? data.flights.booking : null; }
 function number(value, fallback, min, max) {
   if (typeof value !== "number" && typeof value !== "string") return fallback;
   if (typeof value === "string" && !value.trim()) return fallback;
@@ -140,15 +142,16 @@ export function defaultState(data = {}) {
   const items = itemList(data);
   const ids = new Set(items.map(x => x.id));
   const options = variants(data);
+  const booking = confirmedBooking(data);
   return {
     version: 1,
-    variant: (options.find(x => x.recommended) || options[0])?.id || "15-19",
+    variant: booking?.variantId || (options.find(x => x.recommended) || options[0])?.id || "15-19",
     selected: DEFAULT_IDS.filter(id => ids.has(id)),
     attendees: Object.fromEntries(items.map(x => [x.id, 2])),
     eurPLN: 4.33,
     gbpPLN: 5,
     reissueExtraPLN: 0,
-    bag: "pending",
+    bag: booking ? "included" : "pending",
     etaCount: 2,
     foodGBP: 35,
     prices: {},
@@ -157,9 +160,13 @@ export function defaultState(data = {}) {
   };
 }
 
-/** Whitelists identifiers, types and bounded numbers. Empty selections survive. */
+/** Whitelists identifiers, types and bounded numbers. Empty selections survive.
+ * A confirmed booking overrides obsolete flight/bag inputs while preserving
+ * attractions, sessions, attendance, price overrides and other trip settings.
+ * Version 1 localStorage and hash payloads remain backwards-compatible. */
 export function sanitizeState(raw, data = {}) {
   const base = defaultState(data);
+  const booking = confirmedBooking(data);
   const input = object(raw);
   const valid = new Set(itemList(data).map(x => x.id));
   const rawAttendees = object(input.attendees);
@@ -167,7 +174,7 @@ export function sanitizeState(raw, data = {}) {
   const rawDates = object(input.dates);
   const rawSessions = object(input.sessions);
   const state = {...base, attendees: {...base.attendees}, prices: {}, dates: {}, sessions: {...base.sessions}};
-  if (variants(data).some(x => x.id === input.variant)) state.variant = input.variant;
+  if (!booking && variants(data).some(x => x.id === input.variant)) state.variant = input.variant;
   if (Array.isArray(input.selected)) state.selected = [...new Set(input.selected.filter(x => typeof x === "string" && valid.has(x)))];
   for (const id of valid) {
     const count = number(rawAttendees[id], 2, 1, 5);
@@ -188,10 +195,10 @@ export function sanitizeState(raw, data = {}) {
   state.eurPLN = number(input.eurPLN, base.eurPLN, 0.01, 100);
   state.gbpPLN = number(input.gbpPLN, base.gbpPLN, 0.01, 100);
   state.foodGBP = number(input.foodGBP, base.foodGBP, 0, 1000);
-  state.reissueExtraPLN = number(input.reissueExtraPLN, 0, 0, 1000000);
+  state.reissueExtraPLN = booking ? 0 : number(input.reissueExtraPLN, 0, 0, 1000000);
   const eta = number(input.etaCount, 2, 0, 2);
   state.etaCount = Number.isInteger(eta) ? eta : 2;
-  if (["pending", "included", "extra"].includes(input.bag)) state.bag = input.bag;
+  if (!booking && ["pending", "included", "extra"].includes(input.bag)) state.bag = input.bag;
   return state;
 }
 
@@ -268,7 +275,8 @@ export function conflicts(rawState, data = {}) {
  * Budget return:
  * {variant,nights,days,travellers:2,lines:Line[],activities:Activity[],
  * flightPLN,baggagePLN,etaGBP,urbanGBP,airportGBP,foodGBP,activitiesGBP,
- * knownTotalPLN,totalPLN,alreadyPaidPLN:null,priorTicketExcluded:true,hasUnknownPrices,
+ * knownTotalPLN,totalPLN,bookingConfirmed,paidFlightPLN,remainingKnownPLN,remainingPLN,
+ * alreadyPaidPLN:null,priorTicketExcluded:true,hasUnknownPrices,
  * unknownItems:string[],estimatedItems:string[],excludedItems:string[],warnings:Warning[]}.
  *
  * Line={id,label,amountPLN,amountGBP?,estimated,details}.
@@ -278,6 +286,8 @@ export function conflicts(rawState, data = {}) {
  * knownTotalPLN is a PARTIAL subtotal and must not be displayed as a complete quote.
  * The original ticket cost is intentionally not published; alreadyPaidPLN is
  * null and priorTicketExcluded is true. It never enters new expenditure.
+ * Confirmed flights are counted once as paid cost, independently of exchange
+ * rates and obsolete reissue/baggage state. Remaining amounts exclude them.
  */
 export function budget(rawState, data = {}) {
   const state = sanitizeState(rawState, data);
@@ -288,11 +298,18 @@ export function budget(rawState, data = {}) {
   const nights = trip ? Math.max(0, Math.round((Date.parse(trip.return) - Date.parse(trip.departure)) / 86400000)) : 0;
   const days = nights + 1;
   const travellers = 2;
+  const booking = confirmedBooking(data);
+  const bookingConfirmed = Boolean(booking);
   const ticket = number(trip?.newTicket, null, 0, 1000000);
   const feeEUR = number(data.flights?.reissue?.feeEUR, 70, 0, 1000000);
-  const flightPLN = ticket === null ? null : round(ticket + feeEUR * state.eurPLN + state.reissueExtraPLN);
-  const baggagePLN = state.bag === "extra" ? number(data.flights?.luggage?.fallback, 233, 0, 1000000) : 0;
-  const baggageEstimate = state.bag === "extra" && trip?.id !== "15-19";
+  const exchangePaidPLN = number(booking?.exchangePaidPLN, null, 0, 1000000);
+  const kostekPaidPLN = number(booking?.kostekPaidPLN, null, 0, 1000000);
+  const flightPLN = bookingConfirmed
+    ? (exchangePaidPLN === null || kostekPaidPLN === null ? null : round(exchangePaidPLN + kostekPaidPLN))
+    : (ticket === null ? null : round(ticket + feeEUR * state.eurPLN + state.reissueExtraPLN));
+  const paidFlightPLN = bookingConfirmed ? flightPLN : 0;
+  const baggagePLN = !bookingConfirmed && state.bag === "extra" ? number(data.flights?.luggage?.fallback, 233, 0, 1000000) : 0;
+  const baggageEstimate = !bookingConfirmed && state.bag === "extra" && trip?.id !== "15-19";
   const etaGBP = state.etaCount * number(data.places?.practical?.find(x=>x.id==="eta")?.priceGBP,20,0,10000);
   const urbanGBP = round(Math.max(0, nights - 1) * 10.5 * travellers);
   const airportGBP = round(number(data.flights?.route?.fareGBP,15.5,0,1000) * 2 * travellers);
@@ -321,12 +338,16 @@ export function budget(rawState, data = {}) {
   if (estimatedItems.length) warnings.push(warning("estimated-prices",estimatedItems,"Część cen to budżety planistyczne, widełki lub własne wpisy, a nie aktualna oferta wybranych miejsc."));
   if (state.bag==="pending") warnings.push(warning("baggage-pending",[],"Bagaż do potwierdzenia przy wymianie biletu. Na razie nie dodano dopłaty; awaryjny wariant Standard kosztował 233 zł."));
   if (baggageEstimate) warnings.push(warning("baggage-estimate",[],"Dopłata 233 zł została sprawdzona tylko dla 15–19 X. Dla wybranego terminu jest estymacją."));
-  if (ticket===null) warnings.push(warning("flight-price-unknown",[],"Brak ceny nowego biletu dla wybranego wariantu; suma niepełna."));
+  if (flightPLN===null) warnings.push(warning("flight-price-unknown",[],bookingConfirmed
+    ? "Brakuje pełnej kwoty opłaconych lotów w danych; suma niepełna."
+    : "Brak ceny nowego biletu dla wybranego wariantu; suma niepełna."));
   const lines = [
-    {id:"flights",label:"Loty: nowy bilet Kostka + zmiana biletu Mieszka",amountPLN:flightPLN,estimated:true,
-      details:"Dokładnie 2 podróżnych. "+feeEUR+" EUR opłaty + rzeczywista dopłata z infolinii "+state.reissueExtraPLN+" zł; publiczna cena nie służy do wyliczania różnicy taryf."},
+    {id:"flights",label:bookingConfirmed?"Loty — opłacone (2 osoby)":"Loty: nowy bilet Kostka + zmiana biletu Mieszka",amountPLN:flightPLN,estimated:!bookingConfirmed,
+      details:bookingConfirmed
+        ? "Opłacone: całkowita dopłata Mieszka "+exchangePaidPLN+" PLN + bilet Kostka "+kostekPaidPLN+" PLN. Bez ponownego doliczania opłaty za zmianę ani wartości starego biletu."
+        : "Dokładnie 2 podróżnych. "+feeEUR+" EUR opłaty + rzeczywista dopłata z infolinii "+state.reissueExtraPLN+" zł; publiczna cena nie służy do wyliczania różnicy taryf."},
     {id:"baggage",label:"Jedna wspólna walizka, obie strony",amountPLN:baggagePLN,estimated:baggageEstimate,
-      details:state.bag==="extra"?"Dopłata do pakietu Standard raz RT, nie dwa bagaże ani opłata za każdy odcinek.":state.bag==="included"?"Założenie: infolinia potwierdziła walizkę na obu odcinkach.":"Status niepotwierdzony, dopłata na razie poza sumą."},
+      details:bookingConfirmed?"Jedna wspólna walizka rejestrowana na obu odcinkach jest w cenie opłaconych biletów.":state.bag==="extra"?"Dopłata do pakietu Standard raz RT, nie dwa bagaże ani opłata za każdy odcinek.":state.bag==="included"?"Założenie: infolinia potwierdziła walizkę na obu odcinkach.":"Status niepotwierdzony, dopłata na razie poza sumą."},
     {id:"accommodation",label:"Nocleg u gospodarza",amountPLN:0,estimated:false,details:"Bez kosztu hotelu."},
     {id:"eta",label:"ETA dla osób, które jej potrzebują",amountGBP:etaGBP,amountPLN:round(etaGBP*state.gbpPLN),estimated:false,details:state.etaCount+" × £20; gospodarz nie jest doliczany."},
     {id:"airport",label:"Lotnisko ↔ baza, dwoje podróżnych",amountGBP:airportGBP,amountPLN:round(airportGBP*state.gbpPLN),estimated:true,details:"2 osoby × 2 przejazdy × £15,50; migawka planera, nie gwarancja taryfy."},
@@ -336,8 +357,10 @@ export function budget(rawState, data = {}) {
       details:"Uczestnicy liczeni osobno dla każdej atrakcji; nie dodają lotów ani jedzenia gospodarza."}
   ];
   const knownTotalPLN = round(lines.reduce((sum,x)=>sum+(x.amountPLN??0),0));
-  const hasUnknownPrices = unknownItems.length>0 || ticket===null;
+  const hasUnknownPrices = unknownItems.length>0 || flightPLN===null;
+  const remainingKnownPLN = round(knownTotalPLN - (paidFlightPLN ?? 0));
   return {variant:trip,nights,days,travellers,lines,activities,flightPLN,baggagePLN,etaGBP,urbanGBP,airportGBP,foodGBP,activitiesGBP,
+    bookingConfirmed,paidFlightPLN,remainingKnownPLN,remainingPLN:hasUnknownPrices?null:remainingKnownPLN,
     knownTotalPLN,totalPLN:hasUnknownPrices?null:knownTotalPLN,
     alreadyPaidPLN:null,priorTicketExcluded:true,
     hasUnknownPrices,unknownItems,estimatedItems,excludedItems,warnings};

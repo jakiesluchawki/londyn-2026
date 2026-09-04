@@ -1,9 +1,28 @@
 {
-  "verifiedAt": "2026-09-03",
+  "verifiedAt": "2026-09-04",
   "currency": "PLN",
   "travellers": 2,
-  "note": "Ceny nowych biletów RT dla dorosłych. Nie są wyceną wymiany istniejącego biletu. Nic nie zostało kupione.",
+  "note": "Oba bilety wystawione 4 IX 2026. Daty, godziny i bagaż odczytane z potwierdzeń LOT. Kwota wymiany 600 zł potwierdzona przez podróżnego, nowy bilet 600,03 zł według e-biletu. Dokumenty i identyfikatory pozostają prywatne.",
   "variants": [
+    {
+      "id": "15morning-19",
+      "label": "Czwartek rano–poniedziałek",
+      "departure": "2026-10-15",
+      "return": "2026-10-19",
+      "out": "07:25",
+      "arrival": "09:20",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO281",
+      "returnFlight": "LO280",
+      "nights": 4,
+      "newTicket": 600.03,
+      "confirmed": true,
+      "recommended": true,
+      "arrivalTerminal": "2",
+      "returnTerminal": "2",
+      "verified": "Oba e-bilety LOT z 4 IX 2026: status OK na obu odcinkach."
+    },
     {
       "id": "15-19",
       "label": "Czwartek–poniedziałek",
@@ -20,7 +39,8 @@
       "twoNewTickets": 1457.8,
       "standardTicket": 960.9,
       "verified": "LOT, publiczna ścieżka wyboru obu lotów, 1 i 2 dorosłych",
-      "recommended": true
+      "archived": true,
+      "verifiedAt": "2026-09-03"
     },
     {
       "id": "14-19",
@@ -35,7 +55,9 @@
       "returnFlight": "LO280",
       "nights": 5,
       "newTicket": 745,
-      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły",
+      "archived": true,
+      "verifiedAt": "2026-09-03"
     },
     {
       "id": "16-19",
@@ -50,7 +72,9 @@
       "returnFlight": "LO280",
       "nights": 3,
       "newTicket": 742,
-      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły",
+      "archived": true,
+      "verifiedAt": "2026-09-03"
     },
     {
       "id": "15-18",
@@ -65,7 +89,9 @@
       "returnFlight": "LO280",
       "nights": 3,
       "newTicket": 846,
-      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły",
+      "archived": true,
+      "verifiedAt": "2026-09-03"
     },
     {
       "id": "16-18",
@@ -80,7 +106,9 @@
       "returnFlight": "LO280",
       "nights": 2,
       "newTicket": 874,
-      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły"
+      "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły",
+      "archived": true,
+      "verifiedAt": "2026-09-03"
     },
     {
       "id": "15late-19",
@@ -96,34 +124,34 @@
       "nights": 4,
       "newTicket": 601,
       "verified": "Google Flights, oferta sprzedawcy LOT, 1 dorosły",
-      "warning": "Dotarcie do gospodarza bardzo późno. Oszczędność około 127 zł na nowym bilecie kosztem pierwszego wieczoru."
+      "warning": "Dotarcie do gospodarza bardzo późno. Oszczędność około 127 zł na nowym bilecie kosztem pierwszego wieczoru.",
+      "archived": true,
+      "verifiedAt": "2026-09-03"
     }
   ],
   "sources": [
     {
-      "label": "LOT: wyszukaj i sprawdź obecną cenę",
+      "label": "LOT: bagaż kabinowy i 23 kg w Economy Standard",
+      "url": "https://www.lot.com/pl/pl/podrozuj/bagaz/bagaz-na-lotach-krotkodystansowych"
+    },
+    {
+      "label": "LOT: zarządzanie rezerwacją i odprawa",
       "url": "https://www.lot.com/pl/pl"
-    },
-    {
-      "label": "Warunki zmiany biletu",
-      "url": "https://www.lot.com/pl/pl/centrum-pomocy/zmiana-lub-anulacja-rezerwacji"
-    },
-    {
-      "label": "Limit bagażu podręcznego",
-      "url": "https://www.lot.com/pl/pl/centrum-pomocy/centrum-pomocy-bagaz/limit-bagazu-podrecznego"
     }
   ],
   "luggage": {
-    "cabin": "1 × 8 kg, 55 × 40 × 23 cm",
-    "personal": "1 przedmiot osobisty do 2 kg, np. torba na laptopa",
-    "checked": "Najwyżej jedna wspólna walizka 23 kg w obie strony",
-    "status": "Do potwierdzenia na infolinii: bagaż po zmianie trasy nie jest automatycznie gwarantowany.",
-    "fallback": 233,
-    "fallbackNote": "Potwierdzona 3 IX dopłata do taryfy Standard Kostka na 15–19 X: 960,90 zamiast 727,90 zł. To cena pakietu, nie samego dodatku bagażowego."
+    "cabin": "Na osobę: 1 × 8 kg, 55 × 40 × 23 cm",
+    "personal": "1 przedmiot osobisty, np. torba z laptopem, do 2 kg i 40 × 35 × 12 cm",
+    "checked": "1 wspólna walizka do 23 kg w obie strony, przypisana do biletu Mieszka",
+    "status": "Potwierdzone: Mieszko 1PC w obie strony; Kostek 0PC. Nie kupujemy drugiej walizki.",
+    "costPLN": 0,
+    "checkedMaxDimensionsCm": 158,
+    "verifiedAt": "2026-09-04"
   },
   "reissue": {
-    "feeEUR": 70,
-    "note": "70 € to warunek podany przez podróżnego, nie ogólna gwarancja taryfowa LOT. Dopłatę i oba odcinki z 23 kg potwierdza infolinia. Wpisz rzeczywistą dopłatę po rozmowie; nie odejmujemy mechanicznie publicznej ceny od wartości poprzedniego biletu."
+    "completed": true,
+    "paidPLN": 600,
+    "note": "Zmiana załatwiona przez infolinię i opłacona. 600 zł to cała dopłata, bez ponownego doliczania opłaty za zmianę ani różnicy taryfy."
   },
   "route": {
     "title": "Heathrow → Brent Cross",
@@ -132,9 +160,24 @@
       "Northern line, kierunek Edgware, do Brent Cross",
       "Dojście do gospodarza ustalcie prywatnie"
     ],
-    "duration": "Około 70–90 minut od stacji na Heathrow, plus wyjście z samolotu i kontrola graniczna.",
+    "duration": "Orientacyjnie 70–90 minut od stacji na Heathrow, plus kontrola graniczna, odbiór walizki i dojście do pociągu.",
     "fareGBP": 15.5,
-    "note": "Mapy Google 3 IX: 15 X, odjazd około 18:00, około 71 min i £15,50/os. To migawka planera, nie gwarancja październikowego rozkładu. Dokładny adres gospodarza nie jest publikowany.",
+    "note": "Orientacyjna trasa i koszt £15,50/os. pochodzą z odczytu planera 3 IX dla wcześniejszego wariantu przylotu. Teraz lądujemy o 09:20 w Terminalu 2; poranny rozkład i utrudnienia trzeba sprawdzić przed wyjazdem. Dokładny adres gospodarza pozostaje prywatny.",
     "source": "https://tfl.gov.uk/plan-a-journey/"
+  },
+  "booking": {
+    "confirmed": true,
+    "verifiedAt": "2026-09-04",
+    "variantId": "15morning-19",
+    "exchangePaidPLN": 600,
+    "kostekPaidPLN": 600.03,
+    "checkedIncluded": true,
+    "checkedPieces": 1,
+    "checkedWeightKg": 23,
+    "checkedHolder": "Mieszko",
+    "exchangeSource": "Całkowita opłacona dopłata potwierdzona przez Mieszka; nie dodajemy osobno dawnej opłaty za zmianę.",
+    "kostekSource": "Kwota 600,03 PLN na elektronicznym potwierdzeniu wystawienia biletu.",
+    "scheduleSource": "Dwa elektroniczne potwierdzenia LOT z 4 IX 2026, oba odcinki ze statusem OK.",
+    "baggageSource": "Mieszko: 1PC na obu odcinkach, Economy Standard. Kostek: 0PC na obu odcinkach, Economy Saver."
   }
 }

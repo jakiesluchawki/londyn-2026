@@ -456,9 +456,10 @@
     {
       "id": "no-overbooking",
       "title": "Jeden duży punkt dzienny wystarczy",
-      "body": "Czwartek: przylot i kolacja. Piątek: Borough + Tate albo spacer, potem opcjonalny musical. Sobota: wybierz Abbey Road/Frieze, City/Brick Lane albo deszczowy duet National Gallery/Water Body. Niedziela: Londyn Marcina, Hampstead/Kenwood, opcjonalnie chór. Poniedziałek: spokojny poranek i lotnisko; bez Borough, Frieze Fair, Water Body ani BFI, które tego dnia nie działają.",
+      "body": "Czwartek: przylot o 09:20, odłożenie walizki u Marcina i luźne popołudnie. Piątek: Borough + Tate albo spacer, potem opcjonalny musical. Sobota: wybierz Abbey Road/Frieze, City/Brick Lane albo deszczowy duet National Gallery/Water Body. Niedziela: Londyn Marcina, Hampstead/Kenwood, opcjonalnie chór. Poniedziałek: spokojny poranek w okolicy, odbiór walizki u Marcina i wyjazd na Heathrow; bez Borough, Frieze Fair, Water Body ani BFI, które tego dnia nie działają.",
       "sources": [],
-      "verifiedAt": "2026-09-03"
+      "verifiedAt": "2026-09-03",
+      "updatedAt": "2026-09-04"
     },
     {
       "id": "budget-scope",
