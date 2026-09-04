@@ -8,7 +8,7 @@
     "Dla maksymalnie pięciu osób nie zakładamy zniżki grupowej: publikowane progi tych teatrów zaczynają się od 6 lub 10 osób. Rush, loterie i bilety w dniu spektaklu nie gwarantują pięciu miejsc obok siebie ani najniższej ceny na nasz termin.",
     "Najłatwiejsze wejście dla grupy o różnych gustach: Moulin Rouge. Najbliżej muzycznego kierunku Mieszka pozostaje Hadestown. Les Misérables to klasyka z dużymi emocjami; Cabaret jest mroczniejszy i bardziej dorosły; Hamilton wymaga największej swobody w śledzeniu szybkiego angielskiego.",
     "Oceny trudności angielskiego są orientacyjne, nie oficjalną klasyfikacją CEFR. Przy Mincemeat i Mormon humor mocno zależy od słów; przed zakupem warto zapytać wszystkich, czy to ich rodzaj wieczoru.",
-    "W regularnym rozkładzie tych trzech nowych propozycji nie ma niedzieli. Poniedziałkowy wieczór 19 X kolidowałby z preferowanym powrotem, a czwartek po locie nie jest dobrym terminem na drogi bilet z małym marginesem.",
+    "W regularnym rozkładzie tych trzech nowych propozycji nie ma niedzieli. Poniedziałkowy wieczór 19 X koliduje z potwierdzonym powrotem. Czwartek 15 X wieczorem jest logistycznie możliwy po przylocie o 09:20; przed zakupem uwzględnijmy zmęczenie po bardzo wczesnej pobudce, skład grupy i dostępność sesji.",
     "Żadnych miejsc nie zarezerwowano i niczego nie kupiono. Wystarczy wybrać jeden główny musical — reszta wyjazdu powinna zostawić przestrzeń na spotkania."
   ],
   "recommendations": [
@@ -186,5 +186,6 @@
       "id": "book-of-mormon",
       "reason": "Opcja warunkowa: może wygrać, jeśli wszyscy lubią South Park i bezpośrednio zgodzą się na prowokacyjny humor."
     }
-  ]
+  ],
+  "updatedAt": "2026-09-04"
 }

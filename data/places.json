@@ -435,7 +435,8 @@
           "url": "https://www.gov.uk/uk-border-control/before-you-leave-for-the-uk"
         }
       ],
-      "verifiedAt": "2026-09-03"
+      "verifiedAt": "2026-09-04",
+      "feeVerifiedAt": "2026-09-04"
     },
     {
       "id": "dates-not-inventory",

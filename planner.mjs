@@ -261,10 +261,13 @@ export function conflicts(rawState, data = {}) {
       else if (knownStart === null && fixedEvent) issues.push(warning("arrival-time-unknown", [item.id], item.title + ": w dniu przylotu, ale godzina sesji niepotwierdzona. Najpierw sprawdź logistykę."));
     }
     if (date === trip.return && departure !== null) {
-      const leaveForAirport = departure - 180;
-      if (knownStart !== null && knownStart >= leaveForAirport) issues.push(warning("return-flight", [item.id], item.title + ": koliduje z powrotem. Rezerwujemy 3 godziny przed odlotem na dojazd i lotnisko.", "error"));
-      else if (end !== null && end > leaveForAirport) issues.push(warning("return-buffer", [item.id], item.title + ": kończy się za późno względem 3-godzinnego buforu na dojazd i odprawę.", "error"));
-      else if (end !== null && end > departure - 240) issues.push(warning("return-tight", [item.id], item.title + ": do lotu zostaje mniej niż 4 godziny po końcu atrakcji. Odbiór bagażu u gospodarza i dojazd na Heathrow mogą uczynić plan zbyt ciasnym; sprawdź trasę lub odpuść."));
+      const sharedBagReturn = trip.return === "2026-10-19";
+      const leaveForAirport = sharedBagReturn ? 13 * 60 : departure - 180;
+      const tightAfter = sharedBagReturn ? 12 * 60 : departure - 240;
+      const returnExplanation = sharedBagReturn ? "Wróćcie po walizkę do Marcina przed 13:15; wyjazd z Brent Cross planujemy na 13:15–13:45." : "Rezerwujemy 3 godziny przed odlotem na dojazd i lotnisko.";
+      if (knownStart !== null && knownStart >= leaveForAirport) issues.push(warning("return-flight", [item.id], item.title + ": koliduje z powrotem. " + returnExplanation, "error"));
+      else if (end !== null && end > leaveForAirport) issues.push(warning("return-buffer", [item.id], item.title + ": kończy się za późno. " + returnExplanation, "error"));
+      else if (end !== null && end > tightAfter) issues.push(warning("return-tight", [item.id], item.title + ": po atrakcji zostaje mało czasu na odbiór bagażu i dojazd. " + returnExplanation));
       else if (knownStart === null && fixedEvent) issues.push(warning("return-time-unknown", [item.id], item.title + ": godzina niepotwierdzona w dniu wylotu; wieczornego koncertu nie da się pogodzić z lotem."));
     }
   }

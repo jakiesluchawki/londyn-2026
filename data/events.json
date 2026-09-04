@@ -57,7 +57,7 @@
     "why": "Pierwszy wybór muzyczny dla Mieszka. Popołudniowa sesja zostawia wieczór na Adję.",
     "availability": "on-sale",
     "availabilityNote": "Data i godzina potwierdzone w oficjalnym kalendarzu. Sąsiadujących miejsc oraz dzisiejszej ceny koszyka nie sprawdzono.",
-    "timeNote": "2 godz. 30 min z przerwą; około 17:00. Alternatywy: 17 X 19:30, 18 X 15:00, 16 X 19:30. 15 X 19:30 byłoby ryzykowne po locie.",
+    "timeNote": "2 godz. 30 min z przerwą; około 17:00. Alternatywy: 17 X 19:30, 18 X 15:00, 16 X 19:30. 15 X 19:30 też pasuje logistycznie do przylotu o 09:20; warto uwzględnić zmęczenie po bardzo wczesnej pobudce.",
     "sources": [
       {
         "label": "Oficjalny kalendarz",
@@ -122,7 +122,8 @@
         "end": "17:30",
         "label": "18 X · 15:00"
       }
-    ]
+    ],
+    "updatedAt": "2026-09-04"
   },
   {
     "id": "adja",

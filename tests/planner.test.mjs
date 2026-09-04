@@ -465,3 +465,17 @@ test("confirmed morning arrival replaces stale late-flight logistics without fab
   assert.ok(issues.some(x=>x.code==="arrival-conflict"&&x.itemIds.includes("before-landing")));
   assert.ok(issues.some(x=>x.code==="arrival-buffer"&&x.itemIds.includes("too-soon")));
 });
+
+
+test("Monday plan includes the return to Brent Cross for the shared suitcase",()=>{
+  const d=clone(data);
+  d.events.push({id:"mon-safe",title:"Morning",date:"2026-10-19",start:"10:00",end:"11:45",priceGBP:0});
+  d.events.push({id:"mon-tight",title:"Lunch",date:"2026-10-19",start:"11:00",end:"12:30",priceGBP:0});
+  d.events.push({id:"mon-late",title:"Too late",date:"2026-10-19",start:"12:00",end:"13:30",priceGBP:0});
+  d.events.push({id:"mon-start-late",title:"Late start",date:"2026-10-19",start:"13:00",end:"14:00",priceGBP:0});
+  const issues=conflicts(state({variant:"15-19",selected:["mon-safe","mon-tight","mon-late","mon-start-late"]}),d);
+  assert.ok(!issues.some(x=>x.code.startsWith("return")&&x.itemIds.includes("mon-safe")));
+  assert.ok(issues.some(x=>x.code==="return-tight"&&x.itemIds.includes("mon-tight")));
+  assert.ok(issues.some(x=>x.code==="return-buffer"&&x.itemIds.includes("mon-late")));
+  assert.ok(issues.some(x=>x.code==="return-flight"&&x.itemIds.includes("mon-start-late")));
+});
