@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#ffe1eb">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Jak aplikacja Londyn przechowuje plan wyjazdu i korzysta z pogody, map oraz TestFlight.">
+  <title>Prywatność — Londyn</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    @font-face{font-family:Roobert;src:url('assets/Roobert-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+    @font-face{font-family:Roobert;src:url('assets/Roobert-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+    @font-face{font-family:Romie;src:url('assets/Romie-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+    :root{color-scheme:light;--pink:#ffe1eb;--ink:#554f30;--dark:#403b23;--cream:#fffaf2;--purple:#7544bd;--line:#554f3038;--muted:#696248}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--pink);color:var(--ink);font:17px/1.65 Roobert,Arial,sans-serif}
+    a{color:var(--purple);text-decoration-thickness:1px;text-underline-offset:.2em;overflow-wrap:anywhere}
+    a:hover{text-decoration-thickness:2px}
+    a:focus-visible{outline:3px solid var(--purple);outline-offset:5px;border-radius:3px}
+    .skip{position:absolute;left:16px;top:-80px;background:var(--cream);padding:10px 16px;z-index:2}
+    .skip:focus{top:12px}
+    .shell{max-width:900px;margin:auto;padding:0 32px}
+    .masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:30px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+    .wordmark{font:42px/1 Romie,Georgia,serif;letter-spacing:-.055em;color:var(--dark);text-decoration:none}
+    .back{font-size:14px;text-decoration:none}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .intro{padding:55px 0 34px}
+    h1,h2{font-family:Romie,Georgia,serif;font-weight:400;letter-spacing:-.04em;color:var(--dark)}
+    h1{font-size:clamp(46px,8vw,76px);line-height:1.03;margin:15px 0 22px;max-width:720px}
+    .lead{font-size:20px;line-height:1.55;max-width:680px;margin:0}
+    .meta{font-size:13px;color:var(--muted);margin:20px 0 0}
+    .summary{display:flex;flex-wrap:wrap;gap:9px;padding:0;margin:26px 0 0;list-style:none}
+    .summary li{border:1px solid var(--line);padding:7px 12px;border-radius:999px;font-size:13px}
+    .document{background:var(--cream);border:1px solid var(--line);border-radius:26px;padding:8px 34px}
+    section{padding:27px 0}
+    section+section{border-top:1px solid var(--line)}
+    h2{font-size:32px;line-height:1.15;margin:0 0 15px}
+    h3{font-size:17px;line-height:1.4;color:var(--dark);margin:23px 0 6px}
+    p{margin:0 0 14px}
+    p:last-child{margin-bottom:0}
+    strong{font-weight:700;color:var(--dark)}
+    .note{border-left:3px solid var(--purple);padding-left:17px;margin-top:18px}
+    .small{font-size:15px}
+    footer{padding:25px 0 38px;font-size:13px;color:var(--muted)}
+    footer p{margin-bottom:9px}
+    @media(max-width:540px){
+      body{font-size:16px}
+      .shell{padding:0 19px}
+      .masthead{padding-top:22px;padding-bottom:20px}
+      .wordmark{font-size:36px}
+      .back{max-width:130px;text-align:right;line-height:1.4}
+      .intro{padding:38px 0 26px}
+      .lead{font-size:18px}
+      .document{padding:3px 21px;border-radius:22px}
+      section{padding:25px 0}
+      h2{font-size:29px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{background:white;color:#222}.shell{max-width:none;padding:0}.masthead,.summary{display:none}.intro{padding:15px 0}.document{border:0;padding:0}section{break-inside:avoid}a{color:inherit}h1{font-size:40px}h2{font-size:26px}footer{padding-bottom:0}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#tresc">Przejdź do treści</a>
+  <div class="shell">
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="Londyn — strona główna">londyn</a>
+      <a class="back" href="./">Wróć do planu wyjazdu ↗</a>
+    </header>
+    <main id="tresc">
+      <div class="intro">
+        <div class="eyebrow">Notes z dobrego wyjazdu · iOS</div>
+        <h1>Prywatność,<br>po ludzku.</h1>
+        <p class="lead">Plan zostaje w Twoim telefonie. Pogoda, mapy i udostępnianie potrzebują połączenia z innymi usługami. Poniżej: co to oznacza w praktyce.</p>
+        <p class="meta">Informacja o prywatności · wersja beta TestFlight<br>Stan aplikacji i aktualizacja: <time datetime="2026-09-04">4 września 2026</time></p>
+        <ul class="summary" aria-label="Najważniejsze zasady">
+          <li>Bez konta w notesie</li>
+          <li>Bez dostępu do GPS</li>
+          <li>Bez reklam i własnej analityki</li>
+        </ul>
+      </div>
+
+      <div class="document">
+        <section aria-labelledby="lokalnie">
+          <h2 id="lokalnie">Co zapisuje telefon</h2>
+          <p>Wybrane atrakcje, ustawienia planera, checklista i wpisany przez Ciebie adres bazy są przechowywane lokalnie. Notes nie wysyła ich do własnego serwera ani nie synchronizuje na żywo między uczestnikami. Nie wymaga konta i nie pobiera lokalizacji urządzenia.</p>
+          <p>Zapisany adres możesz usunąć przyciskiem <strong>„Usuń”</strong>. Lokalne dane mogą trafić do systemowej kopii zapasowej i zostać z niej przywrócone. Usunięcie danych w aplikacji nie oznacza usunięcia ich z wcześniejszych kopii systemowych.</p>
+          <p class="note"><strong>Nawigacja jest wyjątkiem:</strong> przycisk prowadzący do zapisanej bazy przekazuje jej adres do Map Apple. Otwarta osobno aplikacja Mapy może używać lokalizacji zgodnie z udzielonymi jej uprawnieniami. <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/" rel="noopener noreferrer">Prywatność Map Apple</a>.</p>
+        </section>
+
+        <section aria-labelledby="udostepnianie">
+          <h2 id="udostepnianie">Co zawiera wspólny link</h2>
+          <p>Udostępniasz <strong>kopię wyborów w planerze</strong>: zaznaczone propozycje, terminy i ustawienia budżetu. Link nie zawiera prywatnego adresu ani natywnej checklisty i nie jest pełną kopią aplikacji.</p>
+          <p>Każda osoba, która otrzyma ten link, może odczytać zawarte w nim wybory. Nie jest on zabezpieczony hasłem. Przekazanie go wybranym komunikatorem lub pocztą podlega również zasadom tej usługi.</p>
+        </section>
+
+        <section aria-labelledby="online">
+          <h2 id="online">Pogoda i mapy online</h2>
+          <p>Połączenia z dostawcami odbywają się bezpośrednio z urządzenia. Mogą ujawniać standardowe dane połączenia, takie jak adres IP, czas żądania i parametry pobieranych danych. Brak własnej analityki w notesie nie oznacza braku przetwarzania danych przez te usługi.</p>
+          <h3>Open-Meteo · prognoza</h3>
+          <p>Zapytanie dotyczy stałego, publicznego punktu w centrum Londynu — nie GPS ani adresu noclegu. Open-Meteo może zapisywać dane techniczne żądań API. <a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">Warunki i prywatność Open-Meteo</a>.</p>
+          <h3>RainViewer i Apple Maps · radar</h3>
+          <p>RainViewer dostarcza obrazy historycznych opadów, a Apple Maps podkład mapowy. Usługi otrzymują żądania dotyczące wyświetlanego obszaru. <a href="https://www.rainviewer.com/privacy.html" rel="noopener noreferrer">Prywatność RainViewer</a> · <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/" rel="noopener noreferrer">Prywatność Map Apple</a>.</p>
+          <p class="small">Pobrane dane pogody i radaru są zapisywane w pamięci podręcznej wraz z czasem pobrania. Bez internetu mogą być nieaktualne. Notes nie gwarantuje dostępności map offline.</p>
+          <h3>TfL i inne strony</h3>
+          <p>Integracja API TfL jest w tej wersji wyłączona do czasu potwierdzenia rejestracji. Linki do TfL, biletów i innych usług mogą otwierać strony zewnętrzne, których własne zasady prywatności obowiązują po przejściu. <a href="https://tfl.gov.uk/corporate/privacy-and-cookies/" rel="noopener noreferrer">Prywatność TfL</a>.</p>
+        </section>
+
+        <section aria-labelledby="testflight">
+          <h2 id="testflight">TestFlight ma własną diagnostykę</h2>
+          <p>Notes nie zawiera reklam ani własnych narzędzi analitycznych. <strong>Po instalacji wersji beta przez TestFlight:</strong> Apple automatycznie zbiera informacje o użyciu i awariach oraz przekazuje je twórcy aplikacji. Dane mogą obejmować informacje o urządzeniu, wersji systemu i instalacji, a zależnie od sposobu zaproszenia także imię i adres e-mail.</p>
+          <p>Opinie i zrzuty ekranu wysłane przez TestFlight również trafiają do Apple i twórcy. Przed ich wysłaniem sprawdź, czy nie pokazują prywatnych informacji. Szczegóły opisuje <a href="https://www.apple.com/legal/privacy/data/en/test-flight/" rel="noopener noreferrer">TestFlight i prywatność</a>.</p>
+        </section>
+
+        <section aria-labelledby="strona">
+          <h2 id="strona">Ta strona i publiczny planer</h2>
+          <p>Ta strona nie zawiera JavaScriptu, formularzy ani skryptów śledzących. Publiczny planer przechowuje wybory w przeglądarce. Obie strony korzystają z hostingu GitHub Pages; dostawca może przetwarzać metadane połączenia zgodnie ze swoją <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">polityką prywatności GitHub</a>.</p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>Opis dotyczy działania wskazanej wersji aplikacji. Zmiana integracji lub sposobu zapisu danych wymaga aktualizacji tej informacji.</p>
+      <a href="./">Powrót do Londynu ↗</a>
+    </footer>
+  </div>
+</body>
+</html>
