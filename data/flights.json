@@ -1,12 +1,33 @@
 {
-  "verifiedAt": "2026-09-04",
+  "verifiedAt": "2026-10-13",
   "currency": "PLN",
   "travellers": 2,
-  "note": "Oba bilety wystawione 4 IX 2026. Daty, godziny i bagaż odczytane z potwierdzeń LOT. Kwota wymiany 600 zł potwierdzona przez podróżnego, nowy bilet 600,03 zł według e-biletu. Dokumenty i identyfikatory pozostają prywatne.",
+  "note": "Sprawdzono pocztę 13 X. Mieszko: e-bilet ponownie wystawiony 10 X, powrót 21 X. Kostek: najnowszy znaleziony e-bilet z 4 IX, powrót 19 X. Kwoty według dokumentów i wcześniejszego potwierdzenia podróżnego; nie jest to uzgodnienie wyciągu bankowego. Numery dokumentów i rezerwacji pozostają prywatne.",
   "variants": [
     {
+      "id": "15morning-split",
+      "label": "Razem 15 X · Kostek wraca 19 X, Mieszko 21 X",
+      "departure": "2026-10-15",
+      "return": "2026-10-21",
+      "out": "07:25",
+      "arrival": "09:20",
+      "back": "18:10",
+      "home": "21:45",
+      "outFlight": "LO281",
+      "returnFlight": "LO280",
+      "nights": 6,
+      "newTicket": 600.03,
+      "confirmed": true,
+      "recommended": true,
+      "arrivalTerminal": "2",
+      "returnTerminal": "2",
+      "verified": "Mieszko: bilet z 10 X. Kostek: najnowszy znaleziony bilet z 4 IX.",
+      "archived": false,
+      "verifiedAt": "2026-10-13"
+    },
+    {
       "id": "15morning-19",
-      "label": "Czwartek rano–poniedziałek",
+      "label": "Poprzednia rezerwacja · obaj do 19 X (nieaktualna)",
       "departure": "2026-10-15",
       "return": "2026-10-19",
       "out": "07:25",
@@ -17,11 +38,13 @@
       "returnFlight": "LO280",
       "nights": 4,
       "newTicket": 600.03,
-      "confirmed": true,
-      "recommended": true,
+      "confirmed": false,
+      "recommended": false,
       "arrivalTerminal": "2",
       "returnTerminal": "2",
-      "verified": "Oba e-bilety LOT z 4 IX 2026: status OK na obu odcinkach."
+      "verified": "Oba e-bilety LOT z 4 IX 2026: status OK na obu odcinkach.",
+      "archived": true,
+      "verifiedAt": "2026-09-04"
     },
     {
       "id": "15-19",
@@ -142,42 +165,91 @@
   "luggage": {
     "cabin": "Na osobę: 1 × 8 kg, 55 × 40 × 23 cm",
     "personal": "1 przedmiot osobisty, np. torba z laptopem, do 2 kg i 40 × 35 × 12 cm",
-    "checked": "1 wspólna walizka do 23 kg w obie strony, przypisana do biletu Mieszka",
-    "status": "Potwierdzone: Mieszko 1PC w obie strony; Kostek 0PC. Nie kupujemy drugiej walizki.",
+    "checked": "1 wspólna walizka do 23 kg na bilecie Mieszka: wylot 15 X, powrót 21 X",
+    "status": "Mieszko 1PC; Kostek 0PC. Kostek wraca 19 X bez walizki Mieszka. Na jego oddzielny powrót nie przenosi się uprawnienie 1PC.",
     "costPLN": 0,
     "checkedMaxDimensionsCm": 158,
-    "verifiedAt": "2026-09-04"
+    "verifiedAt": "2026-10-13"
   },
   "reissue": {
     "completed": true,
-    "paidPLN": 600,
-    "note": "Zmiana załatwiona przez infolinię i opłacona. 600 zł to cała dopłata, bez ponownego doliczania opłaty za zmianę ani różnicy taryfy."
+    "paidPLN": 1300.89,
+    "note": "600 zł według Mieszka + zmiana z 10 X: 349,89 zł additional collection na e-bilecie i osobny EMD Rebooking Fee 351 zł. Nie doliczamy ponownie starego biletu ani jego nowej wartości taryfowej."
   },
   "route": {
     "title": "Heathrow → Brent Cross",
     "steps": [
-      "Elizabeth line do Tottenham Court Road",
-      "Northern line, kierunek Edgware, do Brent Cross",
+      "Heathrow Terminals 2 & 3 → Piccadilly line w kierunku Cockfosters → Leicester Square",
+      "Na Leicester Square: Northern line w kierunku Edgware → Brent Cross (nie High Barnet ani Brent Cross West)",
       "Dojście do gospodarza ustalcie prywatnie"
     ],
-    "duration": "Orientacyjnie 70–90 minut od stacji na Heathrow, plus kontrola graniczna, odbiór walizki i dojście do pociągu.",
-    "fareGBP": 15.5,
-    "note": "Orientacyjna trasa i koszt £15,50/os. pochodzą z odczytu planera 3 IX dla wcześniejszego wariantu przylotu. Teraz lądujemy o 09:20 w Terminalu 2; poranny rozkład i utrudnienia trzeba sprawdzić przed wyjazdem. Dokładny adres gospodarza pozostaje prywatny.",
-    "source": "https://tfl.gov.uk/plan-a-journey/"
+    "duration": "Zaplanujcie orientacyjnie 90–110 minut od stacji Heathrow do Brent Cross, plus granica, odbiór walizki i dojścia. Nie jest to rozkład ani gwarancja trasy bez schodów.",
+    "fareGBP": 5.9,
+    "note": "Opcja podstawowa według wskazówki Marcina: Piccadilly + Northern. Heathrow podaje PAYG od £5,90 przez strefę 1; do budżetu przyjmujemy około £5,90/os./przejazd, nie gwarantowaną taryfę dokładnie do Brent Cross. Każdy używa własnej karty lub urządzenia przy wejściu i wyjściu. Elizabeth line i Heathrow Express tylko jako droższa alternatywa przy utrudnieniach.",
+    "source": "https://tfl.gov.uk/plan-a-journey/",
+    "returnSteps": "Brent Cross → Northern przez Charing Cross → Leicester Square → Piccadilly na Heathrow (nie Uxbridge) → Terminals 2 & 3 → Terminal 2.",
+    "works": "17–18 X: brak Piccadilly między Hammersmith a Heathrow/Uxbridge, także piątkowa i sobotnia Night Tube. W wykazie TfL z 12 X nie ma takiego zamknięcia na dni lotów 15, 19 i 21 X. Sprawdź status w dniu podróży.",
+    "verifiedAt": "2026-10-13",
+    "sources": [
+      {
+        "label": "Heathrow: Piccadilly i cena PAYG od £5,90",
+        "url": "https://www.heathrow.com/transport-and-directions/by-rail-or-train/london-underground"
+      },
+      {
+        "label": "TfL: zaplanowane zamknięcia (wykaz 12 X)",
+        "url": "https://tfl.gov.uk/cdn/static/cms/documents/planned-track-closures.pdf"
+      },
+      {
+        "label": "TfL: sprawdź trasę i taryfę przed przejazdem",
+        "url": "https://tfl.gov.uk/plan-a-journey/"
+      }
+    ]
   },
   "booking": {
     "confirmed": true,
-    "verifiedAt": "2026-09-04",
-    "variantId": "15morning-19",
-    "exchangePaidPLN": 600,
+    "verifiedAt": "2026-10-13",
+    "variantId": "15morning-split",
+    "exchangePaidPLN": 1300.89,
     "kostekPaidPLN": 600.03,
     "checkedIncluded": true,
     "checkedPieces": 1,
     "checkedWeightKg": 23,
     "checkedHolder": "Mieszko",
-    "exchangeSource": "Całkowita opłacona dopłata potwierdzona przez Mieszka; nie dodajemy osobno dawnej opłaty za zmianę.",
+    "exchangeSource": "600 zł według Mieszka + zmiana z 10 X: 349,89 zł additional collection na e-bilecie i osobny EMD Rebooking Fee 351 zł. Nie doliczamy ponownie starego biletu ani jego nowej wartości taryfowej.",
     "kostekSource": "Kwota 600,03 PLN na elektronicznym potwierdzeniu wystawienia biletu.",
-    "scheduleSource": "Dwa elektroniczne potwierdzenia LOT z 4 IX 2026, oba odcinki ze statusem OK.",
-    "baggageSource": "Mieszko: 1PC na obu odcinkach, Economy Standard. Kostek: 0PC na obu odcinkach, Economy Saver."
-  }
+    "scheduleSource": "Sprawdzono pocztę 13 X. Mieszko: e-bilet ponownie wystawiony 10 X, powrót 21 X. Kostek: najnowszy znaleziony e-bilet z 4 IX, powrót 19 X. Kwoty według dokumentów i wcześniejszego potwierdzenia podróżnego; nie jest to uzgodnienie wyciągu bankowego. Numery dokumentów i rezerwacji pozostają prywatne.",
+    "baggageSource": "Mieszko: 1PC na wylocie 15 X i powrocie 21 X (e-bilet 10 X). Kostek: 0PC na wylocie 15 X i powrocie 19 X (e-bilet 4 IX).",
+    "initialExchangePLN": 600,
+    "latestChangePLN": 700.89,
+    "latestAdditionalCollectionPLN": 349.89,
+    "latestFeePLN": 351,
+    "extendedStayConfirmed": false,
+    "travellers": [
+      {
+        "id": "kostek",
+        "name": "Kostek",
+        "departure": "2026-10-15",
+        "return": "2026-10-19",
+        "back": "18:10",
+        "home": "21:45",
+        "returnFlight": "LO280",
+        "checkedPieces": 0,
+        "nights": 4,
+        "ticketIssued": "2026-09-04"
+      },
+      {
+        "id": "mieszko",
+        "name": "Mieszko",
+        "departure": "2026-10-15",
+        "return": "2026-10-21",
+        "back": "18:10",
+        "home": "21:45",
+        "returnFlight": "LO280",
+        "checkedPieces": 1,
+        "nights": 6,
+        "ticketIssued": "2026-10-10"
+      }
+    ]
+  },
+  "schemaVersion": 1
 }

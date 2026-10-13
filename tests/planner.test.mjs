@@ -10,7 +10,7 @@ const publishedData = {flights:load("flights"),events:load("events"),places:load
 const data = {...publishedData,flights:{...publishedData.flights,booking:undefined,
   reissue:{feeEUR:70},luggage:{...publishedData.flights.luggage,fallback:233},
   route:{...publishedData.flights.route,fareGBP:15.5},
-  variants:publishedData.flights.variants.filter(x=>x.id!=="15morning-19").map(x=>({...x,recommended:x.id==="15-19"}))}};
+  variants:publishedData.flights.variants.filter(x=>!["15morning-19","15morning-split"].includes(x.id)).map(x=>({...x,recommended:x.id==="15-19"}))}};
 const state = patch => ({...defaultState(data),...patch});
 const clone = x => JSON.parse(JSON.stringify(x));
 
@@ -478,4 +478,36 @@ test("Monday plan includes the return to Brent Cross for the shared suitcase",()
   assert.ok(issues.some(x=>x.code==="return-tight"&&x.itemIds.includes("mon-tight")));
   assert.ok(issues.some(x=>x.code==="return-buffer"&&x.itemIds.includes("mon-late")));
   assert.ok(issues.some(x=>x.code==="return-flight"&&x.itemIds.includes("mon-start-late")));
+});
+
+test("October reissue separates returns and migrates old plans without resetting selections",()=>{
+  const raw={...defaultState(publishedData),variant:"15morning-19",bag:"extra",selected:["tate"],dates:{tate:"2026-10-20"},attendees:{tate:1},prices:{tate:12}};
+  const s=sanitizeState(raw,publishedData);
+  assert.equal(s.variant,"15morning-split");
+  assert.deepEqual(s.selected,["tate"]);
+  assert.equal(s.dates.tate,"2026-10-20");
+  assert.equal(s.attendees.tate,1);
+  assert.equal(s.prices.tate,12);
+  const b=budget(s,publishedData);
+  assert.equal(b.flightPLN,1900.92);
+  assert.equal(b.baggagePLN,0);
+  assert.equal(b.days,7);
+  assert.equal(b.personDays,12);
+  assert.equal(b.foodGBP,420);
+  assert.equal(b.fullPersonDays,8);
+  assert.equal(b.urbanGBP,84);
+  assert.equal(b.airportGBP,23.6);
+  assert.equal(b.totalPLN,null);
+  assert.equal(b.lines.find(x=>x.id==='accommodation').amountPLN,null);
+  assert.ok(b.warnings.some(x=>x.code==='extended-stay-unconfirmed'));
+  assert.deepEqual(publishedData.flights.booking.travellers.map(x=>[x.name,x.return,x.checkedPieces]),[["Kostek","2026-10-19",0],["Mieszko","2026-10-21",1]]);
+});
+
+test("return conflicts distinguish Monday Kostek from Wednesday Mieszko and suitcase",()=>{
+  const d={...publishedData,events:[{id:'mon',title:'Monday show',date:'2026-10-19',start:'16:00',end:'18:00',category:'musical'},{id:'wed',title:'Wednesday show',date:'2026-10-21',start:'16:00',end:'18:00',category:'musical'}],places:[]};
+  const issues=conflicts({...defaultState(d),selected:['mon','wed']},d);
+  assert.ok(issues.some(x=>x.code==='return-flight' && x.itemIds[0]==='mon' && x.message.includes('Kostek')));
+  assert.ok(issues.some(x=>x.code==='return-flight' && x.itemIds[0]==='wed' && x.message.includes('Mieszko') && x.message.includes('walizki')));
+  assert.ok(issues.some(x=>x.code==='traveller-away' && x.itemIds[0]==='wed' && x.message.includes('Kostek')));
+  assert.ok(!issues.some(x=>x.code==='return-flight' && x.itemIds[0]==='mon' && x.message.includes('odbiór walizki')));
 });

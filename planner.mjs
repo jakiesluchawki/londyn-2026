@@ -6,7 +6,7 @@
  * Item dates may be date:"YYYY-MM-DD", ISO start/end datetimes, inclusive
  * start/end date ranges, or absent (an unscheduled option, not an appointment).
  * Optional availableWeekdays uses 0=Sunday..6=Saturday. Optional sessions is
- * a trusted list of {id,date,start,end,label}, restricted to 14–19 October.
+ * a trusted list of {id,date,start,end,label}, restricted to 14–21 October.
  *
  * State: {version:1,variant,selected:string[],attendees:{id:1|2|3|4|5},
  * eurPLN,gbpPLN,reissueExtraPLN,bag:"pending"|"included"|"extra",
@@ -59,7 +59,7 @@ function sessionsFor(item) {
   const seen = new Set();
   return item.sessions.slice(0,100).filter(session => {
     if (!session || typeof session.id!=="string" || session.id.length>100 || seen.has(session.id)) return false;
-    if (typeof session.date!=="string" || !DATE.test(session.date) || session.date<"2026-10-14" || session.date>"2026-10-19") return false;
+    if (typeof session.date!=="string" || !DATE.test(session.date) || session.date<"2026-01-01" || session.date>"2027-12-31") return false;
     if (minutes(session.start)===null || (session.end!=null && minutes(session.end)===null)) return false;
     seen.add(session.id);
     return true;
@@ -189,7 +189,7 @@ export function sanitizeState(raw, data = {}) {
     if (typeof chosen==="string" && sessionsFor(item).some(x=>x.id===chosen))
       Object.defineProperty(state.sessions,item.id,{value:chosen,enumerable:true,configurable:true,writable:true});
     const date = rawDates[item.id];
-    if (!sessionsFor(item).length && !exactDate(item) && typeof date==="string" && DATE.test(date) && date >= "2026-10-14" && date <= "2026-10-19")
+    if (!sessionsFor(item).length && !exactDate(item) && typeof date==="string" && DATE.test(date) && date >= variants(data).map(v=>v.departure).sort()[0] && date <= variants(data).map(v=>v.return).sort().at(-1))
       Object.defineProperty(state.dates,item.id,{value:date,enumerable:true,configurable:true,writable:true});
   }
   state.eurPLN = number(input.eurPLN, base.eurPLN, 0.01, 100);
@@ -246,7 +246,9 @@ export function conflicts(rawState, data = {}) {
     }
   }
   if (!trip) return issues;
-  const arrival = minutes(trip.arrival), departure = minutes(trip.back);
+  const arrival = minutes(trip.arrival);
+  const passengers = confirmedBooking(data)?.travellers;
+  const returns = Array.isArray(passengers) ? passengers : [{return:trip.return,back:trip.back}];
   for (const item of active) {
     const date = exactDate(item);
     if (!date) continue;
@@ -260,11 +262,14 @@ export function conflicts(rawState, data = {}) {
       else if (knownStart !== null && knownStart < arrival + 240) issues.push(warning("arrival-buffer", [item.id], item.title + ": mniej niż 4 godziny od lądowania; po granicy, bagażu, dojeździe i wizycie u gospodarza może być ciasno. Nie planuj obowiązkowo."));
       else if (knownStart === null && fixedEvent) issues.push(warning("arrival-time-unknown", [item.id], item.title + ": w dniu przylotu, ale godzina sesji niepotwierdzona. Najpierw sprawdź logistykę."));
     }
-    if (date === trip.return && departure !== null) {
-      const sharedBagReturn = trip.return === "2026-10-19";
-      const leaveForAirport = sharedBagReturn ? 13 * 60 : departure - 180;
-      const tightAfter = sharedBagReturn ? 12 * 60 : departure - 240;
-      const returnExplanation = sharedBagReturn ? "Wróćcie po walizkę do Marcina przed 13:15; wyjazd z Brent Cross planujemy na 13:15–13:45." : "Rezerwujemy 3 godziny przed odlotem na dojazd i lotnisko.";
+    for (const person of returns) {
+      const departure = minutes(person.back);
+      if (person.name && date > person.return) issues.push(warning("traveller-away", [item.id], item.title + ": " + person.name + " jest już po powrocie do Warszawy. Ustaw uczestników zgodnie z faktycznym składem."));
+      if (date !== person.return || departure === null) continue;
+      const sharedBagReturn = Boolean(person.name) || trip.return === "2026-10-19";
+      const leaveForAirport = person.name ? departure - 300 : sharedBagReturn ? 13 * 60 : departure - 180;
+      const tightAfter = person.name ? departure - 360 : sharedBagReturn ? 12 * 60 : departure - 240;
+      const returnExplanation = person.name ? person.name + ": zaplanuj wyjazd z Brent Cross 5 godzin przed lotem, cel T2 około 3 godziny przed odlotem. " + (person.checkedPieces ? "Najpierw odbiór walizki u Marcina." : "Powrót z 0PC; walizka pozostaje na bilecie Mieszka.") : sharedBagReturn ? "Wróćcie po walizkę do Marcina przed 13:15; wyjazd z Brent Cross planujemy na 13:15–13:45." : "Rezerwujemy 3 godziny przed odlotem na dojazd i lotnisko.";
       if (knownStart !== null && knownStart >= leaveForAirport) issues.push(warning("return-flight", [item.id], item.title + ": koliduje z powrotem. " + returnExplanation, "error"));
       else if (end !== null && end > leaveForAirport) issues.push(warning("return-buffer", [item.id], item.title + ": kończy się za późno. " + returnExplanation, "error"));
       else if (end !== null && end > tightAfter) issues.push(warning("return-tight", [item.id], item.title + ": po atrakcji zostaje mało czasu na odbiór bagażu i dojazd. " + returnExplanation));
@@ -314,9 +319,13 @@ export function budget(rawState, data = {}) {
   const baggagePLN = !bookingConfirmed && state.bag === "extra" ? number(data.flights?.luggage?.fallback, 233, 0, 1000000) : 0;
   const baggageEstimate = !bookingConfirmed && state.bag === "extra" && trip?.id !== "15-19";
   const etaGBP = state.etaCount * number(data.places?.practical?.find(x=>x.id==="eta")?.priceGBP,20,0,10000);
-  const urbanGBP = round(Math.max(0, nights - 1) * 10.5 * travellers);
+  const passengerNights = Array.isArray(booking?.travellers) ? booking.travellers.map(p=>Math.max(0,Math.round((Date.parse(p.return)-Date.parse(p.departure))/86400000))) : [nights,nights];
+  const personDays = passengerNights.reduce((sum,n)=>sum+n+1,0);
+  const fullPersonDays = passengerNights.reduce((sum,n)=>sum+Math.max(0,n-1),0);
+  const accommodationUnknown = booking?.extendedStayConfirmed === false;
+  const urbanGBP = round(fullPersonDays * 10.5);
   const airportGBP = round(number(data.flights?.route?.fareGBP,15.5,0,1000) * 2 * travellers);
-  const foodGBP = round(state.foodGBP * travellers * days);
+  const foodGBP = round(state.foodGBP * personDays);
   const activities = active.map(item => {
     const overridden = own(state.prices,item.id);
     const unitGBP = overridden ? state.prices[item.id] : number(item.priceGBP,null,0,10000);
@@ -334,6 +343,7 @@ export function budget(rawState, data = {}) {
       estimated,unknown,priceSource:overridden?"override":"data"};
   });
   const unknownItems = activities.filter(x=>x.unknown).map(x=>x.id);
+  if (accommodationUnknown) warnings.push(warning("extended-stay-unconfirmed",[],"Przedłużenie noclegów po zmianie dat wymaga potwierdzenia u Marcina. Koszt pozostaje nieznany, a suma jest częściowa; nie zakładamy darmowego przedłużenia pobytu."));
   const estimatedItems = activities.filter(x=>x.estimated).map(x=>x.id);
   const excludedItems = selected.filter(x=>!inVisit(x,trip)).map(x=>x.id);
   const activitiesGBP = round(activities.reduce((sum,x)=>sum+(x.costGBP??0),0));
@@ -349,20 +359,20 @@ export function budget(rawState, data = {}) {
       details:bookingConfirmed
         ? "Opłacone: całkowita dopłata Mieszka "+exchangePaidPLN+" PLN + bilet Kostka "+kostekPaidPLN+" PLN. Bez ponownego doliczania opłaty za zmianę ani wartości starego biletu."
         : "Dokładnie 2 podróżnych. "+feeEUR+" EUR opłaty + rzeczywista dopłata z infolinii "+state.reissueExtraPLN+" zł; publiczna cena nie służy do wyliczania różnicy taryf."},
-    {id:"baggage",label:"Jedna wspólna walizka, obie strony",amountPLN:baggagePLN,estimated:baggageEstimate,
-      details:bookingConfirmed?"Jedna wspólna walizka rejestrowana na obu odcinkach jest w cenie opłaconych biletów.":state.bag==="extra"?"Dopłata do pakietu Standard raz RT, nie dwa bagaże ani opłata za każdy odcinek.":state.bag==="included"?"Założenie: infolinia potwierdziła walizkę na obu odcinkach.":"Status niepotwierdzony, dopłata na razie poza sumą."},
-    {id:"accommodation",label:"Nocleg u gospodarza",amountPLN:0,estimated:false,details:"Bez kosztu hotelu."},
+    {id:"baggage",label:"Walizka na bilecie Mieszka",amountPLN:baggagePLN,estimated:baggageEstimate,
+      details:booking?.travellers?data.flights.luggage.status:bookingConfirmed?"Jedna wspólna walizka rejestrowana na obu odcinkach jest w cenie opłaconych biletów.":state.bag==="extra"?"Dopłata do pakietu Standard raz RT, nie dwa bagaże ani opłata za każdy odcinek.":state.bag==="included"?"Założenie: infolinia potwierdziła walizkę na obu odcinkach.":"Status niepotwierdzony, dopłata na razie poza sumą."},
+    {id:"accommodation",label:accommodationUnknown?"Przedłużenie noclegów · do potwierdzenia":"Nocleg u gospodarza",amountPLN:accommodationUnknown?null:0,estimated:false,details:accommodationUnknown?"Pierwotne noclegi u Marcina bez kosztu hotelu; przedłużenie wymaga potwierdzenia.":"Bez kosztu hotelu."},
     {id:"eta",label:"ETA dla osób, które jej potrzebują",amountGBP:etaGBP,amountPLN:round(etaGBP*state.gbpPLN),estimated:false,details:state.etaCount+" × £20; gospodarz nie jest doliczany."},
-    {id:"airport",label:"Lotnisko ↔ baza, dwoje podróżnych",amountGBP:airportGBP,amountPLN:round(airportGBP*state.gbpPLN),estimated:true,details:"2 osoby × 2 przejazdy × £15,50; migawka planera, nie gwarancja taryfy."},
-    {id:"urban",label:"Komunikacja w pełne dni pobytu",amountGBP:urbanGBP,amountPLN:round(urbanGBP*state.gbpPLN),estimated:true,details:Math.max(0,nights-1)+" dni × 2 osoby × cap £10,50. Cap to limit, nie obowiązkowy wydatek; dni lotniskowe osobno."},
-    {id:"food",label:"Jedzenie dla dwojga",amountGBP:foodGBP,amountPLN:round(foodGBP*state.gbpPLN),estimated:true,details:days+" dni × 2 osoby × £"+state.foodGBP+". W tym posiłki na targach — nie doliczamy ich drugi raz."},
+    {id:"airport",label:"Lotnisko ↔ baza, dwoje podróżnych",amountGBP:airportGBP,amountPLN:round(airportGBP*state.gbpPLN),estimated:true,details:"4 przejazdy × około £"+data.flights.route.fareGBP+"; Piccadilly + Northern. Szacunek, nie gwarancja taryfy dokładnie do Brent Cross."},
+    {id:"urban",label:"Komunikacja w pełne dni pobytu",amountGBP:urbanGBP,amountPLN:round(urbanGBP*state.gbpPLN),estimated:true,details:fullPersonDays+" osobodni × cap £10,50. Cap to limit, nie obowiązkowy wydatek; dni lotniskowe osobno."},
+    {id:"food",label:"Jedzenie dla dwojga",amountGBP:foodGBP,amountPLN:round(foodGBP*state.gbpPLN),estimated:true,details:personDays+" osobodni × £"+state.foodGBP+". W tym posiłki na targach — nie doliczamy ich drugi raz."},
     {id:"activities",label:unknownItems.length?"Atrakcje — znana część kosztu":"Wybrane atrakcje",amountGBP:activitiesGBP,amountPLN:round(activitiesGBP*state.gbpPLN),estimated:estimatedItems.length>0,
       details:"Uczestnicy liczeni osobno dla każdej atrakcji; nie dodają lotów ani jedzenia gospodarza."}
   ];
   const knownTotalPLN = round(lines.reduce((sum,x)=>sum+(x.amountPLN??0),0));
-  const hasUnknownPrices = unknownItems.length>0 || flightPLN===null;
+  const hasUnknownPrices = unknownItems.length>0 || flightPLN===null || accommodationUnknown;
   const remainingKnownPLN = round(knownTotalPLN - (paidFlightPLN ?? 0));
-  return {variant:trip,nights,days,travellers,lines,activities,flightPLN,baggagePLN,etaGBP,urbanGBP,airportGBP,foodGBP,activitiesGBP,
+  return {variant:trip,nights,days,travellers,personDays,fullPersonDays,accommodationUnknown,lines,activities,flightPLN,baggagePLN,etaGBP,urbanGBP,airportGBP,foodGBP,activitiesGBP,
     bookingConfirmed,paidFlightPLN,remainingKnownPLN,remainingPLN:hasUnknownPrices?null:remainingKnownPLN,
     knownTotalPLN,totalPLN:hasUnknownPrices?null:knownTotalPLN,
     alreadyPaidPLN:null,priorTicketExcluded:true,

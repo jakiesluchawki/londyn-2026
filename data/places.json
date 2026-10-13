@@ -400,7 +400,7 @@
     {
       "id": "daily-cap",
       "title": "Limit dzienny komunikacji",
-      "body": "Oficjalna tabela 2026 podaje £10.50/os/dzień dla stref 1–3. To maksymalny limit dla objętych nim podróży, nie stała opłata. Trzy pełne dni można ostrożnie oszacować na maks. £31.50/os; dni lotniskowe policzyć osobno. Tygodniowy cap działa poniedziałek–niedziela, więc Wasz wyjazd przekracza granicę tygodnia.",
+      "body": "Budżet komunikacji: 3 pełne dni Kostka + 5 pełnych dni Mieszka = 8 osobodni, po roboczym limicie £10,50 dla stref 1–3. To limit, nie obowiązkowy wydatek. Przejazdy lotniskowe szacujemy osobno na około £5,90 każdy; inne strefy i utrudnienia mogą zmienić koszt.",
       "priceGBP": 10.5,
       "priceStatus": "official-2026-cap",
       "sources": [
@@ -457,7 +457,7 @@
     {
       "id": "no-overbooking",
       "title": "Jeden duży punkt dzienny wystarczy",
-      "body": "Czwartek: przylot o 09:20, odłożenie walizki u Marcina i luźne popołudnie. Piątek: Borough + Tate albo spacer, potem opcjonalny musical. Sobota: wybierz Abbey Road/Frieze, City/Brick Lane albo deszczowy duet National Gallery/Water Body. Niedziela: Londyn Marcina, Hampstead/Kenwood, opcjonalnie chór. Poniedziałek: spokojny poranek w okolicy, odbiór walizki u Marcina i wyjazd na Heathrow; bez Borough, Frieze Fair, Water Body ani BFI, które tego dnia nie działają.",
+      "body": "Kostek wraca 19 X, Mieszko 21 X. W oba dni planuj wyjście z Brent Cross 13:15–13:45 i przyjazd do T2 15:15–15:45 na lot o 18:10. Walizka wraca dopiero z Mieszkiem w środę. To bufory, nie bieżący rozkład.",
       "sources": [],
       "verifiedAt": "2026-09-03",
       "updatedAt": "2026-09-04"
@@ -465,7 +465,7 @@
     {
       "id": "budget-scope",
       "title": "Budżet dla dwóch podróżnych, atrakcje dla chętnych",
-      "body": "Loty, transfery lotniskowe, jedzenie i ewentualna ETA dotyczą dwóch osób lecących z Warszawy. Atrakcje liczymy dla 1–5 chętnych, zależnie od udziału Marcina, Karoliny i Adama. To łączny koszt zaznaczonej grupy, nie rachunek do zapłacenia przez Mieszka. Kwoty wejścia £0 nie obejmują jedzenia, zakupów ani płatnych alternatyw.",
+      "body": "Loty według dokumentów: 1900,92 zł dodatkowych kosztów, bez starego biletu. Jedzenie: 5 dni Kostka + 7 dni Mieszka. Dodatkowe noce 19–21 X wymagają potwierdzenia u Marcina, dlatego suma pozostaje częściowa. Atrakcje liczymy dla wybranej liczby osób.",
       "sources": [],
       "verifiedAt": "2026-09-03"
     }
