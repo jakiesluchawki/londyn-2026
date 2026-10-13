@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-14",
+  "scope": "website-only",
+  "title": "Jeszcze dwa dni. Z Weroniką.",
+  "dateStart": "2026-10-19",
+  "dateEnd": "2026-10-21",
+  "events": [
+    {
+      "id": "alani-20",
+      "title": "ALA.NI · Sunshine Music",
+      "category": "concert",
+      "date": "2026-10-20",
+      "venue": "Upstairs at Ronnie’s",
+      "area": "Soho",
+      "priceGBP": 35,
+      "priceLabel": "£25–35/os. · £50–70 za dwoje, przed ewentualnymi opłatami",
+      "priceStatus": "from",
+      "description": "Kameralny wokal, gitara i wiolonczela. Calypso, jazz, bossa nova i soul zamiast dużej areny.",
+      "why": "Mój pierwszy typ na Wasz wtorek: ciepłe, subtelne brzmienie pasujące do muzycznego kierunku Mieszka. Gust Weroniki pozostaje do poznania.",
+      "sources": [
+        {
+          "label": "Ronnie Scott’s · data, skład i ceny",
+          "url": "https://www.ronniescotts.co.uk/find-a-show/ala-ni"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "durationMinutes": null,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "20 X potwierdzony. Godzin poszczególnych sesji nie udało się potwierdzić w odczycie — wybierz je w „Times and Tickets”. Nie łącz w ciemno z musicalem ani odsłuchem o 17:00.",
+      "availabilityNote": "Strona prowadzi do sprzedaży i podaje £25–35. Nie sprawdzono dwóch miejsc ani końcowej kwoty koszyka. Do kalkulatora przyjęto £35/os.",
+      "conflicts": [
+        "randy-crawford-20",
+        "hadestown-20",
+        "celtic-20"
+      ]
+    },
+    {
+      "id": "randy-crawford-20",
+      "title": "Street Life · The Randy Crawford Project",
+      "category": "concert",
+      "date": "2026-10-20",
+      "venue": "Vortex Jazz Club",
+      "area": "Dalston / Gillett Square",
+      "priceGBP": 15,
+      "priceLabel": "£15/os. standard · £30 za dwoje + ewentualne opłaty",
+      "priceStatus": "verified",
+      "description": "Ineza i kwintet grają piosenki Randy Crawford: soul, jazz i R&B w niewielkim klubie. To interpretacje jej repertuaru, nie występ samej Randy Crawford.",
+      "why": "Najlepszy stosunek muzycznego dopasowania do ceny. Dobry wybór, jeśli wolicie głos i zespół od teatralnego widowiska.",
+      "sources": [
+        {
+          "label": "Vortex · termin, godziny i taryfa",
+          "url": "https://www.vortexjazz.co.uk/event/street-life-the-randy-crawford-project/"
+        }
+      ],
+      "start": "20:30",
+      "end": null,
+      "durationMinutes": null,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "doors": "19:45",
+      "timeNote": "Drzwi 19:45, muzyka 20:30, dwa sety. Końca koncertu nie traktujemy jako potwierdzonego; zostaw cały wieczór.",
+      "availabilityNote": "Bilet standardowy £15. Klub ma miejsca siedzące i stojące; zwykły bilet nie gwarantuje krzesła. Dostępności dwóch biletów i opłat koszyka nie sprawdzono.",
+      "youtube": "https://www.youtube.com/watch?v=YAg5_wi3X7A",
+      "youtubeNote": "„Rainy Night in Georgia” — nagranie Randy Crawford Project podlinkowane przez Vortex. Odtwarzania nie testowano.",
+      "conflicts": [
+        "alani-20",
+        "hadestown-20",
+        "celtic-20"
+      ]
+    },
+    {
+      "id": "hadestown-20",
+      "title": "Hadestown · wtorek z Weroniką",
+      "category": "musical",
+      "date": "2026-10-20",
+      "venue": "Lyric Theatre",
+      "area": "Soho / Shaftesbury Avenue",
+      "priceGBP": 85,
+      "priceLabel": "Budżet £70–100/os. · £140–200 za dwoje (estymacja)",
+      "priceStatus": "estimate",
+      "description": "Orfeusz i Eurydyka w musicalu z folkiem, jazzem i bluesem. Po angielsku, na siedząco, z przerwą.",
+      "why": "Najbliższy muzycznym preferencjom Mieszka musical z wcześniejszej listy. Wtorek działa niezależnie od weekendowych planów z Kostkiem.",
+      "sources": [
+        {
+          "label": "Oficjalny kalendarz · 20 X o 19:00",
+          "url": "https://uk.hadestown.com/"
+        },
+        {
+          "label": "Nimax · dokładne przedstawienie 20 X",
+          "url": "https://ticketing.nimaxtheatres.com/shop/tickets/series/LYHDT01M/hadestown-1955040"
+        },
+        {
+          "label": "FAQ · czas trwania",
+          "url": "https://uk.hadestown.com/faq/"
+        }
+      ],
+      "start": "19:00",
+      "end": "21:30",
+      "durationMinutes": 150,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "20 X o 19:00 potwierdzone w kalendarzu produkcji — nie 19:30. Koniec ok. 21:30 przy czasie 2 h 30 min z przerwą. W poniedziałek 19 X nie ma przedstawienia w tym kalendarzu.",
+      "availabilityNote": "Potwierdzona data i link do konkretnego przedstawienia. Dwa sąsiadujące miejsca i ich cena pozostają do sprawdzenia. £85 w kalkulatorze to budżet, nie odczyt koszyka.",
+      "repeatOf": "hadestown",
+      "conflicts": [
+        "alani-20",
+        "randy-crawford-20",
+        "celtic-20"
+      ]
+    },
+    {
+      "id": "adriana-19",
+      "title": "Adriana Calcanhotto · Voz e Violão",
+      "category": "concert",
+      "date": "2026-10-19",
+      "venue": "The Clapham Grand",
+      "area": "Clapham Junction / Battersea",
+      "priceGBP": 49.9,
+      "priceLabel": "Circle £49,90/os. · £99,80 za dwoje; Stalls £59,90/os.",
+      "priceStatus": "verified",
+      "description": "Brazylijska songwriterka z głosem i gitarą: oszczędny, skupiony koncert po portugalsku.",
+      "why": "Mocna poniedziałkowa alternatywa, jeżeli Weronika dotrze odpowiednio wcześnie. W innym przypadku wybrałbym po prostu kolację.",
+      "sources": [
+        {
+          "label": "Clapham Grand · koncert i taryfy",
+          "url": "https://claphamgrand.com/event/adriana-calcanhotto-voz-e-violao/"
+        }
+      ],
+      "start": null,
+      "end": "22:00",
+      "durationMinutes": null,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "doors": "18:30",
+      "timeNote": "19 X: drzwi i bary 18:30, koniec wydarzenia 22:00 według obiektu. Godzina wyjścia artystki niepodana. 18:30 nie jest godziną startu koncertu.",
+      "availabilityNote": "Circle £49,90 i Stalls £59,90 prowadzą do zakupu. Upper Circle £31,96 oraz Royal Box oznaczone jako wyprzedane. Miejsca nienumerowane; dostępności dla dwojga i końcowej ceny nie sprawdzono.",
+      "arrivalUnconfirmed": true
+    },
+    {
+      "id": "celtic-20",
+      "title": "Celtic Session · Jamboree",
+      "category": "concert",
+      "date": "2026-10-20",
+      "venue": "Jamboree",
+      "area": "King’s Cross",
+      "priceGBP": 0,
+      "priceLabel": "Wstęp bezpłatny · napoje osobno",
+      "priceStatus": "verified",
+      "description": "Tradycyjna sesja irlandzka z domieszką melodii szkockich. Kameralnie i bez kosztownego biletu.",
+      "why": "Wariant swobodny i budżetowy. To przede wszystkim słuchanie grających muzyków, nie obietnica wspólnego chóralnego śpiewania.",
+      "sources": [
+        {
+          "label": "Jamboree · 20 X, start i bezpłatny wstęp",
+          "url": "https://www.jamboreevenue.co.uk/upcoming-events/page/2/?pno=2"
+        }
+      ],
+      "start": "20:30",
+      "end": null,
+      "durationMinutes": null,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "Wtorek 20 X od 20:30. Koniec niepodany. Nie trzeba planować całego wieczoru co do minuty.",
+      "availabilityNote": "Oficjalny kalendarz: Entry Free. Bez rezerwacji krzeseł ani potwierdzenia wolnego stolika; napoje nie są częścią bezpłatnego wstępu.",
+      "conflicts": [
+        "alani-20",
+        "randy-crawford-20",
+        "hadestown-20"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "spiritland-20",
+      "title": "Spiritland w Barbicanie · dzień otwarcia",
+      "category": "music",
+      "date": "2026-10-20",
+      "venue": "Spiritland Bar / Barbican, Level 2",
+      "area": "Barbican / Moorgate",
+      "priceGBP": 20,
+      "priceLabel": "Rezerwa £15–25/os. na napoje / przekąskę (estymacja)",
+      "priceStatus": "estimate",
+      "description": "Nowy listening bar nad wodą. O 17:00 odtwarzany jest cały album na systemie Living Voice; program obejmuje m.in. jazz, soul, ambient i klasykę.",
+      "why": "Najciekawszy niekoncertowy trop na wtorkowe popołudnie. Słuchanie muzyki i architektura Barbicanu; można później wybrać jeden koncert.",
+      "sources": [
+        {
+          "label": "Barbican · otwarcie 20 X i odsłuchy o 17:00",
+          "url": "https://www.barbican.org.uk/your-visit/eat-drink/spiritland-bar"
+        }
+      ],
+      "start": "17:00",
+      "end": "18:00",
+      "durationMinutes": 60,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "Otwarcie 20 X; wt.–pt. bar 16:00–23:00, codzienny odsłuch albumu 17:00. 17:00–18:00 to nasz blok planistyczny, nie potwierdzona długość albumu. To odsłuch, nie koncert artysty.",
+      "availabilityNote": "Stolik, program dnia i ewentualne warunki zamówienia trzeba potwierdzić przez rezerwację na stronie. Nie zakładamy dostępności w dniu otwarcia. £20/os. w planie jest rezerwą na konsumpcję, nie ceną biletu.",
+      "rainFriendly": true
+    },
+    {
+      "id": "tarek-atoui-20",
+      "title": "Tarek Atoui · dźwięk w Turbine Hall",
+      "category": "art",
+      "date": "2026-10-20",
+      "venue": "Tate Modern",
+      "area": "Bankside",
+      "priceGBP": 0,
+      "priceLabel": "Wystawa bezpłatna",
+      "priceStatus": "verified",
+      "description": "Instalacja artysty i kompozytora pracującego z dźwiękiem, instrumentami i rzeźbą. Kulturalny przystanek pod dachem, nie kolejny biletowany wieczór.",
+      "why": "Propozycja bliska zainteresowaniom Mieszka: technologia, dźwięk i przestrzeń. Po wizycie można przejść nad Tamizę.",
+      "sources": [
+        {
+          "label": "Studio artysty · daty wystawy i osobne koncerty",
+          "url": "https://tarekatoui.com/"
+        },
+        {
+          "label": "The Wire · godziny i bezpłatny wstęp",
+          "url": "https://www.thewire.co.uk/events/tarek-atoui-2026"
+        },
+        {
+          "label": "Tate · strona organizatora (odczyt zablokowany)",
+          "url": "https://www.tate.org.uk/whats-on/tate-modern/hyundai-commission-2026"
+        }
+      ],
+      "start": "12:00",
+      "end": "13:00",
+      "durationMinutes": 60,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "Wystawa 13 X 2026–11 IV 2027. Wtorek: 10:00–18:00; 12:00–13:00 to nasza propozycja zwiedzania. Studio artysty wymienia występy live 16 i 17 X, nie 20 X — nie obiecujemy koncertu we wtorek.",
+      "availabilityNote": "Daty potwierdzone u artysty, godziny i bezpłatność w The Wire; serwer Tate odmówił odczytu. Nie jest to rezerwacja wejścia.",
+      "rainFriendly": true
+    },
+    {
+      "id": "light-magic-20",
+      "title": "Light and Magic · fotografia jako sztuka",
+      "category": "art",
+      "date": "2026-10-20",
+      "venue": "Tate Modern",
+      "area": "Bankside",
+      "priceGBP": 20,
+      "priceLabel": "Około £20/os. · £40 za dwoje; taryfa z Time Out",
+      "priceStatus": "estimate",
+      "description": "Wystawa o piktorializmie i narodzinach fotografii artystycznej. Dobry temat do rozmowy: kiedy zdjęcie przestaje być wyłącznie dokumentem?",
+      "why": "Alternatywa dla instalacji dźwiękowej, jeśli Weronika woli fotografię. Nie trzeba robić obu wystaw jednego dnia.",
+      "sources": [
+        {
+          "label": "Tate Shop · oficjalne daty wystawy",
+          "url": "https://shop.tate.org.uk/exhibitions/now-booking?sz=100"
+        },
+        {
+          "label": "Time Out · cena £20 i godziny",
+          "url": "https://www.timeout.com/london/art/light-and-magic-the-birth-of-art-photography"
+        },
+        {
+          "label": "Tate · strona wystawy (odczyt zablokowany)",
+          "url": "https://www.tate.org.uk/whats-on/tate-modern/light-and-magic"
+        }
+      ],
+      "start": "12:00",
+      "end": "13:30",
+      "durationMinutes": 90,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "14 X 2026–21 II 2027. Wtorek 10:00–18:00; 12:00–13:30 to propozycja wizyty, nie zarezerwowany slot.",
+      "availabilityNote": "£20 według aktualnego Time Out; cenę i slot potwierdź w kasie Tate. Oficjalny katalog Tate potwierdza daty, pełna strona wystawy nie dała się odczytać.",
+      "rainFriendly": true
+    },
+    {
+      "id": "kenwood-21",
+      "title": "Kenwood · spokojny środowy poranek",
+      "category": "art",
+      "date": "2026-10-21",
+      "venue": "Kenwood House",
+      "area": "Hampstead / północny Londyn",
+      "priceGBP": 0,
+      "priceLabel": "Kolekcja bezpłatna · kawa osobno",
+      "priceStatus": "verified",
+      "description": "Rembrandt, Vermeer i krótki spacer po parku. Zamiast ścigać się z miastem: ostatnie wspólne przedpołudnie na północy Londynu.",
+      "why": "Rozsądniejszy finał niż popołudniowy West End. Daje czas na powrót do Marcina po walizkę przed Heathrow.",
+      "sources": [
+        {
+          "label": "English Heritage · kolekcja, darmowe wejście, godziny",
+          "url": "https://www.english-heritage.org.uk/kenwood"
+        }
+      ],
+      "start": "10:00",
+      "end": "11:00",
+      "durationMinutes": 60,
+      "availability": "on-sale",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "Dom otwarty codziennie 10:00–17:00. Nasza propozycja: 21 X 10:00–11:00, potem powrót po bagaż. Bądź przy walizce około 12:00–12:30; wyjazd z Brent Cross około 13:10 to bufor na lot 18:10, nie rozkład TfL.",
+      "availabilityNote": "Kolekcja bezpłatna; English Heritage udostępnia bezpłatną rezerwację. To zwiedzanie, nie niedzielny koncert chóralny. W razie opóźnień zrezygnuj z muzeum na rzecz kawy bliżej bazy.",
+      "rainFriendly": true
+    },
+    {
+      "id": "welcome-weronika",
+      "title": "Powitanie Weroniki · kolacja bez pośpiechu",
+      "category": "friends",
+      "date": "2026-10-19",
+      "venue": "Do ustalenia wspólnie",
+      "area": "King’s Cross lub okolice bazy",
+      "priceGBP": 0,
+      "priceLabel": "Spotkanie £0 · posiłek osobno, roboczo £25–40/os.",
+      "priceStatus": "personal-plan",
+      "description": "Kostek wraca do Polski, Weronika przyjeżdża do Londynu. Zostawmy ten wieczór elastyczny, dopóki nie znamy jej godziny przyjazdu.",
+      "why": "Ważniejsze jest spokojne spotkanie niż dopasowanie przyjazdu do drogiej wejściówki.",
+      "sources": [],
+      "start": null,
+      "end": null,
+      "durationMinutes": null,
+      "availability": "personal-plan",
+      "origin": "new",
+      "verifiedAt": "2026-10-14",
+      "participantNames": [
+        "Mieszko",
+        "Weronika"
+      ],
+      "cultureExtension": true,
+      "timeNote": "19 X, dopiero po przyjeździe Weroniki. Jej godzina i miejsce przyjazdu nie są jeszcze znane. Nie zakładamy spotkania z Kostkiem przed jego odlotem.",
+      "availabilityNote": "Bez rezerwacji restauracji. Wpis £0 dotyczy samego spotkania, nie darmowej kolacji. Jedzenie Weroniki nie jest w bazowym budżecie dwóch podróżnych.",
+      "arrivalUnconfirmed": true,
+      "rainFriendly": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "soul",
+      "title": "Ciepły wokal, mały klub",
+      "subtitle": "Tarek Atoui za dnia → ALA.NI wieczorem",
+      "ids": [
+        "welcome-weronika",
+        "tarek-atoui-20",
+        "alani-20",
+        "kenwood-21"
+      ],
+      "budget": "Bilety dla dwojga: £50–70 + ewentualne opłaty",
+      "note": "Mój pierwszy wybór. Najpierw sprawdź godzinę sesji ALA.NI."
+    },
+    {
+      "id": "value",
+      "title": "Dużo muzyki, mniejszy koszt",
+      "subtitle": "Tarek Atoui → Randy Crawford Project",
+      "ids": [
+        "welcome-weronika",
+        "tarek-atoui-20",
+        "randy-crawford-20",
+        "kenwood-21"
+      ],
+      "budget": "Bilety dla dwojga: £30 + ewentualne opłaty",
+      "note": "Wieczorny koncert o 20:30. Zamiast niego: bezpłatna Celtic Session."
+    },
+    {
+      "id": "theatre",
+      "title": "Fotografia i West End",
+      "subtitle": "Light and Magic → Hadestown o 19:00",
+      "ids": [
+        "welcome-weronika",
+        "light-magic-20",
+        "hadestown-20",
+        "kenwood-21"
+      ],
+      "budget": "Rezerwa dla dwojga: £180–240 + ewentualne opłaty",
+      "note": "Estymacja: wystawa £40, musical £140–200. Jeśli Hadestown zobaczysz wcześniej, wybierz koncert."
+    }
+  ]
+}

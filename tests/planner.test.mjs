@@ -511,3 +511,69 @@ test("return conflicts distinguish Monday Kostek from Wednesday Mieszko and suit
   assert.ok(issues.some(x=>x.code==='traveller-away' && x.itemIds[0]==='wed' && x.message.includes('Kostek')));
   assert.ok(!issues.some(x=>x.code==='return-flight' && x.itemIds[0]==='mon' && x.message.includes('odbiór walizki')));
 });
+
+// Additional dates are a website-only overlay; keep the native feed untouched.
+const {withCulture,selectCulturePreset}=await import('../culture.mjs');
+const culture=load('culture-extension');
+const expanded=withCulture(publishedData,culture);
+
+test('culture overlay is additive and does not mutate the shared iOS data',()=>{
+  const original=JSON.stringify(publishedData);
+  const result=withCulture(publishedData,culture);
+  assert.equal(JSON.stringify(publishedData),original);
+  assert.equal(result.events.length,publishedData.events.length+culture.events.length);
+  assert.equal(result.places.places.length,publishedData.places.places.length+culture.places.length);
+  assert.strictEqual(result.flights,publishedData.flights);
+  const ids=[...result.events,...result.places.places].map(x=>x.id);
+  assert.equal(new Set(ids).size,ids.length);
+});
+
+test('choosing a culture preset preserves weekend choices, local prices and flight facts',()=>{
+  const old={...defaultState(expanded),selected:['adja','meet-friends','alani-20'],attendees:{adja:3,'randy-crawford-20':3},prices:{adja:38,'randy-crawford-20':18},gbpPLN:4.9,dates:{'meet-friends':'2026-10-18'}};
+  const original=JSON.stringify(old);
+  const s=selectCulturePreset(old,expanded,'value');
+  assert.deepEqual(s.selected,['adja','meet-friends',...culture.presets.find(x=>x.id==='value').ids]);
+  assert.equal(s.attendees.adja,3);
+  assert.equal(s.attendees['randy-crawford-20'],3);
+  assert.equal(s.prices['randy-crawford-20'],18);
+  assert.equal(s.dates['meet-friends'],'2026-10-18');
+  assert.equal(s.gbpPLN,4.9);
+  assert.equal(s.variant,'15morning-split');
+  assert.equal(JSON.stringify(old),original);
+  assert.deepEqual(decodeState(encodeState(s),expanded),s);
+});
+
+test('repeated preset selection is idempotent; unknown presets do not remove choices',()=>{
+  const s=selectCulturePreset(defaultState(expanded),expanded,'soul');
+  assert.deepEqual(selectCulturePreset(s,expanded,'soul'),s);
+  assert.deepEqual(selectCulturePreset(s,expanded,'not-a-preset'),s);
+});
+
+test('Weronika concert costs are counted without adding her flights or food',()=>{
+  const s={...defaultState(expanded),selected:['randy-crawford-20']};
+  const b=budget(s,expanded);
+  assert.equal(b.activitiesGBP,30);
+  assert.equal(b.flightPLN,1900.92);
+  assert.equal(b.personDays,12);
+  const warnings=conflicts(s,expanded);
+  assert.ok(!warnings.some(x=>x.code==='traveller-away'));
+});
+
+test('Wednesday airport buffer still protects Mieszko; Monday needs guest arrival time',()=>{
+  const d=withCulture(publishedData,{...culture,events:[...culture.events,{...culture.events[1],id:'too-late-wed',date:'2026-10-21'}]});
+  const s={...defaultState(d),selected:['too-late-wed','adriana-19','kenwood-21']};
+  const issues=conflicts(s,d);
+  assert.ok(issues.some(x=>x.code==='return-flight'&&x.itemIds.includes('too-late-wed')&&x.message.includes('Mieszko')));
+  assert.ok(!issues.some(x=>x.code==='return-flight'&&x.itemIds.includes('adriana-19')));
+  assert.ok(issues.some(x=>x.code==='guest-arrival-unknown'&&x.itemIds.includes('adriana-19')));
+  assert.ok(!issues.some(x=>x.code.startsWith('return')&&x.itemIds.includes('kenwood-21')));
+});
+
+test('Tuesday alternatives and duplicate Hadestown bookings are flagged',()=>{
+  const s={...defaultState(expanded),selected:['alani-20','hadestown-20','hadestown']};
+  const issues=conflicts(s,expanded);
+  assert.ok(issues.some(x=>x.code==='alternatives'&&x.itemIds.includes('alani-20')));
+  assert.ok(issues.some(x=>x.code==='repeat-show'&&x.itemIds.includes('hadestown-20')));
+  const show=activeItems(s,expanded).find(x=>x.id==='hadestown-20');
+  assert.equal(show.start,'19:00');
+});

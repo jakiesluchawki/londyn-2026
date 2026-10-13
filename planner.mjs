@@ -236,6 +236,8 @@ export function conflicts(rawState, data = {}) {
   for (let i = 0; i < active.length; i++) {
     for (let j = i + 1; j < active.length; j++) {
       const a = active[i], b = active[j];
+      if (a.repeatOf === b.id || b.repeatOf === a.id) issues.push(warning("repeat-show", [a.id,b.id],
+        a.title + " / " + b.title + ": ten sam musical w dwóch terminach. Jeśli nie chcesz powtórki, zostaw tylko jedno przedstawienie."));
       const explicit = a.conflicts?.includes(b.id) || b.conflicts?.includes(a.id);
       const ia = interval(a), ib = interval(b);
       const overlap = ia && ib && ia[0] < ib[1] && ib[0] < ia[1];
@@ -252,6 +254,8 @@ export function conflicts(rawState, data = {}) {
   for (const item of active) {
     const date = exactDate(item);
     if (!date) continue;
+    if (item.arrivalUnconfirmed) issues.push(warning("guest-arrival-unknown", [item.id],
+      item.title + ": najpierw ustal godzinę przyjazdu Weroniki. Nie kupuj poniedziałkowej wejściówki bez tego ustalenia."));
     const start = minutes(item.start), doors = doorsMinutes(item);
     const knownStart = start ?? doors;
     const itemInterval = interval(item);
@@ -263,6 +267,9 @@ export function conflicts(rawState, data = {}) {
       else if (knownStart === null && fixedEvent) issues.push(warning("arrival-time-unknown", [item.id], item.title + ": w dniu przylotu, ale godzina sesji niepotwierdzona. Najpierw sprawdź logistykę."));
     }
     for (const person of returns) {
+      // These curated later activities explicitly concern Mieszko and Weronika,
+      // not Kostek. Flight protection still applies to Mieszko on Wednesday.
+      if (Array.isArray(item.participantNames) && person.name && !item.participantNames.includes(person.name)) continue;
       const departure = minutes(person.back);
       if (person.name && date > person.return) issues.push(warning("traveller-away", [item.id], item.title + ": " + person.name + " jest już po powrocie do Warszawy. Ustaw uczestników zgodnie z faktycznym składem."));
       if (date !== person.return || departure === null) continue;
