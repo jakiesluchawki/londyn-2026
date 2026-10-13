@@ -6,7 +6,7 @@
  * Item dates may be date:"YYYY-MM-DD", ISO start/end datetimes, inclusive
  * start/end date ranges, or absent (an unscheduled option, not an appointment).
  * Optional availableWeekdays uses 0=Sunday..6=Saturday. Optional sessions is
- * a trusted list of {id,date,start,end,label}, restricted to 14–21 October.
+ * a trusted list of {id,date,start,end,label}, restricted to 2026–2027.
  *
  * State: {version:1,variant,selected:string[],attendees:{id:1|2|3|4|5},
  * eurPLN,gbpPLN,reissueExtraPLN,bag:"pending"|"included"|"extra",
