@@ -1,0 +1,39 @@
+{
+  "revision": "2026-10-18.1",
+  "asOf": "2026-10-18",
+  "source": "Relacja Mieszka; daty potwierdzone po północy 18 X, czas londyński.",
+  "pauseConcerts": true,
+  "defaultSelected": ["sunday-roast-18", "welcome-weronika"],
+  "completed": [
+    {"id": "matt-johnson", "title": "Matt Johnson", "category": "concert", "date": "2026-10-16", "participantNames": ["Mieszko"], "paidGBP": 35, "note": "Mieszko był solo. Zapłacone £35."},
+    {"id": "adja", "title": "Adja", "category": "concert", "date": "2026-10-17", "participantNames": ["Mieszko"], "paidGBP": 25, "note": "Udało się wejść. Mieszko był solo. Zapłacone £25."},
+    {"id": "tate-britain", "title": "Tate Britain", "category": "art", "date": "2026-10-17", "paidGBP": null, "note": "Wspólna sobotnia wizyta w Tate Britain."}
+  ],
+  "notVisited": [{"id": "national-gallery", "note": "17 X nie starczyło czasu. Nadal luźna opcja, nie zrealizowana wizyta ani rezerwacja."}],
+  "places": [
+    {
+      "id": "sunday-roast-18",
+      "title": "Sunday roast z Karoliną · 7 osób",
+      "category": "food",
+      "date": "2026-10-18",
+      "venue": "The Sun In Splendour · 7 Portobello Road",
+      "area": "Notting Hill",
+      "start": null,
+      "end": null,
+      "fixedAttendees": 7,
+      "budgetScope": "food",
+      "priceGBP": null,
+      "priceLabel": "Rachunek i podział kosztów do ustalenia",
+      "priceStatus": "unknown",
+      "availability": "personal-plan",
+      "origin": "personal",
+      "verifiedAt": "2026-10-18",
+      "description": "Niedzielny Sunday roast z Karoliną i całą grupą. Mieszko potwierdził plan dla 7 osób; godziny spotkania jeszcze nie podano.",
+      "why": "Wspólny niedzielny obiad. Bez dokładania następnego koncertu.",
+      "timeNote": "Niedziela 18 X. Godzina spotkania nieznana; godziny otwarcia pubu nie są godziną rezerwacji.",
+      "availabilityNote": "Plan przekazany przez Mieszka, nie potwierdzenie rezerwacji stolika z restauracji. Nie kupiono ani nie zarezerwowano niczego przez tę stronę.",
+      "sources": [{"label": "The Sun In Splendour · oficjalna strona i adres", "url": "https://www.suninsplendourpub.co.uk/"}],
+      "rainFriendly": true
+    }
+  ]
+}

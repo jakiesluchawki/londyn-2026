@@ -53,3 +53,16 @@ Nie dodawaj PNR, numerów biletów, PDF-ów, danych logowania ani adresu gospoda
 - Wcześniejsze wydarzenia zachowują poprzednie daty researchu. Aktualizacja nie potwierdza na nowo całego repertuaru ani dostępności miejsc.
 
 Weryfikacja: 48 testów jednostkowych; lokalna przeglądarka Chromium (desktop, szerokości 320/390/768 px, dodawanie wariantu, zachowanie weekendu, odświeżenie, udostępniony link, brak błędów JS i poziomego przewijania).
+
+## Notes z pobytu i spokojniejszy plan (18 X 2026)
+
+`data/trip-updates.json` + `updates.mjs` to kolejna **nakładka wyłącznie WWW**. Pięć plików konsumowanych przez iOS nie zostało zmienionych; brak wydania TestFlight.
+
+- `#aktualnie`: Matt Johnson 16 X, £35, Mieszko solo; Adja 17 X, £25, Mieszko solo; Tate Britain 17 X odwiedzone wspólnie. Daty potwierdzone przez Mieszka po londyńskiej północy. National Gallery pozostaje niezrealizowaną opcją, nie wizytą.
+- Niedziela 18 X: Sunday roast z Karoliną w The Sun In Splendour, 7 osób. Brak godziny, potwierdzenia stolika i ceny; nie dopowiadamy tych danych. Adres lokalu sprawdzony w oficjalnym źródle, nie publikujemy adresu gospodarza.
+- Łączne £60 jest zapłaconym wydatkiem Mieszka. Historia jest niezależna od lokalnych cen i liczby uczestników, nie jest ponownie liczona jako przyszłe bilety. Kwota PLN to przeliczenie robocze. Pozostały model nadal obejmuje jedzenie i transport za cały pobyt, a nie zweryfikowane saldo do wydania.
+- Siedmiu uczestników obiadu nie zwiększa liczby podróżnych ani budżetu jedzenia do siedmiu osób. Rachunek i sposób jego podziału pozostają nieznane. Posiłek Mieszka i Kostka mieści się w dotychczasowej kategorii jedzenia; pozostałych osób nie wyceniamy.
+- Domyślny plan nie dodaje koncertów. Stare zapisy i linki migrują raz według `updateRevision`: odbyte/past-dated pozycje oraz dawne koncerty opuszczają przyszły plan. Zachowujemy ustawienia budżetu i przyszłe niekoncertowe wybory. Późniejsze świadome dodanie koncertu jest nadal możliwe; wpisów z historii nie można naliczyć drugi raz.
+- Research sceniczny zostaje pod osobnymi filtrami, bez promujących go zestawów. Pierwszy widok pokazuje spotkania i spokojne atrakcje. Poniedziałek–środa z Weroniką pozostają na stronie.
+
+Weryfikacja tej aktualizacji: 53 testy jednostkowe oraz Chromium desktop/mobile (320, 390, 768 px), stare localStorage, udostępniony link, trwałość zmian i brak błędów JavaScript.

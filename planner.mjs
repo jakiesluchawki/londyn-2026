@@ -146,8 +146,9 @@ export function defaultState(data = {}) {
   return {
     version: 1,
     variant: booking?.variantId || (options.find(x => x.recommended) || options[0])?.id || "15-19",
-    selected: DEFAULT_IDS.filter(id => ids.has(id)),
-    attendees: Object.fromEntries(items.map(x => [x.id, 2])),
+    selected: (data.updates?.defaultSelected || DEFAULT_IDS).filter(id => ids.has(id)),
+    ...(data.updates ? {updateRevision: data.updates.revision} : {}),
+    attendees: Object.fromEntries(items.map(x => [x.id, x.fixedAttendees || 2])),
     eurPLN: 4.33,
     gbpPLN: 5,
     reissueExtraPLN: 0,
@@ -185,6 +186,8 @@ export function sanitizeState(raw, data = {}) {
     }
   }
   for (const item of itemList(data)) {
+    if (Number.isInteger(item.fixedAttendees) && item.fixedAttendees > 0)
+      state.attendees[item.id] = item.fixedAttendees;
     const chosen=rawSessions[item.id];
     if (typeof chosen==="string" && sessionsFor(item).some(x=>x.id===chosen))
       Object.defineProperty(state.sessions,item.id,{value:chosen,enumerable:true,configurable:true,writable:true});
@@ -199,6 +202,29 @@ export function sanitizeState(raw, data = {}) {
   const eta = number(input.etaCount, 2, 0, 2);
   state.etaCount = Number.isInteger(eta) ? eta : 2;
   if (!booking && ["pending", "included", "extra"].includes(input.bag)) state.bag = input.bag;
+  if (data.updates) {
+    const updates = data.updates;
+    if (input.updateRevision !== updates.revision) {
+      // Apply this change of plans once, including old shared links. Later
+      // deliberate selections remain editable; history is never a new bill.
+      const resolved = new Map(selectedItems(state, data).map(x => [x.id, x]));
+      state.selected = state.selected.filter(id => {
+        const item = resolved.get(id);
+        return item && !(updates.pauseConcerts &&
+          (['concert', 'singing'].includes(item.category) || id === 'kenwood-choir')) &&
+          !(exactDate(item) && exactDate(item) < updates.asOf) && id !== 'meet-friends';
+      });
+      if (valid.has('sunday-roast-18') && !state.selected.includes('sunday-roast-18'))
+        state.selected.push('sunday-roast-18');
+      for (const {id} of updates.notVisited)
+        if (state.dates[id] && state.dates[id] < updates.asOf) delete state.dates[id];
+    }
+    const completed = new Set(updates.completed.map(x => x.id));
+    const resolved = new Map(selectedItems(state, data).map(x => [x.id, x]));
+    state.selected = state.selected.filter(id => !completed.has(id) &&
+      !(exactDate(resolved.get(id)) && exactDate(resolved.get(id)) < updates.asOf));
+    state.updateRevision = updates.revision;
+  }
   return state;
 }
 
@@ -333,7 +359,8 @@ export function budget(rawState, data = {}) {
   const urbanGBP = round(fullPersonDays * 10.5);
   const airportGBP = round(number(data.flights?.route?.fareGBP,15.5,0,1000) * 2 * travellers);
   const foodGBP = round(state.foodGBP * personDays);
-  const activities = active.map(item => {
+  // Meal attendance is a social fact, not an instruction to pay seven bills.
+  const activities = active.filter(item => item.budgetScope !== 'food').map(item => {
     const overridden = own(state.prices,item.id);
     const unitGBP = overridden ? state.prices[item.id] : number(item.priceGBP,null,0,10000);
     const attendees = state.attendees[item.id];
@@ -376,11 +403,17 @@ export function budget(rawState, data = {}) {
     {id:"activities",label:unknownItems.length?"Atrakcje — znana część kosztu":"Wybrane atrakcje",amountGBP:activitiesGBP,amountPLN:round(activitiesGBP*state.gbpPLN),estimated:estimatedItems.length>0,
       details:"Uczestnicy liczeni osobno dla każdej atrakcji; nie dodają lotów ani jedzenia gospodarza."}
   ];
+  const paidActivitiesGBP = round((data.updates?.completed || []).reduce((sum, item) =>
+    sum + (number(item.paidGBP, null, 0, 10000) ?? 0), 0));
+  const paidActivitiesPLN = round(paidActivitiesGBP * state.gbpPLN);
+  if (paidActivitiesGBP) lines.push({id:'paid-activities', label:'Odbyte koncerty · Mieszko solo · zapłacone',
+    amountGBP:paidActivitiesGBP, amountPLN:paidActivitiesPLN, estimated:true,
+    details:'£35 Matt Johnson + £25 Adja. Zapłacone kwoty w GBP; PLN według roboczego kursu, nie wyciągu bankowego.'});
   const knownTotalPLN = round(lines.reduce((sum,x)=>sum+(x.amountPLN??0),0));
   const hasUnknownPrices = unknownItems.length>0 || flightPLN===null || accommodationUnknown;
-  const remainingKnownPLN = round(knownTotalPLN - (paidFlightPLN ?? 0));
+  const remainingKnownPLN = round(knownTotalPLN - (paidFlightPLN ?? 0) - paidActivitiesPLN);
   return {variant:trip,nights,days,travellers,personDays,fullPersonDays,accommodationUnknown,lines,activities,flightPLN,baggagePLN,etaGBP,urbanGBP,airportGBP,foodGBP,activitiesGBP,
-    bookingConfirmed,paidFlightPLN,remainingKnownPLN,remainingPLN:hasUnknownPrices?null:remainingKnownPLN,
+    bookingConfirmed,paidFlightPLN,paidActivitiesGBP,paidActivitiesPLN,remainingKnownPLN,remainingPLN:hasUnknownPrices?null:remainingKnownPLN,
     knownTotalPLN,totalPLN:hasUnknownPrices?null:knownTotalPLN,
     alreadyPaidPLN:null,priorTicketExcluded:true,
     hasUnknownPrices,unknownItems,estimatedItems,excludedItems,warnings};

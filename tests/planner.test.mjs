@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {defaultState,sanitizeState,budget,conflicts,activeItems,encodeState,decodeState} from "../planner.mjs";
+import {withTripUpdates} from "../updates.mjs";
 
 const load = name => JSON.parse(readFileSync(new URL("../data/"+name+".json",import.meta.url),"utf8"));
 // Preserve the original unbooked research as the legacy fixture. Published
@@ -576,4 +577,76 @@ test('Tuesday alternatives and duplicate Hadestown bookings are flagged',()=>{
   assert.ok(issues.some(x=>x.code==='repeat-show'&&x.itemIds.includes('hadestown-20')));
   const show=activeItems(s,expanded).find(x=>x.id==='hadestown-20');
   assert.equal(show.start,'19:00');
+});
+
+const updates=load('trip-updates');
+const journalData=withTripUpdates(withCulture(publishedData,load('culture-extension')),updates);
+
+test('trip journal overlays actual prices without mutating iOS datasets or confusing Tate museums',()=>{
+  const before=JSON.stringify(publishedData);
+  const merged=withTripUpdates(withCulture(publishedData,load('culture-extension')),updates);
+  assert.equal(JSON.stringify(publishedData),before);
+  assert.equal(merged.events.find(x=>x.id==='matt-johnson').priceGBP,35);
+  assert.equal(merged.events.find(x=>x.id==='adja').priceGBP,25);
+  assert.equal(merged.places.places.find(x=>x.id==='tate-britain').completed,true);
+  assert.equal(merged.places.places.find(x=>x.id==='tate').completed,undefined);
+  const national=merged.places.places.find(x=>x.id==='national-gallery');
+  assert.equal(national.completed,undefined);
+  assert.match(national.visitNote,/nie starczyło czasu/);
+});
+
+test('old local or shared plans migrate once, keeping future art and user settings',()=>{
+  const old={...defaultState(publishedData),
+    selected:['adja','matt-johnson','masego','kenwood-choir','alani-20','tarek-atoui-20','national-gallery','meet-friends'],
+    dates:{'national-gallery':'2026-10-17'},prices:{'tarek-atoui-20':3},gbpPLN:4.9};
+  const s=sanitizeState(old,journalData);
+  assert.deepEqual(s.selected,['tarek-atoui-20','sunday-roast-18']);
+  assert.equal(s.dates['national-gallery'],undefined);
+  assert.equal(s.prices['tarek-atoui-20'],3);
+  assert.equal(s.gbpPLN,4.9);
+  assert.equal(s.attendees['sunday-roast-18'],7);
+  assert.deepEqual(decodeState(encodeState(old),journalData),s);
+  s.selected=s.selected.filter(id=>id!=='sunday-roast-18');
+  s.selected.push('alani-20'); // A deliberate later change of mind is allowed.
+  assert.deepEqual(sanitizeState(s,journalData).selected,s.selected);
+  assert.deepEqual(decodeState(encodeState(s),journalData),s);
+});
+
+test('actual solo concert spend is £60 once, independent of group size and price overrides',()=>{
+  const s=defaultState(journalData);
+  s.selected.push('adja','matt-johnson','tate-britain');
+  s.attendees.adja=5;s.attendees['matt-johnson']=5;
+  s.prices.adja=999;s.prices['matt-johnson']=0;
+  const b=budget(s,journalData);
+  assert.equal(b.paidActivitiesGBP,60);
+  assert.equal(b.paidActivitiesPLN,300);
+  assert.ok(!b.activities.some(x=>['adja','matt-johnson','tate-britain'].includes(x.id)));
+  assert.equal(b.knownTotalPLN-b.remainingKnownPLN,b.paidFlightPLN+300);
+  assert.equal(b.lines.filter(x=>x.id==='paid-activities').length,1);
+  const altered=budget({...s,gbpPLN:4},journalData);
+  assert.equal(altered.paidActivitiesGBP,60);
+  assert.equal(altered.paidActivitiesPLN,240);
+});
+
+test('seven roast guests do not become seven travellers or seven extra meals',()=>{
+  const s=defaultState(journalData);
+  s.attendees['sunday-roast-18']=1;s.prices['sunday-roast-18']=500;
+  const b=budget(s,journalData);
+  assert.equal(sanitizeState(s,journalData).attendees['sunday-roast-18'],7);
+  assert.equal(b.travellers,2);
+  assert.equal(b.personDays,12);
+  assert.equal(b.foodGBP,420);
+  assert.ok(!b.activities.some(x=>x.id==='sunday-roast-18'));
+  const noRoast=budget({...s,selected:s.selected.filter(id=>id!=='sunday-roast-18')},journalData);
+  assert.equal(b.knownTotalPLN,noRoast.knownTotalPLN);
+  assert.equal(journalData.places.places.find(x=>x.id==='sunday-roast-18').priceGBP,null);
+});
+
+test('fresh and malformed shared plans do not revive old concerts; past items cannot become future charges',()=>{
+  const s=defaultState(journalData);
+  assert.deepEqual(s.selected,['sunday-roast-18','welcome-weronika']);
+  assert.deepEqual(decodeState('not a valid link',journalData).selected,s.selected);
+  s.selected.push('massaoke','blue-lab-beats','national-gallery');
+  s.dates['national-gallery']='2026-10-17';
+  assert.deepEqual(sanitizeState(s,journalData).selected,['sunday-roast-18','welcome-weronika']);
 });

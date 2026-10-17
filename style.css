@@ -36,3 +36,15 @@
 .plan-controls{gap:8px}
 .plan-controls select{min-width:0}
 @media(max-width:400px){.hero>*{min-width:0}.hero h1{font-size:clamp(48px,16vw,64px)}}
+
+/* Trip journal: reported facts are separate from editable future options. */
+.journal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.journal-card{padding:28px;background:var(--cream);border-radius:22px;display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+.journal-card .eyebrow{margin:0}.journal-card h3{font:400 35px/1.1 Romie,Georgia,serif}.journal-card p{font-size:15px}
+.journal-paid{font:400 36px/1.15 Romie,Georgia,serif;margin-top:auto}.journal-paid span{display:block;font:400 12px/1.5 Roobert,Arial,sans-serif;margin-top:5px}
+.journal-total{display:flex;justify-content:space-between;gap:30px;border-block:1px solid var(--line);padding:22px 0;margin:25px 0 40px}.journal-total p{font-size:13px;max-width:50ch}
+.roast-card{display:grid;grid-template-columns:1.1fr 1fr;background:var(--lavender);border-radius:24px;overflow:hidden}.roast-card>div{padding:38px}.roast-card h3{font:400 48px/1.05 Romie,Georgia,serif;margin-bottom:20px}.roast-card p+p{margin-top:15px}.roast-card img{width:100%;height:100%;object-fit:cover}.roast-card .hero-actions{flex-wrap:wrap;gap:16px;margin-bottom:0}.roast-card .text-link{white-space:normal}
+.journal-note{margin-top:25px;font-size:15px;max-width:none}.visit-note{margin-top:10px;padding:10px 14px;border-left:3px solid var(--purple);background:var(--cream)}.attendance-fixed{font-size:12px;padding:9px 12px;white-space:normal}
+@media(max-width:900px){.journal-grid{gap:12px}.journal-card{padding:23px}.roast-card{grid-template-columns:1fr .8fr}.roast-card>div{padding:28px}.journal-total{flex-direction:column;gap:10px}}
+@media(max-width:720px){.journal-grid{grid-template-columns:1fr}.journal-card h3{font-size:32px}.journal-paid{font-size:32px}.roast-card{grid-template-columns:1fr}.roast-card img{height:230px;object-position:center}.roast-card h3{font-size:42px}.roast-card>div{padding:25px}}
+@media print{.journal-grid{grid-template-columns:repeat(3,1fr)}.journal-card{padding:12px}.journal-card h3{font-size:20px}.journal-paid{font-size:22px}.roast-card{display:block}.roast-card img,.roast-card .hero-actions{display:none}.roast-card>div{padding:16px}.roast-card h3{font-size:24px}.journal-card,.roast-card{break-inside:avoid}}
