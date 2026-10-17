@@ -66,3 +66,13 @@ Weryfikacja: 48 testów jednostkowych; lokalna przeglądarka Chromium (desktop, 
 - Research sceniczny zostaje pod osobnymi filtrami, bez promujących go zestawów. Pierwszy widok pokazuje spotkania i spokojne atrakcje. Poniedziałek–środa z Weroniką pozostają na stronie.
 
 Weryfikacja tej aktualizacji: 53 testy jednostkowe oraz Chromium desktop/mobile (320, 390, 768 px), stare localStorage, udostępniony link, trwałość zmian i brak błędów JavaScript.
+
+### Uzupełnienie relacji z pobytu (18 X, druga aktualizacja)
+
+Notes obejmuje teraz wspólne zwiedzanie według przekazanego zestawienia: czwartek (Horizon 22, Hyde Park, Kensington Gardens, Serpentine, Royal Albert Hall **z zewnątrz**, Science Museum, Harrods/Knightsbridge, Poppies), piątek (Portobello/Notting Hill, V&A, Blackfriars, Borough Market) i sobotę (Old Bailey/Ludgate Hill, metalowa rzeźba, Tate Britain). Tate Modern i Canary Wharf są potwierdzone bez konkretnego dnia. Camden jest zapisane osobno jako wyjście solo, również bez przypisywania daty.
+
+Bezpośrednie potwierdzenia Mieszka rozstrzygają niepewności starszego cytowanego podsumowania: Adja i Tate Britain są odbyte; National Gallery nie zaliczamy do tego wyjazdu. „Whispers” Oskara Zięty pozostaje niepotwierdzoną identyfikacją rzeźby. Nie dopisujemy British Museum, Richmond Park, Buckingham Palace ani osobno Isle of Dogs. Horizon 22 nie oznacza wizyty w Sky Garden.
+
+`contentVersion` zmienia się niezależnie od rewizji migracji planu: dopisanie wizyt nie resetuje ponownie lokalnych decyzji o przyszłych wyjściach. Zrealizowane pozycje zawsze opuszczają wybory do wyceny. Brak daty wizyty nie może zostać zastąpiony terminem ze starego researchu lub localStorage. Wydatki bez podanej kwoty pozostają nieznane; znane koncerty nadal sumują się do £60.
+
+Weryfikacja uzupełnienia: 55 testów jednostkowych i scenariusze przeglądarkowe desktop/mobile, w tym dni niepodane, osobne wyjścia solo, brak duplikowania kosztów i niezrealizowane National Gallery.

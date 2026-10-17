@@ -1,15 +1,209 @@
 {
   "revision": "2026-10-18.1",
   "asOf": "2026-10-18",
-  "source": "Relacja Mieszka; daty potwierdzone po północy 18 X, czas londyński.",
+  "source": "Relacje Mieszka z 18 X oraz przekazane przez niego zestawienie wcześniejszej rozmowy. Bezpośrednie potwierdzenia mają pierwszeństwo przed niepewnościami cytowanego podsumowania. Daty w czasie londyńskim.",
   "pauseConcerts": true,
-  "defaultSelected": ["sunday-roast-18", "welcome-weronika"],
-  "completed": [
-    {"id": "matt-johnson", "title": "Matt Johnson", "category": "concert", "date": "2026-10-16", "participantNames": ["Mieszko"], "paidGBP": 35, "note": "Mieszko był solo. Zapłacone £35."},
-    {"id": "adja", "title": "Adja", "category": "concert", "date": "2026-10-17", "participantNames": ["Mieszko"], "paidGBP": 25, "note": "Udało się wejść. Mieszko był solo. Zapłacone £25."},
-    {"id": "tate-britain", "title": "Tate Britain", "category": "art", "date": "2026-10-17", "paidGBP": null, "note": "Wspólna sobotnia wizyta w Tate Britain."}
+  "defaultSelected": [
+    "sunday-roast-18",
+    "welcome-weronika"
   ],
-  "notVisited": [{"id": "national-gallery", "note": "17 X nie starczyło czasu. Nadal luźna opcja, nie zrealizowana wizyta ani rezerwacja."}],
+  "completed": [
+    {
+      "id": "matt-johnson",
+      "title": "Matt Johnson",
+      "category": "concert",
+      "date": "2026-10-16",
+      "participantNames": [
+        "Mieszko"
+      ],
+      "paidGBP": 35,
+      "note": "Mieszko był solo. Zapłacone £35.",
+      "visitMode": "solo"
+    },
+    {
+      "id": "adja",
+      "title": "Adja",
+      "category": "concert",
+      "date": "2026-10-17",
+      "participantNames": [
+        "Mieszko"
+      ],
+      "paidGBP": 25,
+      "note": "Udało się wejść. Mieszko był solo. Zapłacone £25.",
+      "visitMode": "solo"
+    },
+    {
+      "id": "tate-britain",
+      "title": "Tate Britain",
+      "category": "art",
+      "date": "2026-10-17",
+      "paidGBP": null,
+      "note": "Wspólna sobotnia wizyta w Tate Britain.",
+      "visitMode": "together"
+    },
+    {
+      "id": "horizon-22",
+      "title": "Horizon 22",
+      "category": "view",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Londyn oglądany z góry.",
+      "visitMode": "together"
+    },
+    {
+      "id": "hyde-park",
+      "title": "Hyde Park",
+      "category": "walk",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Spacer po Hyde Parku.",
+      "visitMode": "together"
+    },
+    {
+      "id": "kensington-gardens",
+      "title": "Kensington Gardens",
+      "category": "walk",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Odwiedzone podczas czwartkowego zwiedzania.",
+      "visitMode": "together"
+    },
+    {
+      "id": "serpentine",
+      "title": "Serpentine Gallery",
+      "category": "art",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Wizyta w galerii, w tym instalacja z kablami i dzwonami. Tytułu pracy nie ustalono.",
+      "visitMode": "together"
+    },
+    {
+      "id": "royal-albert-hall",
+      "title": "Royal Albert Hall · z zewnątrz",
+      "category": "walk",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Obejrzane z zewnątrz; nie zapisujemy wejścia ani koncertu.",
+      "visitMode": "together"
+    },
+    {
+      "id": "science-museum",
+      "title": "Science Museum",
+      "category": "art",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Zwiedzanie, szczególnie pod zainteresowania lotnicze Kostka.",
+      "visitMode": "together"
+    },
+    {
+      "id": "harrods",
+      "title": "Harrods i Knightsbridge",
+      "category": "walk",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Harrods i okolice Knightsbridge.",
+      "visitMode": "together"
+    },
+    {
+      "id": "poppies",
+      "title": "Poppies · fish and chips",
+      "category": "food",
+      "date": "2026-10-15",
+      "paidGBP": null,
+      "note": "Wspólny fish and chips. Kwota rachunku nie została podana.",
+      "visitMode": "together"
+    },
+    {
+      "id": "portobello",
+      "title": "Portobello Road i Notting Hill",
+      "category": "walk",
+      "date": "2026-10-16",
+      "paidGBP": null,
+      "note": "Spacer po Portobello Road i okolicy.",
+      "visitMode": "together"
+    },
+    {
+      "id": "victoria-albert",
+      "title": "Victoria and Albert Museum",
+      "category": "art",
+      "date": "2026-10-16",
+      "paidGBP": null,
+      "note": "Wspólna wizyta w V&A.",
+      "visitMode": "together"
+    },
+    {
+      "id": "blackfriars",
+      "title": "Okolice Blackfriars",
+      "category": "walk",
+      "date": "2026-10-16",
+      "paidGBP": null,
+      "note": "Spacer w okolicach Blackfriars.",
+      "visitMode": "together"
+    },
+    {
+      "id": "borough",
+      "title": "Borough Market",
+      "category": "food",
+      "date": "2026-10-16",
+      "paidGBP": null,
+      "note": "Odwiedzony targ i okolice. Nie dopisujemy niepodanych wydatków.",
+      "visitMode": "together"
+    },
+    {
+      "id": "old-bailey-ludgate",
+      "title": "Old Bailey i Ludgate Hill",
+      "category": "walk",
+      "date": "2026-10-17",
+      "paidGBP": null,
+      "note": "Spacer po okolicy.",
+      "visitMode": "together"
+    },
+    {
+      "id": "metal-sculpture",
+      "title": "Metalowa rzeźba po drodze",
+      "category": "art",
+      "date": "2026-10-17",
+      "paidGBP": null,
+      "note": "Widziana podczas spaceru w okolicach Old Bailey i Ludgate Hill. „Whispers / Szepty” Oskara Zięty to trop z poprzedniej rozmowy, niepotwierdzona identyfikacja.",
+      "visitMode": "together"
+    },
+    {
+      "id": "tate",
+      "title": "Tate Modern",
+      "category": "art",
+      "date": null,
+      "paidGBP": null,
+      "note": "Wizyta potwierdzona przez Mieszka. Dzień niepodany; to osobne muzeum od odwiedzonego Tate Britain.",
+      "visitMode": "together"
+    },
+    {
+      "id": "canary-wharf",
+      "title": "Canary Wharf",
+      "category": "walk",
+      "date": null,
+      "paidGBP": null,
+      "note": "Odwiedzone podczas obecnego wyjazdu. Dzień niepodany; nie dopisujemy osobno całego Isle of Dogs.",
+      "visitMode": "together"
+    },
+    {
+      "id": "camden-solo",
+      "title": "Camden · spacer solo",
+      "category": "walk",
+      "date": null,
+      "paidGBP": null,
+      "note": "Wyjście Mieszka bez Kostka, odnotowane w przekazanym zestawieniu. Bez przypisywania konkretnego dnia.",
+      "visitMode": "solo",
+      "participantNames": [
+        "Mieszko"
+      ]
+    }
+  ],
+  "notVisited": [
+    {
+      "id": "national-gallery",
+      "note": "17 X nie starczyło czasu. Starsze podsumowanie rozmowy było niejednoznaczne; na tym wyjeździe nie oznaczamy National Gallery jako odwiedzonej."
+    }
+  ],
   "places": [
     {
       "id": "sunday-roast-18",
@@ -32,8 +226,20 @@
       "why": "Wspólny niedzielny obiad. Bez dokładania następnego koncertu.",
       "timeNote": "Niedziela 18 X. Godzina spotkania nieznana; godziny otwarcia pubu nie są godziną rezerwacji.",
       "availabilityNote": "Plan przekazany przez Mieszka, nie potwierdzenie rezerwacji stolika z restauracji. Nie kupiono ani nie zarezerwowano niczego przez tę stronę.",
-      "sources": [{"label": "The Sun In Splendour · oficjalna strona i adres", "url": "https://www.suninsplendourpub.co.uk/"}],
+      "sources": [
+        {
+          "label": "The Sun In Splendour · oficjalna strona i adres",
+          "url": "https://www.suninsplendourpub.co.uk/"
+        }
+      ],
       "rainFriendly": true
+    }
+  ],
+  "contentVersion": "2026-10-18.2",
+  "itemNotes": [
+    {
+      "id": "skyline",
+      "note": "Horizon 22 jest już odwiedzone. Sky Garden to druga opcja z tego wcześniejszego researchu — wizyty tam nie potwierdzono."
     }
   ]
 }

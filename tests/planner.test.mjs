@@ -589,7 +589,8 @@ test('trip journal overlays actual prices without mutating iOS datasets or confu
   assert.equal(merged.events.find(x=>x.id==='matt-johnson').priceGBP,35);
   assert.equal(merged.events.find(x=>x.id==='adja').priceGBP,25);
   assert.equal(merged.places.places.find(x=>x.id==='tate-britain').completed,true);
-  assert.equal(merged.places.places.find(x=>x.id==='tate').completed,undefined);
+  assert.equal(merged.places.places.find(x=>x.id==='tate').completed,true);
+  assert.equal(merged.places.places.find(x=>x.id==='tate').date,null);
   const national=merged.places.places.find(x=>x.id==='national-gallery');
   assert.equal(national.completed,undefined);
   assert.match(national.visitNote,/nie starczyło czasu/);
@@ -649,4 +650,32 @@ test('fresh and malformed shared plans do not revive old concerts; past items ca
   s.selected.push('massaoke','blue-lab-beats','national-gallery');
   s.dates['national-gallery']='2026-10-17';
   assert.deepEqual(sanitizeState(s,journalData).selected,['sunday-roast-18','welcome-weronika']);
+});
+
+test('unknown actual visit dates do not inherit research sessions or a locally planned day',()=>{
+  const old=withCulture(publishedData,load('culture-extension'));
+  const d=withTripUpdates({...old,places:{...old.places,places:old.places.places.map(x=>x.id==='tate'?{...x,date:'2026-10-20',start:'12:00',end:'13:00',sessions:[{id:'invented-research-slot',date:'2026-10-20',start:'12:00',end:'13:00'}]}:x)}},updates);
+  const tate=d.places.places.find(x=>x.id==='tate');
+  assert.equal(tate.date,null);
+  assert.equal(tate.start,null);
+  assert.equal(tate.end,null);
+  assert.deepEqual(tate.sessions,[]);
+  const s={...defaultState(d),selected:['tate','poppies','borough','alani-20'],dates:{tate:'2026-10-20'},prices:{poppies:100},attendees:{poppies:5}};
+  assert.deepEqual(sanitizeState(s,d).selected,['alani-20']);
+  assert.equal(budget(s,d).paidActivitiesGBP,60);
+  assert.ok(!budget(s,d).activities.some(x=>['tate','poppies','borough'].includes(x.id)));
+});
+
+test('expanded history keeps uncertain attribution and partial visits distinct from unrelated destinations',()=>{
+  const records=new Map(updates.completed.map(x=>[x.id,x]));
+  assert.match(records.get('royal-albert-hall').note,/z zewnątrz/);
+  assert.match(records.get('metal-sculpture').note,/niepotwierdzona identyfikacja/);
+  assert.equal(records.get('canary-wharf').date,null);
+  assert.equal(records.get('camden-solo').visitMode,'solo');
+  assert.equal(records.get('camden-solo').date,null);
+  assert.equal(records.has('national-gallery'),false);
+  assert.equal(records.has('british-museum'),false);
+  assert.equal(records.has('skyline'),false); // Visiting Horizon 22 does not imply Sky Garden.
+  assert.equal(records.has('horizon-22'),true);
+  assert.equal(new Set(updates.completed.map(x=>x.id)).size,updates.completed.length);
 });

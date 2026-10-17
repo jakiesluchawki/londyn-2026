@@ -48,3 +48,11 @@
 @media(max-width:900px){.journal-grid{gap:12px}.journal-card{padding:23px}.roast-card{grid-template-columns:1fr .8fr}.roast-card>div{padding:28px}.journal-total{flex-direction:column;gap:10px}}
 @media(max-width:720px){.journal-grid{grid-template-columns:1fr}.journal-card h3{font-size:32px}.journal-paid{font-size:32px}.roast-card{grid-template-columns:1fr}.roast-card img{height:230px;object-position:center}.roast-card h3{font-size:42px}.roast-card>div{padding:25px}}
 @media print{.journal-grid{grid-template-columns:repeat(3,1fr)}.journal-card{padding:12px}.journal-card h3{font-size:20px}.journal-paid{font-size:22px}.roast-card{display:block}.roast-card img,.roast-card .hero-actions{display:none}.roast-card>div{padding:16px}.roast-card h3{font-size:24px}.journal-card,.roast-card{break-inside:avoid}}
+
+.journal-days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.journal-day{background:var(--cream);padding:28px;border-radius:22px;min-width:0}
+.journal-day h3{font:400 31px/1.15 Romie,Georgia,serif;letter-spacing:-.02em}.journal-day .eyebrow{margin-bottom:12px}
+.journal-day ul{list-style:none;margin:20px 0 0;padding:0}.journal-day li{padding:12px 0;border-top:1px solid var(--line)}.journal-day li:last-child{padding-bottom:0}.journal-day li strong{font-size:16px}.journal-day li p{font-size:13px;color:var(--muted);margin-top:5px}
+.journal-solo-heading{margin:36px 0 20px}.journal-solo-heading .eyebrow{margin-bottom:12px}.journal-solo-heading h3{font:400 34px/1.1 Romie,Georgia,serif}.journal-concerts{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:720px){.journal-days,.journal-concerts{grid-template-columns:1fr}.journal-day{padding:23px}.journal-day h3{font-size:28px}}
+@media print{.journal-days{grid-template-columns:repeat(2,1fr)}.journal-day{padding:14px;break-inside:avoid}.journal-day h3{font-size:22px}.journal-day li{padding:8px 0}}
