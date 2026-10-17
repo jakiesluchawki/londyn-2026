@@ -56,3 +56,9 @@
 .journal-solo-heading{margin:36px 0 20px}.journal-solo-heading .eyebrow{margin-bottom:12px}.journal-solo-heading h3{font:400 34px/1.1 Romie,Georgia,serif}.journal-concerts{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:720px){.journal-days,.journal-concerts{grid-template-columns:1fr}.journal-day{padding:23px}.journal-day h3{font-size:28px}}
 @media print{.journal-days{grid-template-columns:repeat(2,1fr)}.journal-day{padding:14px;break-inside:avoid}.journal-day h3{font-size:22px}.journal-day li{padding:8px 0}}
+
+/* Preserve the full pub frontage and street scene at every viewport width. */
+.roast-card .roast-art{min-width:0;display:flex;flex-direction:column;justify-content:center;background:var(--pink)}
+.roast-card .roast-art a{display:block}.roast-card .roast-art img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.roast-card .roast-art figcaption{padding:10px 16px;font-size:11px;line-height:1.45;color:var(--muted)}
+@media print{.roast-card .roast-art{display:none}}

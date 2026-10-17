@@ -76,3 +76,7 @@ Bezpośrednie potwierdzenia Mieszka rozstrzygają niepewności starszego cytowan
 `contentVersion` zmienia się niezależnie od rewizji migracji planu: dopisanie wizyt nie resetuje ponownie lokalnych decyzji o przyszłych wyjściach. Zrealizowane pozycje zawsze opuszczają wybory do wyceny. Brak daty wizyty nie może zostać zastąpiony terminem ze starego researchu lub localStorage. Wydatki bez podanej kwoty pozostają nieznane; znane koncerty nadal sumują się do £60.
 
 Weryfikacja uzupełnienia: 55 testów jednostkowych i scenariusze przeglądarkowe desktop/mobile, w tym dni niepodane, osobne wyjścia solo, brak duplikowania kosztów i niezrealizowane National Gallery.
+
+### Ilustracja Sunday roast
+
+Ogólny krajobraz zastąpiono `assets/sun-in-splendour-felt.jpg`: filcową interpretacją rzeczywistego The Sun In Splendour i Portobello Road. Fasada oparta na zdjęciach referencyjnych; tłum, posiłki i rozmieszczenie stolików to stylizacja atmosfery, nie dokumentacja spotkania. Podpis i tekst alternatywny rozróżniają to wprost. Obraz można powiększyć, a pełny kadr pozostaje widoczny na telefonie. Wygenerowano wbudowanym `image_gen`; referencje i finalny prompt: `assets/sun-in-splendour-felt.prompt.md`. Zdjęcia źródłowe nie są publikowane w repozytorium.

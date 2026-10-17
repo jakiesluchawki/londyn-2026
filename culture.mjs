@@ -1,5 +1,5 @@
 // Website-only extension. The five datasets used by iOS remain unchanged.
-import {sanitizeState} from './planner.mjs?v=20261018b';
+import {sanitizeState} from './planner.mjs?v=20261018c';
 
 export function withCulture(data, culture) {
   return {...data, culture,
